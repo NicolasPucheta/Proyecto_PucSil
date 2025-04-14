@@ -1,60 +1,65 @@
 /* Eliminamos márgenes y paddings por defecto del navegador */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilo general para el <body> */
-  body {
-    background-color: lightblue; /* color de fondo del body */
-  }
-  
-  /* Estilo para los párrafos */
-  p {
-    font-family: Verdana;        /* tipo de letra */
-    text-align: justify;         /* alineación del texto */
-    color: red;                  /* color de la fuente */
-    font-size: 24px;             /* tamaño de la fuente */
-    font-style: italic;          /* estilo */
-    font-weight: bold;           /* negrito o fuerte */
-  }
-  
-  /* Estilo para la etiqueta h1 */
-  h1 {
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  /* Estilo para un div con clase "clase" */
-  .clase {
-    color: blue;
-    background-color: #e0f0ff;
-    border: 2px solid blue;
-    padding: 15px;
-    border-radius: 10px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilo para el div del título */
-  .titulo {
-    background-color: #92a8d1;
-    margin: 20px;
-  }
-  
-  /* Estilo para el div del párrafo */
-  .parrafo {
-    background-color: green;
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-bottom: 60px;
-    padding-right: 300px;
-  }
-  
-  /* Estilo para el pie de página */
-  footer {
-    background-color: GoldenRod;
-    padding: 10px 20px 30px 40px;
-    margin: 10px 200px;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo general para el <body> */
+body {
+  background-color: lightblue;
+}
+
+/* Estilo para los párrafos */
+p {
+  font-family: Verdana;
+  text-align: justify;
+  color: black; /* 🔁 cambiado de red a black */
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Estilo para la etiqueta h1 */
+h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2{
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para un div con clase "clase" */
+.clase {
+  color: blue;
+  background-color: #e0f0ff;
+  border: 2px solid blue;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para el div del título */
+.titulo {
+  background-color: #92a8d1;
+  margin: 20px;
+}
+
+/* Estilo para el div del párrafo */
+.parrafo {
+  background-color: green;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-bottom: 60px;
+  padding-right: 300px;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: GoldenRod;
+  padding: 10px 20px 30px 40px;
+  margin: 10px 200px;
+}
