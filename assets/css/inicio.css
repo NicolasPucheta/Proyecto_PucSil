@@ -5,13 +5,12 @@
 }
 
 /* Estilo general para el <body> */
-body {
-  background-color: #CEA07E
-}
+
 body {
   margin: 0;
   padding-top: 80px;
   font-family: sans-serif;
+  background-color: #CEA07E
 }
 
 /* Estilo para los párrafos */
@@ -19,16 +18,17 @@ p {
   font-family: Verdana;
   text-align: justify;
   color:  #E2E8C0;
- 
   font-size: 24px;
   font-style: italic;
   font-weight: bold;
 }
 
 .titulo{
- color:#E2E8C0;
- font-size:50px;
- position:absolute;
+  color:#E2E8C0;
+  font-size:50px;
+  position:absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /*Estilo para la barra de navegacion*/
@@ -63,8 +63,6 @@ p {
 .menu li a:hover {
   background-color: #333; /* Efecto hover */
 }
-
-
 
 h2{
   color:#E2E8C0;
@@ -119,37 +117,91 @@ h2{
 }
 
 
-/* Estilo para el pie de página */
 .footer {
   background-color: #443742;
   color: white;
-  padding: 2rem 0;
-  text-align: center;
+  padding: 2rem 1rem;
   font-size: 14px;
   margin-top: 50px;
 }
 
-.footer-content p {
+.footer-superior {
   max-width: 1200px;
-  margin: 0;
-  color: #E2E8C0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 1rem;
 }
 
-.footer p {
-  margin: 0;
+.footer-contacto {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.footer-redes {
+  flex: 1;
+  min-width: 250px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.footer-inferior {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .footer-links {
-  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-style: italic;
 }
 
 .footer-links a {
-  color:#E2E8C0;
+  color: #E2E8C0;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.footer-mediosPagos {
+  text-align: center;
+  color: #E2E8C0;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.footer-mediosPagos p {
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-superior, .footer-inferior {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-redes {
+    align-items: center;
+    text-align: center;
+  }
 }
