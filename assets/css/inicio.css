@@ -13,6 +13,7 @@ body {
   background-color: #CEA07E
 }
 
+
 /* Estilo para los párrafos */
 p {
   font-family: Verdana;
@@ -43,7 +44,6 @@ p {
   padding: 5px 10px;
 }
 
-
 .menu ul {
   list-style: none;
   margin: 0;
@@ -52,6 +52,9 @@ p {
   justify-content: center; /* Alineados a la derecha */
 }
 
+.menu h2{
+  margin-top: 10px;
+}
 .menu li a {
   display: block;
   padding: 18px 22px;
@@ -144,6 +147,68 @@ h2{
   text-align: left;
 }
 
+/* Estilo para la barra de búsqueda */
+.Busqueda{
+  text-align: right;
+}
+.search-container {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 400px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.search-input:focus {
+  border-color:#443742; /* Color de borde al hacer foco */
+}
+
+.search-button {
+  background-color: #E2E8C0;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #443742;
+}
+
+.search-button:focus {
+  outline: none;
+}
+/* Estilo para los iconos de redes sociales */
+.Iconos-redes img {
+  width: 100px; /* Tamaño de los iconos */
+  height: 80px; /* Ajusta la altura si es necesario */
+  margin: 10px; /* Espaciado entre los iconos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Para efectos suaves */
+}
+
+/* Efecto al pasar el ratón */
+.Iconos-redes img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono */
+  box-shadow: 0 0 15px rgba(230, 125, 5, 0.3); /* Sombra al pasar el ratón */
+}
+
+
 .footer-redes {
   flex: 1;
   min-width: 250px;
@@ -176,7 +241,6 @@ h2{
   color: #E2E8C0;
   text-decoration: none;
 }
-
 .footer-links a:hover {
   text-decoration: underline;
 }
