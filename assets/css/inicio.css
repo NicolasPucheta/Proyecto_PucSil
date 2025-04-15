@@ -6,7 +6,7 @@
 
 /* Estilo general para el <body> */
 body {
-  background-color: #443742;
+  background-color: #CEA07E
 }
 body {
   margin: 0;
@@ -18,16 +18,31 @@ body {
 p {
   font-family: Verdana;
   text-align: justify;
-  color: black; /* 🔁 cambiado de red a black */
+  color:  #E2E8C0;
+ 
   font-size: 24px;
   font-style: italic;
   font-weight: bold;
 }
 
+.titulo{
+ color:#E2E8C0;
+ font-size:50px;
+ position:absolute;
+}
+
 /*Estilo para la barra de navegacion*/
 .menu {
   background-color: #443742; /* Fondo negro */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+  z-index: 1000; /* para que esté por encima del contenido */
+  padding: 5px 10px;
 }
+
 
 .menu ul {
   list-style: none;
@@ -39,9 +54,10 @@ p {
 
 .menu li a {
   display: block;
-  padding: 15px 20px;
-  color: black;
+  padding: 18px 22px;
+  color: #E2E8C0;
   text-decoration: none;
+
 }
 
 .menu li a:hover {
@@ -50,14 +66,8 @@ p {
 
 
 
-/* Estilo para la etiqueta h1 */
-h1 {
-  color: #CEA07E;
-  font-weight: bold;
-  text-align: center;
-}
 h2{
-  color: red;
+  color:#E2E8C0;
   font-weight: bold;
   text-align: center;
 }
@@ -97,16 +107,11 @@ h2{
 
 /* Estilo para el div del título */
 
-.titulo {
-   margin: 0;
-  font-size: 2rem;
-  font-family: 'Orbitron', sans-serif;
-  color: #f1f1f1;
-}
+
 
 /* Estilo para el div del párrafo */
 .parrafo {
-  background-color: green;
+  background-color: #443742;
   padding-top: 50px;
   padding-left: 10px;
   padding-bottom: 60px;
@@ -115,8 +120,36 @@ h2{
 
 
 /* Estilo para el pie de página */
-footer {
-  background-color: GoldenRod;
-  padding: 10px 20px 30px 40px;
-  margin: 10px 200px;
+.footer {
+  background-color: #443742;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer-content p {
+  max-width: 1200px;
+  margin: 0;
+  color: #E2E8C0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color:#E2E8C0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
