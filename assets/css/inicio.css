@@ -10,6 +10,7 @@ body {
   padding-top: 80px;
   font-family: sans-serif;
   background-color: #e2e2e2;
+  overflow-x:hidden;
 }
 
 /* Estilo para los párrafos */
@@ -20,6 +21,20 @@ p {
   font-size: 24px;
   font-style: italic;
   font-weight: bold;
+}
+/*Estilo para la seccion de envios*/
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .titulo {
@@ -84,30 +99,92 @@ h2{
   font-family: Arial, sans-serif;
 }
 
-/*Estilo para el Carrusel infinito*/
-.Carrusel-Infinito {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-track {
+/*Estilo para los precios y productos del carrusel*/
+.item-producto {
   display: flex;
-  animation: scroll 15s linear infinite;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  min-width: 160px;
+  transition: transform 0.3s ease;
 }
 
-.carousel-track img {
-  width: 300px;
+.item-producto:hover {
+  transform: scale(1.05);
+}
+
+.item-producto img {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.precio {
+  font-weight: bold;
+  color: black; 
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*Estilo para el Carrusel infinito*/
+  /* Caja Contenedora*/
+  .caja-carrusel {
+    background-color: #247BA0;
+    border: 5px solid #0A2463;
+    border-radius: 1rem;
+    padding: 2rem 0;
+    margin: 2rem ;
+     width: 1850px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+/* Título */
+.titulo-caja {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #212529;
+}
+
+/* Carrusel */
+  .carrusel-infinito {
+  overflow: hidden;
+  width: 100%;
+  }
+
+  .carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+  }
+
+  .carousel-track img {
+  width: 150px;
   height: auto;
-  margin-right: 10px;
-  border-radius: 8px;
+  margin: 0 1rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  }
+
+.carousel-track img:hover {
+  transform: scale(1.1);
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+    /* Animación */
+  @keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+  }
+  } 
 
-/* Estilo para el div del título */
 
 /* Estilo para el pie de pag*/
 .footer {
@@ -198,7 +275,7 @@ h2{
 /* Efecto al pasar el ratón */
 .Iconos-redes img:hover {
   transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono */
-  box-shadow: 0 0 15px rgba(230, 125, 5, 0.3); /* Sombra al pasar el ratón */
+  box-shadow: 0 0 15px #2478A0; /* Sombra al pasar el ratón */
 }
 
 
@@ -209,7 +286,7 @@ h2{
   padding-left: 10px;
   padding-bottom: 5px;
   padding-right: 5px;
-  background-color:#f81313 ;
+  background-color: grey;
 }
 
 .info-container {
@@ -233,7 +310,7 @@ h2{
   font-size: 25px;
   margin-top: 10px;
   margin-bottom: 8px;
-  color: white;
+  color: black;
 }
 
 .info-card p {
