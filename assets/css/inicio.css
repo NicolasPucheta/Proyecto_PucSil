@@ -40,7 +40,7 @@ p {
   width: 100%;
   z-index: 1000; /* para que esté por encima del contenido */
   padding: 5px 10px;
-  background-image: url('../img/logo2.jpeg'); /* Cambiá esto si tu ruta es distinta */
+  background-image: url('../img/Logo3.jpeg'); /* Cambiá esto si tu ruta es distinta */
   background-size: cover;
   background-position:  center;
 }
@@ -112,12 +112,12 @@ h2{
 
 
 /* Estilo para el div del párrafo */
-.parrafo {
+.Info {
   background-color: #f81313;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-left: 10px;
-  padding-bottom: 60px;
-  padding-right: 300px;
+  padding-bottom: 5px;
+  padding-right: 5px;
 }
 
 
@@ -131,12 +131,12 @@ h2{
 
 .footer-superior {
   max-width: 1200px;
-  margin: auto;
+  margin-top: 0px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 1rem;
+  padding-top: 15px;
 }
 
 .footer-contacto {
@@ -150,7 +150,8 @@ h2{
 
 /* Estilo para la barra de búsqueda */
 .Busqueda{
-  text-align: right;
+  text-align: center;
+
 }
 .search-container {
   display: flex;
@@ -160,6 +161,7 @@ h2{
   padding: 10px;
   border-radius: 50px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
 }
 
 .search-input {
@@ -171,6 +173,7 @@ h2{
   outline: none;
   transition: border-color 0.3s ease;
   margin-right: 10px;
+
 }
 
 .search-input:focus {
@@ -178,7 +181,7 @@ h2{
 }
 
 .search-button {
-  background-color: #E2E8C0;
+  background-color: #247BA0;
   color: white;
   font-size: 18px;
   border: none;
@@ -189,7 +192,7 @@ h2{
 }
 
 .search-button:hover {
-  background-color: #443742;
+  background-color: #FB3640;
 }
 
 .search-button:focus {
@@ -210,6 +213,12 @@ h2{
 }
 
 
+.container2{
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+}
 .footer-redes {
   flex: 1;
   min-width: 250px;
