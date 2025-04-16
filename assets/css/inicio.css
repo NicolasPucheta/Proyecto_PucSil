@@ -109,18 +109,7 @@ h2{
 
 /* Estilo para el div del título */
 
-
-
-/* Estilo para el div del párrafo */
-.Info {
-  background-color: #f81313;
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-}
-
-
+/* Estilo para el pie de pag*/
 .footer {
   background-color: #030e27 ;
   color: white;
@@ -211,6 +200,55 @@ h2{
   transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono */
   box-shadow: 0 0 15px rgba(230, 125, 5, 0.3); /* Sombra al pasar el ratón */
 }
+
+
+/* Estilo para la seccion de informacion */
+
+.info-section {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  background-color:#f81313 ;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.info-card h2 {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: wheat;
+  text-align: center;
+}
+
+.info-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain; /* o 'cover' si preferís que rellene */
+  margin-bottom: 10px;
+}
+
 
 
 .container2{
