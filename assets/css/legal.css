@@ -1,0 +1,17 @@
+/* Estilos específicos para la página Legal */
+/* Cambiar color de p, h1 y h2 a negro solo en la página legal */
+.legal p {
+    color: black ;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.legal h1, .legal h2 {
+    color: black ;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGHardware</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto&display=swap" rel="stylesheet">
-
-    <link href="assets/css/inicio.css" rel="stylesheet"> 
-  
-<body> 
-    <nav class="menu">
-        <h1 class="titulo"></h1>
-        <h2 class ="Busqueda"> 
-          <form action="/search" method="get">
-            <input type="text" placeholder="¿Qué estás buscando?" name="query" class="search-input">
-            <button type="submit" class="search-button">🔍</button>
-        </form>                                                 
-      </h2>  
-        <ul> 
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Más vendidos</a></li> 
-          <li><a href="<?= base_url('quienesSomos');?>">Quiénes Somos</a></li>
-          <li><a href="#">Ayuda</a></li>
-          <li><a href="<?= base_url('legal'); ?>">Legal</a></li>
-
-        </ul>
-      </nav>
+<?= view('front/head_view'); ?>
     <!-- Carousel de imagenes -->
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
@@ -171,55 +142,4 @@
     </section>
 
 
-    <footer class="footer">
-        <div class="container2">
-        <div class="row"> 
-                <!-- Parte Superior -->
-            <div class="col-md-4 ps-4">
-
-              <div class="footer-contacto">
-                <p><em>Contacto</em></p>
-                <p>Email: --- -- --</p>
-                <p>Teléfono: --- --- -</p>
-                <p>Dirección: -- --- ---</p>
-              </div>
-            </div>
-            
-            <div class="col-md-8 d-flex justify-content-end align-items-center">
-              <div class="text-end me-3">
-                <p class="mb-0">Seguinos...</p>
-            </div>
-
-
-                <div class="Iconos-redes">
-                <!-- Icono de Facebook -->
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="assets\img\facebook-logo_2504792.png" alt="Facebook">
-                </a>
-            
-                <!-- Icono de Instagram -->
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="assets\img\instagram_4494488.png" alt="Instagram">
-                </a>
-              </div>
-        </div> 
-            </div>
-        </div>
-      </div>
-            <!-- Parte Inferior -->
-          <div class="footer-inferior">
-              <div class="footer-links">
-                <a href="<?= base_url('quienesSomos');?>">Sobre nosotros</a>
-                <a href="#">Arrepentimiento</a>
-                <a href="<?= base_url('legal'); ?>"><em>términos y condiciones</em></a>
-              </div>
-              <div class="footer-mediosPagos">
-                <p>© 2025 GGHardware. Todos los derechos reservados.</p>
-              </div>
-            </div>
-      </footer>
-      
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html> 
+    <?= view('front/footer_view'); ?>
