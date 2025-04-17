@@ -22,9 +22,9 @@
         <ul> 
           <li><a href="#">Productos</a></li>
           <li><a href="#">Más vendidos</a></li> 
-          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="<?= base_url('quienesSomos');?>">Quiénes Somos</a></li>
           <li><a href="#">Ayuda</a></li>
-          <li><a href="<?= base_url('home/legal'); ?>">Legal</a></li>
+          <li><a href="<?= base_url('legal'); ?>">Legal</a></li>
 
         </ul>
       </nav>
@@ -209,13 +209,12 @@
             <!-- Parte Inferior -->
           <div class="footer-inferior">
               <div class="footer-links">
-                <a href="#">Sobre nosotros</a>
+                <a href="<?= base_url('quienesSomos');?>">Sobre nosotros</a>
                 <a href="#">Arrepentimiento</a>
-                <a href="#"><em>términos y condiciones</em></a>
+                <a href="<?= base_url('legal'); ?>"><em>términos y condiciones</em></a>
               </div>
               <div class="footer-mediosPagos">
                 <p>© 2025 GGHardware. Todos los derechos reservados.</p>
-                <p>Medios de pago: Visa | Mastercard | MercadoPago | Transferencia</p>
               </div>
             </div>
       </footer>

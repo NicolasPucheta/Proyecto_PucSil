@@ -59,6 +59,7 @@ p {
   background-image: url('../img/Logo3.jpeg');
   background-size: cover;
   background-position:  center;
+  
 }
 
 .menu ul {
@@ -314,7 +315,7 @@ h2 {
 }
 
 .search-button:hover {
-  background-color: #FB3640;
+  background-color: grey;
 }
 
 .search-button:focus {
