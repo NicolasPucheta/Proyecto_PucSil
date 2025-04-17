@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('legal', 'Legal::index');
+$routes->get('home/legal', 'Home::legal');

@@ -6,8 +6,10 @@
     <title>GGHardware</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/inicio.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto&display=swap" rel="stylesheet">
 
+    <link href="assets/css/inicio.css" rel="stylesheet"> 
+  
 <body> 
     <nav class="menu">
         <h1 class="titulo"></h1>
@@ -15,19 +17,17 @@
           <form action="/search" method="get">
             <input type="text" placeholder="¿Qué estás buscando?" name="query" class="search-input">
             <button type="submit" class="search-button">🔍</button>
-        </form>                                                 </h2>
-        
+        </form>                                                 
+      </h2>  
         <ul> 
-  
           <li><a href="#">Productos</a></li>
           <li><a href="#">Más vendidos</a></li> 
           <li><a href="#">Quiénes Somos</a></li>
           <li><a href="#">Ayuda</a></li>
-          <li><a href="#">Legal</a></li>
+          <li><a href="<?= base_url('home/legal'); ?>">Legal</a></li>
+
         </ul>
-
       </nav>
-
     <!-- Carousel de imagenes -->
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
@@ -104,8 +104,6 @@
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
 
         </div>
-
-
             <!-- Duplicados para loop -->
             <div class="item-producto">
               <img src="assets\img\Procesadores\i5.jpg" alt="1">
@@ -152,25 +150,25 @@
 </section>
     
         <!-- Info Envios -->
-        <section class="info-section">
-          <div class="info-container">
-            <div class="info-card" tabindex="-1">
-              <img src="assets\img\iconos\camion.png" alt="camion">
-              <h2>Beneficio del envío gratis</h2>
-              <p>Aplica en compras a partir de $180,000.</p>
-            </div>
-            <div class="info-card" tabindex="-1">
-              <img src="assets\img\iconos\pagos.png" alt="pagos">
-              <h2>Numerosos métodos de pago</h2>
-              <p>Elegí el que más te convenga.</p>
-            </div>
-            <div class="info-card" tabindex="-1">
-              <img src="assets\img\iconos\paquete2.png" alt="camion">
-              <h2>Recibí tus productos por OCA</h2>
-              <p>Tus paquetes estarán seguros por su garantía.</p>
-            </div>
-          </div>
-        </section>
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-card" tabindex="-1">
+          <img src="assets\img\iconos\camion.png" alt="camion">
+          <h2>Beneficio del envío gratis</h2>
+          <p>Aplica en compras a partir de $180,000.</p>
+        </div>
+        <div class="info-card" tabindex="-1">
+          <img src="assets\img\iconos\pagos.png" alt="pagos">
+          <h2>Numerosos métodos de pago</h2>
+          <p>Elegí el que más te convenga.</p>
+        </div>
+        <div class="info-card" tabindex="-1">
+          <img src="assets\img\iconos\paquete2.png" alt="camion">
+          <h2>Recibí tus productos por OCA</h2>
+          <p>Tus paquetes estarán seguros por su garantía.</p>
+        </div>
+      </div>
+    </section>
 
 
     <footer class="footer">

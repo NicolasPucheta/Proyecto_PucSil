@@ -8,20 +8,21 @@
 body {
   margin: 0;
   padding-top: 80px;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #e2e2e2;
   overflow-x:hidden;
 }
 
 /* Estilo para los párrafos */
 p {
-  font-family: Verdana;
+  font-family: 'Roboto', sans-serif;
   text-align: justify;
   color: white;
   font-size: 24px;
   font-style: italic;
   font-weight: bold;
 }
+
 /*Estilo para la seccion de envios*/
 .info-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -29,6 +30,7 @@ p {
   padding: 1.5rem;
   background-color: white;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .info-card:hover {
@@ -42,20 +44,19 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-color: #2f2532; /* si querés conservar el violeta de fondo */
+  background-color: #2f2532;
 }
-
 
 /*Estilo para la barra de navegacion*/
 .menu {
-  background-color: #443742; /* Fondo negro */
+  background-color: #443742;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* para que esté por encima del contenido */
+  z-index: 1000;
   padding: 5px 10px;
-  background-image: url('../img/Logo3.jpeg'); /* Cambiá esto si tu ruta es distinta */
+  background-image: url('../img/Logo3.jpeg');
   background-size: cover;
   background-position:  center;
 }
@@ -64,39 +65,34 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Para que estén en línea */
-  justify-content: center; /* Alineados a la derecha */
+  display: flex;
+  justify-content: center;
 }
 
-.menu h2{
+.menu h2 {
   margin-top: 10px;
+  font-family: 'Rajdhani', sans-serif;
 }
+
 .menu li a {
   display: block;
   padding: 18px 22px;
   color: #E2E8C0;
   text-decoration: none;
-
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .menu li a:hover {
-  background-color: #333; /* Efecto hover */
+  background-color: #333;
 }
 
-h2{
+h2 {
   color: white;
   font-weight: bold;
   text-align: center;
-}
-
-/* Estilo para un div con clase "clase" */
-.clase {
-  color: blue;
-  background-color: #e0f0ff;
-  border: 2px solid blue;
-  padding: 15px;
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 /*Estilo para los precios y productos del carrusel*/
@@ -111,6 +107,18 @@ h2{
   padding: 0.75rem;
   min-width: 160px;
   transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.carrito-icono {
+  width: 100px !important;
+  height: auto !important;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carrito-icono:hover {
+  transform: scale(1.1);
 }
 
 .item-producto:hover {
@@ -118,169 +126,72 @@ h2{
 }
 
 .item-producto img {
-  width: 10px;
-  height: 10px;
+  width: 500px;
+  height: 500px;
   margin-bottom: 0.5rem;
 }
 
 .precio {
   font-weight: bold;
-  color: black; 
+  color: black;
   font-size: 1rem;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*Estilo para el Carrusel infinito*/
-  /* Caja Contenedora*/
-  .caja-carrusel {
-    background-color: #247BA0;
-    border: 5px solid #0A2463;
-    border-radius: 1rem;
-    padding: 2rem 0;
-    margin: 2rem ;
-     width: 1850px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
+.caja-carrusel {
+  background-color: #247BA0;
+  border: 5px solid #0A2463;
+  border-radius: 1rem;
+  padding: 2rem 0;
+  margin: 2rem ;
+  width: 1850px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-/* Título */
 .titulo-caja {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #212529;
+  font-family: 'Rajdhani', sans-serif;
 }
 
-/* Carrusel */
-  .carrusel-infinito {
+.carrusel-infinito {
   overflow: hidden;
   width: 100%;
-  }
+}
 
-  .carousel-track {
+.carousel-track {
   display: flex;
   width: fit-content;
   animation: scroll-left 30s linear infinite;
-  }
+}
 
-  .carousel-track img {
+.carousel-track img {
   width: 150px;
   height: auto;
   margin: 0 1rem;
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  }
+}
 
 .carousel-track img:hover {
   transform: scale(1.1);
 }
 
-    /* Animación */
-  @keyframes scroll-left {
+@keyframes scroll-left {
   0% {
     transform: translateX(0);
-    }
-    100% {
+  }
+  100% {
     transform: translateX(-50%);
   }
-  } 
-
-
-/* Estilo para el pie de pag*/
-.footer {
-  background-color: #030e27 ;
-  color: white;
-  padding: 2rem 1rem;
-  font-size: 14px;
-  margin-top: 50px;
 }
-
-.footer-superior {
-  max-width: 1200px;
-  margin-top: 0px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 15px;
-}
-
-.footer-contacto {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  text-align: left;
-}
-
-/* Estilo para la barra de búsqueda */
-.Busqueda{
-  text-align: center;
-
-}
-.search-container {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 50px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-
-}
-
-.search-input {
-  width: 400px;
-  padding: 12px 20px;
-  font-size: 18px;
-  border: 2px solid #ddd;
-  border-radius: 50px;
-  outline: none;
-  transition: border-color 0.3s ease;
-  margin-right: 10px;
-
-}
-
-.search-input:focus {
-  border-color:#443742; /* Color de borde al hacer foco */
-}
-
-.search-button {
-  background-color: #247BA0;
-  color: white;
-  font-size: 18px;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-  background-color: #FB3640;
-}
-
-.search-button:focus {
-  outline: none;
-}
-/* Estilo para los iconos de redes sociales */
-.Iconos-redes img {
-  width: 100px; /* Tamaño de los iconos */
-  height: 80px; /* Ajusta la altura si es necesario */
-  margin: 10px; /* Espaciado entre los iconos */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Para efectos suaves */
-}
-
-/* Efecto al pasar el ratón */
-.Iconos-redes img:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono */
-  box-shadow: 0 0 15px #2478A0; /* Sombra al pasar el ratón */
-}
-
 
 /* Estilo para la seccion de informacion */
-
 .info-section {
   padding-top: 20px;
   padding-left: 10px;
@@ -311,29 +222,125 @@ h2{
   margin-top: 10px;
   margin-bottom: 8px;
   color: black;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .info-card p {
   font-size: 15px;
-  color: wheat;
+  color: black;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .info-card img {
   width: 120px;
   height: 120px;
-  object-fit: contain; /* o 'cover' si preferís que rellene */
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
+/* Estilo para el pie de pag */
+.footer {
+  background-color: #030e27;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 14px;
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+}
 
+.footer-superior {
+  max-width: 1200px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 15px;
+}
 
-.container2{
+.footer-contacto {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo para la barra de búsqueda */
+.Busqueda {
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 400px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-input:focus {
+  border-color:#443742;
+}
+
+.search-button {
+  background-color: #247BA0;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+}
+
+.search-button:hover {
+  background-color: #FB3640;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+/* Estilo para los iconos de redes sociales */
+.Iconos-redes img {
+  width: 100px;
+  height: 80px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Iconos-redes img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #2478A0;
+}
+
+.container2 {
   padding-top: 20px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 30px;
 }
+
 .footer-redes {
   flex: 1;
   min-width: 250px;
@@ -352,7 +359,6 @@ h2{
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  
 }
 
 .footer-links {
@@ -361,12 +367,14 @@ h2{
   flex-wrap: wrap;
   justify-content: center;
   font-style: italic;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer-links a {
   color: #E2E8C0;
   text-decoration: none;
 }
+
 .footer-links a:hover {
   text-decoration: underline;
 }
@@ -376,6 +384,7 @@ h2{
   color: #E2E8C0;
   font-style: italic;
   font-weight: bold;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .footer-mediosPagos p {
