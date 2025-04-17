@@ -3,32 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiénes Somos | GGHardware</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu estilo personalizado -->
   <link href="assets/css/quienesSomos.css?v=1.0" rel="stylesheet">
-
 </head>
-<body class="quienesSomos">
-  <div class="conteiner-quienesSomos">
-      <h2>¿Quiénes somos?</h2>
-      <p>
-        GGHardware es una empresa dedicada a la venta de componentes y accesorios de hardware para computadoras, fundada en el año 2025. Nacimos con el objetivo de ofrecer a nuestros clientes una experiencia completa en el mundo del hardware, combinando productos de calidad, precios competitivos y un servicio personalizado.
-      </p>
-      <p>
-        Nuestro equipo está conformado por profesionales apasionados por la tecnología, gamers, técnicos y entusiastas del rendimiento que entienden exactamente lo que nuestros clientes buscan. En GGHardware no solo vendemos productos, sino que también brindamos asesoramiento experto para que cada compra sea una inversión inteligente.
-      </p>
-      <p>
-        Trabajamos con las marcas más reconocidas del mercado, como AMD, Intel, NVIDIA, ASUS, MSI, Corsair, entre muchas otras. Ofrecemos una amplia variedad de productos, desde placas madre, procesadores, memorias RAM y tarjetas gráficas, hasta gabinetes, sistemas de refrigeración, fuentes de poder, monitores y periféricos.
-      </p>
-      <p>
-        Nos esforzamos constantemente por mantenernos actualizados con las últimas tendencias tecnológicas, para poder brindarte siempre lo mejor. Ya sea que estés armando tu primera PC gamer, actualizando tu estación de trabajo o buscando optimizar tu setup, en GGHardware vas a encontrar las herramientas que necesitás.
-      </p>
-      <p>
-        Además de nuestra tienda online, ofrecemos atención al cliente personalizada, soporte técnico y contenido educativo para ayudarte a tomar decisiones informadas. Creemos que la transparencia, la confianza y la atención al detalle son fundamentales para construir relaciones duraderas con nuestra comunidad.
-      </p>
-      <p>
-        GGHardware es más que una tienda: es un espacio donde la tecnología y la pasión se encuentran. Te invitamos a ser parte de nuestra comunidad y a vivir la experiencia GGHardware.
-      </p>
+<body class="quienesSomos bg-dark text-light">
 
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="display-4 fw-bold text-info">¿Quiénes somos?</h2>
+    </div>
 
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p>
+          <strong>GGHardware</strong> es una empresa dedicada a la venta de componentes y accesorios de hardware para computadoras, fundada en el año 2025...
+        </p>
+        <p>
+          Nuestro equipo está conformado por profesionales apasionados por la tecnología...
+        </p>
+        <p>
+          Trabajamos con las marcas más reconocidas del mercado, como AMD, Intel, NVIDIA, ASUS, MSI...
+        </p>
+        <p>
+          Nos esforzamos constantemente por mantenernos actualizados con las últimas tendencias tecnológicas...
+        </p>
+        <p>
+          Además de nuestra tienda online, ofrecemos atención al cliente personalizada, soporte técnico...
+        </p>
+        <p>
+          <strong>GGHardware</strong> es más que una tienda: es un espacio donde la tecnología y la pasión se encuentran...
+        </p>
+      </div>
+    </div>
   </div>
-</body>
-</html>

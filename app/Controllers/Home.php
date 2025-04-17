@@ -20,4 +20,10 @@ class Home extends BaseController
         $data['Titulo'] = 'Quienes Somos?';
         return view('front/head_view') . view('front/Quienes_Somos', $data) . view('front/footer_view');
     }
+
+    public function ayuda(): string
+    {
+        $data['Titulo'] = 'Ayuda';
+        return view('front/head_view') . view('front/Ayuda', $data);
+    }
 }

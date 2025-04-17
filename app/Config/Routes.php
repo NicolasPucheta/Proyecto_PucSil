@@ -11,6 +11,7 @@ $routes->get('legal', 'Home::legal');
 
 $routes->get('quienesSomos', 'Home::quienesSomos');
 
+$routes->get('ayuda', 'Home::ayuda');
 
 
 

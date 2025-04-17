@@ -20,10 +20,12 @@
             </form>                                                 
         </h2>  
         <ul> 
+           
+            <li><a href="<?= base_url(); ?>">Inicio</a></li>  <!--  enlace a la página principal -->
             <li><a href="#">Productos</a></li>
-            <li><a href="#">Más vendidos</a></li> 
+            <li><a href="#">Comercializacion</a></li> 
             <li><a href="<?= base_url('quienesSomos'); ?>">Quiénes Somos</a></li>
-            <li><a href="#">Ayuda</a></li>
+            <li><a href="<?= base_url('ayuda'); ?>">Ayuda</a></li>
             <li><a href="<?= base_url('legal'); ?>">Legal</a></li>
         </ul>
     </nav>
