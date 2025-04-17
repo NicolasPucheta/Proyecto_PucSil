@@ -3,16 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiénes Somos | GGHardware</title>
+  <link href="assets/css/quienesSomos.css?v=1.0" rel="stylesheet">
+
 </head>
-<body>
-
-  <header>
-    <h1>GGHardware</h1>
-    <p>Pasión por el rendimiento</p>
-  </header>
-
-  <main>
-    <section>
+<body class="quienesSomos">
+  <div class="conteiner-quienesSomos">
       <h2>¿Quiénes somos?</h2>
       <p>
         GGHardware es una empresa dedicada a la venta de componentes y accesorios de hardware para computadoras, fundada en el año 2025. Nacimos con el objetivo de ofrecer a nuestros clientes una experiencia completa en el mundo del hardware, combinando productos de calidad, precios competitivos y un servicio personalizado.
@@ -32,12 +27,8 @@
       <p>
         GGHardware es más que una tienda: es un espacio donde la tecnología y la pasión se encuentran. Te invitamos a ser parte de nuestra comunidad y a vivir la experiencia GGHardware.
       </p>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 GGHardware. Todos los derechos reservados.</p>
-  </footer>
 
+  </div>
 </body>
 </html>

@@ -1,0 +1,47 @@
+body.quienesSomos {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #111;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 180px; /* Ajusta si tienes un navbar fijo */
+}
+
+.container-quienesSomos {
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #0c2d48;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #0c2d48;
+    padding-left: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    .container-quienesSomos {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}

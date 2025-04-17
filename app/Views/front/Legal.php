@@ -7,6 +7,7 @@
     <link href="assets/css/legal.css?v=1.0" rel="stylesheet">
 </head>
 <body class="legal">
+    <div class="container">
         <h1>Términos y Condiciones</h1>
         <p>Bienvenido/a a GGHardware. Al realizar una compra en nuestro sitio web, aceptas los siguientes 
             términos y condiciones que regulan el uso de nuestros servicios, la compra de productos, el proceso de envío,
@@ -60,7 +61,7 @@
         <p>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento sin previo aviso. 
             Las actualizaciones entrarán en vigor una vez publicadas en este sitio web. Se recomienda revisar esta sección 
             periódicamente para estar al tanto de cualquier cambio.</p>
-
+    </div>
 </body>
 </html>
 
