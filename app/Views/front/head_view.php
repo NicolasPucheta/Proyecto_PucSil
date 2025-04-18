@@ -12,10 +12,9 @@
 </head>
 <body>
     <nav class="menu">
-        <h1 class="titulo"></h1>
         <h2 class="Busqueda"> 
-            <form action="/search" method="get">
-                <input type="text" placeholder="¿Qué estás buscando?" name="query" class="search-input">
+            <form action="/search" method="get" class="d-flex justify-content-center">
+                <input type="text" placeholder="¿Qué estás buscando?" name="query form-control m-2" class="search-input">
                 <button type="submit" class="search-button">🔍</button>
             </form>                                                 
         </h2>  
@@ -23,7 +22,7 @@
            
             <li><a href="<?= base_url(); ?>">Inicio</a></li>  <!--  enlace a la página principal -->
             <li><a href="#">Productos</a></li>
-            <li><a href="#">Comercializacion</a></li> 
+            <li><a href="<?= base_url('comercializacion'); ?>">Comercializacion</a></li> 
             <li><a href="<?= base_url('quienesSomos'); ?>">Quiénes Somos</a></li>
             <li><a href="<?= base_url('ayuda'); ?>">Ayuda</a></li>
             <li><a href="<?= base_url('legal'); ?>">Legal</a></li>

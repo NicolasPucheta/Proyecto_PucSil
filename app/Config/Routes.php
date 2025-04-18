@@ -13,6 +13,7 @@ $routes->get('quienesSomos', 'Home::quienesSomos');
 
 $routes->get('ayuda', 'Home::ayuda');
 
+$routes->get('comercializacion', 'Home::comercializacion');
 
 
 

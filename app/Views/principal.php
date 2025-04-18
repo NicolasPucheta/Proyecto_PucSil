@@ -120,26 +120,25 @@
             </div>
 </section>
     
-        <!-- Info Envios -->
+       <!-- Info Envios -->
+    <a href="<?= base_url('comercializacion'); ?>">    
     <section class="info-section">
       <div class="info-container">
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\camion.png" alt="camion">
-          <h2>Beneficio del envío gratis</h2>
-          <p>Aplica en compras a partir de $500,000.</p>
+          <h2>Envios a todo el Pais</h2>
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\pagos.png" alt="pagos">
-          <h2>Numerosos métodos de pago</h2>
-          <p>Elegí el que más te convenga.</p>
+          <h2>Aceptamos Tarjetas debito/credito</h2>
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\paquete2.png" alt="camion">
-          <h2>Recibí tus productos por OCA</h2>
-          <p>Tus paquetes estarán seguros por su garantía.</p>
+          <h2>%100 Confiables</h2>
         </div>
       </div>
     </section>
+  </a>
 
 
     <?= view('front/footer_view'); ?>
