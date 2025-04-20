@@ -1,0 +1,240 @@
+/* Estilo principal del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el contenedor */
+.container {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título principal */
+h3 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para los inputs */
+.form-control {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+/* Estilo para el botón */
+.btn-primary {
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0097a7;
+    border-color: #0097a7;
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    h3 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 992px) {
+    .container {
+        padding: 40px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+}
+/* Estilo principal del body para carrito */
+body.carrito {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  /* Estilo del contenedor principal */
+  .cart-container {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    margin: 80px auto;
+    max-width: 900px;
+  }
+  
+  /* Título principal */
+  .cart-container h2 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Lista de productos */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .cart-item .item-info {
+    flex: 1;
+    margin-left: 15px;
+  }
+  
+  .cart-item .item-info h5 {
+    font-size: 1.1rem;
+    color: #00bcd4;
+    margin: 0;
+  }
+  
+  .cart-item .item-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+  }
+  
+  .cart-item .item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00e5ff;
+    margin-left: 15px;
+  }
+  
+  /* Botón para eliminar */
+  .remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Total */
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00bcd4;
+    border-top: 2px solid #2c2c2c;
+    padding-top: 20px;
+  }
+  
+  /* Botón de finalizar compra */
+  .checkout-btn {
+    width: 100%;
+    background-color: #00bcd4;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Responsivo - Móviles */
+  @media (max-width: 576px) {
+    .cart-container {
+      padding: 20px;
+      margin-top: 50px;
+    }
+  
+    .cart-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item img {
+      margin-bottom: 10px;
+    }
+  
+    .cart-item .item-price,
+    .remove-btn {
+      align-self: flex-end;
+    }
+  
+    .cart-total {
+      font-size: 1.2rem;
+    }
+  
+    .checkout-btn {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsivo - Tablets */
+  @media (max-width: 768px) {
+    .cart-container {
+      padding: 30px;
+      margin-top: 60px;
+    }
+  
+    .cart-container h2 {
+      font-size: 2.2rem;
+    }
+  }
+  

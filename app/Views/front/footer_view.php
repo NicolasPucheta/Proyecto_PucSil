@@ -4,11 +4,8 @@
             <!-- Parte Superior -->
             <div class="col-md-4 ps-4">
                 <div class="footer-contacto">
-                    <p><em>Consultas</em></p>
-                    <p>Email: <a href="mailto:axelsilviq95gmail.com">axelsilriq95gmail.com</a></p>
-                    <p>Email: <a href="mailto:nicopuche112005@gmail.com">nicopuche112005@gmail.com</a></p>
-                    <p>Teléfono: <a href="https://wa.me/3782475051" target="_blank">+543782475071 (WhatsApp)</a></p>
-                    <p>Dirección: 9 de Julio</p>
+                    <p><em>Consultas:</em></p>
+                  
 
                     <!-- Botones Email y WhatsApp -->
                     <div class="mt-3">
@@ -18,7 +15,7 @@
                         <a href="mailto:nicopuche112005@gmail.com" class="btn btn-primary me-2">
                             📧 Nico
                         </a>
-                        <a href="https://wa.me/543782475051" target="_blank" class="btn btn-success">
+                        <a href="https://wa.me/5437820800" target="_blank" class="btn btn-success">
                             💬 WhatsApp
                         </a>
                     </div>

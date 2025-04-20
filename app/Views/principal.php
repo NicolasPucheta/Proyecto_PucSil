@@ -140,5 +140,5 @@
     </section>
   </a>
 
-
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
     <?= view('front/footer_view'); ?>

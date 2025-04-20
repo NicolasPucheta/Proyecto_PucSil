@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos | GGHardware</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
   <link href="<?= base_url('assets/css/productos.css') ?>" rel="stylesheet">
 </head><body class="productos">
   <div class="contenedor-principal d-flex">
@@ -32,7 +32,7 @@
 
     </div>
 
-    <!-- LISTA DE PRODUCTOS -->
+    <!-- LISTA DE PRODUCTOS (PROCESADORES) -->
     <div class="productos-lista d-flex flex-wrap gap-4 p-3">
       <div class="producto">
         <img src="<?= base_url('assets/img/Procesadores/i5.jpg') ?>" alt="Intel core i5">
@@ -76,7 +76,8 @@
         <button class="boton-comprar">Comprar</button>
       </div>
     </div>
-    
   </div>
+
+   
 </body>
 </html>
