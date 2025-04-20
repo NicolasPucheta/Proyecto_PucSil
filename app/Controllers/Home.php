@@ -24,11 +24,16 @@ class Home extends BaseController
     public function ayuda(): string
     {
         $data['Titulo'] = 'Ayuda';
-        return view('front/head_view') . view('front/Ayuda', $data);
+        return view('front/head_view') . view('front/Ayuda', $data) . view('front/footer_view');
     }
     public function comercializacion(): string
     {
-    $data['Titulo'] = 'Comercializacion';
-    return view('front/head_view') . view('front/Comercializacion', $data);
+        $data['Titulo'] = 'Comercializacion';
+        return view('front/head_view') . view('front/Comercializacion', $data). view('front/footer_view');
+    }
+    public function productos(): string
+    {
+        $data['Titulo'] = 'Productos';
+        return view('front/head_view') . view('front/Productos', $data). view('front/footer_view');
     }
 }

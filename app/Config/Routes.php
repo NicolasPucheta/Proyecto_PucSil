@@ -15,5 +15,6 @@ $routes->get('ayuda', 'Home::ayuda');
 
 $routes->get('comercializacion', 'Home::comercializacion');
 
+$routes->get('productos', 'Home::productos');
 
 

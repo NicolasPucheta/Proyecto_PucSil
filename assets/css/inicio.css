@@ -247,6 +247,7 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Parte superior del footer */
 .footer-superior {
   max-width: 1200px;
   margin-top: 0px;
@@ -266,6 +267,7 @@ h2 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
 }
+
 .footer-redes {
   flex: 1;
   min-width: 250px;
@@ -277,6 +279,7 @@ h2 {
   gap: 5px;
 }
 
+/* Parte inferior del footer */
 .footer-inferior {
   max-width: 1200px;
   margin: auto;
@@ -302,6 +305,11 @@ h2 {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.footer-mediosPagos p {
+  font-size: 12px;
+  color: #E2E8C0;
 }
 
 /* Estilo para la barra de búsqueda */
@@ -356,7 +364,7 @@ h2 {
   outline: none;
 }
 
-/* Estilo para los iconos de redes sociales */
+/* Estilo para la parte superior de las redes sociales */
 .Iconos-redes img {
   width: 100px;
   height: 80px;
@@ -376,18 +384,79 @@ h2 {
   padding-left: 30px;
 }
 
-
-
 /* Responsivo */
 @media (max-width: 768px) {
+  /* Ajustamos el diseño de la parte superior e inferior del footer */
   .footer-superior, .footer-inferior {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
+  .footer-contacto {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Hacemos que los iconos de redes sociales se alineen al centro */
   .footer-redes {
     align-items: center;
     text-align: center;
+  }
+
+  /* Redefinimos la sección de enlaces y la parte inferior */
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-mediosPagos {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  /* Ajustamos el tamaño de los iconos de redes sociales */
+  .Iconos-redes img {
+    width: 80px;
+    height: 60px;
+  }
+
+  /* Ajuste de márgenes y tamaño de los textos en pantallas pequeñas */
+  .footer a, .footer p {
+    font-size: 14px;
+  }
+
+  .footer-superior {
+    padding-top: 10px;
+  }
+
+  .footer-contacto a, .footer-redes a {
+    font-size: 14px;
+  }
+}
+
+/* Pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Ajuste de tamaño y márgenes en pantallas muy pequeñas */
+  .footer {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+
+  .footer-contacto p, .footer-redes p {
+    font-size: 12px;
+  }
+
+  .footer a {
+    font-size: 12px;
+  }
+
+  .footer .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .footer-inferior {
+    font-size: 12px;
   }
 }

@@ -1,0 +1,131 @@
+/* Fondo general */
+body.productos {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    margin-top: 180px; 
+  }
+  
+  /* Título principal */
+  h1.text-center {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+ 
+  /* Contenedor de productos en grilla */
+  .productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  /* Cada producto como una tarjeta blanca */
+  .producto {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    width: 240px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255,255,255,0.1);
+  }
+  
+  /* Imagen del producto */
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .productos-contenedor {
+    background-color: transparent;
+    padding-bottom: 3rem;
+  }
+    
+  
+  /* Nombre del producto */
+  .producto .titulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    background-color: transparent !important;
+  }
+  
+  /* Precio */
+  .producto .precio {
+    font-size: 1.3rem;
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Botón */
+  .boton-comprar {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .boton-comprar:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Contenedor principal con barra lateral a la izquierda */
+.contenedor-principal {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* Estilo de la barra lateral */
+  .nav-vertical {
+    width: 200px;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+  }
+  
+  .nav-vertical .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-vertical .nav-link:hover {
+    color: #dc3545;
+    text-decoration: underline;
+  }
+  
+  .nav-vertical .nav-link.disabled {
+    color: #666;
+  }
+  
+  /* Lista de productos junto a la nav */
+  .productos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  

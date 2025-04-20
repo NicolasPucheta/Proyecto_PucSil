@@ -19,9 +19,8 @@
             </form>                                                 
         </h2>  
         <ul> 
-           
             <li><a href="<?= base_url(); ?>">Inicio</a></li>  <!--  enlace a la página principal -->
-            <li><a href="#">Productos</a></li>
+            <li><a href="<?= base_url('productos'); ?>">Productos</a></li>
             <li><a href="<?= base_url('comercializacion'); ?>">Comercializacion</a></li> 
             <li><a href="<?= base_url('quienesSomos'); ?>">Quiénes Somos</a></li>
             <li><a href="<?= base_url('ayuda'); ?>">Ayuda</a></li>
