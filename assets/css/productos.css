@@ -7,9 +7,6 @@ body.productos {
   margin-top: 180px; 
   overflow-x: hidden;
 }
-body.productos {
-  overflow-x: hidden;
-}
 
 /* Título principal */
 h1.text-center {

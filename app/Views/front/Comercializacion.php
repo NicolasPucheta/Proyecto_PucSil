@@ -1,7 +1,7 @@
 
 <link href="<?= base_url('assets/css/Comercializacion.css') ?>" rel="stylesheet">
 
-<section id="comercializacion style= background-color: #808080;">
+<section id="comercializacion">
   <div class="container py-5">
     <div class="text-center mb-4">
       <h2 class="display-4 fw-bold text-info">Comercialización</h2>
