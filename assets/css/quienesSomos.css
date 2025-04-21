@@ -5,6 +5,7 @@ body.quienesSomos {
   line-height: 1.7;
   background-color: #121212;
   color: #e0e0e0;
+  padding-top: 140px;
 }
 
 /* Estilo para el contenedor */
@@ -13,7 +14,7 @@ body.quienesSomos {
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 80px; /* Ajustable dependiendo del tamaño de pantalla */
+  margin-top: 300px; /* Ajustable dependiendo del tamaño de pantalla */
 }
 
 /* Título principal */

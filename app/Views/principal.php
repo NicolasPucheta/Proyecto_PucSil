@@ -27,38 +27,79 @@
       </div>
 
     <!-- Carrusel de productos infinito en caja -->
- 
     <section class="caja-carrusel">
       <h2 class="titulo-caja">¡Lo más vendido!</h2>
     <div class="carrusel-infinito">
        <div class="carousel-track">
 
         <div class="item-producto">
-          <img src="assets\img\Procesadores\i5.jpg" alt="1">
+          <img src="assets\img\Procesadores\i5.jpg" alt="i5">
           <p class="precio">Precio Lista: $125.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
         </div>
 
         <div class="item-producto">
-          <img src="assets\img\Procesadores\i7.jpg" alt="1">
+          <img src="assets\img\Procesadores\i7.jpg" alt="i7">
           <p class="precio">Precio Lista: $90.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
         </div>
 
         <div class="item-producto">
-          <img src="assets\img\Procesadores\rtx4060.jpg" alt="1">
+          <img src="assets\img\placasDeVideo\rtx4090.jpg" alt="4090">
           <p class="precio">Precio Lista: $90.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
         </div>
 
         <div class="item-producto">
-          <img src="assets\img\placas de video\placa2.png" alt="1">
+          <img src="assets\img\placasDeVideo\rtx4060.jpg" alt="4060">
           <p class="precio">Precio Lista: $90.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
         </div>
 
         <div class="item-producto">
-          <img src="assets\img\Procesadores\rx7600.jpg" alt="1">
+          <img src="assets\img\placasDeVideo\rx7600.jpg" alt="rx760'">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\Procesadores\ryzen7_7700x.jpeg" alt="Ryzen 7">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\rams\ram1.png" alt="Ram">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+            <!-- Duplicados para loop -->
+            <div class="item-producto">
+          <img src="assets\img\Procesadores\i5.jpg" alt="i5">
+          <p class="precio">Precio Lista: $125.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\Procesadores\i7.jpg" alt="i7">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\placasDeVideo\rtx4090.jpg" alt="1">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\placasDeVideo\rtx4060.jpg" alt="1">
+          <p class="precio">Precio Lista: $90.000</p>
+          <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+        </div>
+
+        <div class="item-producto">
+          <img src="assets\img\placasDeVideo\rx7600.jpg" alt="1">
           <p class="precio">Precio Lista: $90.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
         </div>
@@ -70,54 +111,10 @@
         </div>
 
         <div class="item-producto">
-          <img src="assets\img\Procesadores\rtx4090.jpg" alt="1">
+          <img src="assets\img\rams\ram1.png" alt="1">
           <p class="precio">Precio Lista: $90.000</p>
           <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-
         </div>
-            <!-- Duplicados para loop -->
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\i5.jpg" alt="1">
-              <p class="precio">Precio Lista: $125.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\i7.jpg" alt="1">
-              <p class="precio">Precio Lista $90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\rtx4060.jpg" alt="1">
-              <p class="precio">Precio Lista: $90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\placas de video\placa2.png" alt="1">
-              <p class="precio">Precio Lista$90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\rx7600.jpg" alt="1">
-              <p class="precio">Precio Lista: $90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\ryzen7_7700x.jpeg" alt="1">
-              <p class="precio">Precio Lista: $90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-            </div>
-    
-            <div class="item-producto">
-              <img src="assets\img\Procesadores\rtx4090.jpg" alt="1">
-              <p class="precio">Precio Lista: $90.000</p>
-              <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
-    
-            </div>
 </section>
     
        <!-- Info Envios -->

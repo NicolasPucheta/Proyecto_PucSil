@@ -39,9 +39,6 @@ p {
   cursor: pointer;
 }
 
-
-
-
 /*Estilo para la barra de navegacion*/
 .menu {
   background-color: #443742;
@@ -50,7 +47,7 @@ p {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 5px 10px;
+  padding: 30px 0;
   background-image: url('../img/Logo3.jpeg');
   background-size: cover;
   background-position:  center;
@@ -126,9 +123,9 @@ h2 {
 }
 
 .item-producto img {
-  width: 500px;
-  height: 500px;
-  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .precio {
@@ -138,6 +135,7 @@ h2 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
+
 
 /*Estilo para el Carrusel infinito*/
 .caja-carrusel {
@@ -207,6 +205,7 @@ h2 {
   gap: 40px;
   max-width: 1200px;
   margin: auto;
+  padding: 0 1rem;
   flex-wrap: wrap;
 }
 
@@ -455,3 +454,8 @@ h2 {
     font-size: 12px;
   }
 }
+
+.botones-nav {
+  margin-top: -70px; /* ajustá este valor a gusto */
+}
+

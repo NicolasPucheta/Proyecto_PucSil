@@ -27,9 +27,11 @@
             <li><a href="<?= base_url('ayuda'); ?>">Ayuda</a></li>
             <li><a href="<?= base_url('legal'); ?>">Legal</a></li>
         </ul>
+        
+        <div class="d-flex justify-content-end align-items-center botones-nav">
 
         <!-- Contenedor para los botones de inicio de sesión y carrito (alineados a la derecha) -->
-        <div class="d-flex justify-content-end align-items-center p-3">
+        <div class="d-flex justify-content-end align-items-start pt-2 pb-0">
             <!-- Botón de Carrito -->
             <a href="<?= base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
                 <i class="bi bi-cart-fill"></i> Carrito
@@ -39,7 +41,8 @@
                 <i class="bi bi-person-fill"></i> Iniciar Sesión
             </button>
         </div>
-    </nav>
+        </div>
+      </nav>
 
     <!-- Panel de inicio de sesión (Offcanvas) -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">

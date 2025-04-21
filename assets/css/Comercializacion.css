@@ -2,6 +2,7 @@
 body.comercializacion {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
+  padding-top: 140px;
 }
 
 /* Estilo para el contenedor */
@@ -10,7 +11,7 @@ body.comercializacion {
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 80px;
+  margin-top: 300px;
 }
 
 /* Título principal */
