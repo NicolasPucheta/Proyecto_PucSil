@@ -36,4 +36,9 @@ class Home extends BaseController
         $data['Titulo'] = 'Productos';
         return view('front/head_view') . view('front/Productos', $data). view('front/footer_view');
     }
+    public function carrito(): string
+    {
+        $data['Titulo'] = 'Carrito';
+        return view('front/head_view') . view('front/Carrito', $data). view('front/Carrito');
+    }
 }

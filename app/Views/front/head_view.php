@@ -12,15 +12,23 @@
 </head>
 
 <body>
+
     <nav class="menu">
-        <h2 class="Busqueda"> 
-            <form action="/search" method="get" class="d-flex justify-content-center">
-                <input type="text" placeholder="¿Qué estás buscando?" name="query form-control m-2" class="search-input">
-                <button type="submit" class="search-button">🔍</button>
-            </form>                                                 
-        </h2>  
+    <h2 class="Busqueda">
+  <!-- Botón de la casita -->
+  <button type="button" class="search-home-button" onclick="location.href='<?= base_url() ?>'">
+    <i class="bi bi-house-door"></i> 
+  </button>
+
+  <!-- Barra de búsqueda -->
+  <form action="/search" method="get" class="d-flex justify-content-center">
+    <input type="text" placeholder="¿Qué estás buscando?" name="query form-control m-2" class="search-input">
+    <button type="submit" class="search-button">🔍</button>
+  </form>                                                 
+</h2>
+
+  
         <ul> 
-            <li><a href="<?= base_url(); ?>">Inicio</a></li>  <!--  enlace a la página principal -->
             <li><a href="<?= base_url('productos'); ?>">Productos</a></li>
             <li><a href="<?= base_url('comercializacion'); ?>">Comercialización</a></li> 
             <li><a href="<?= base_url('quienesSomos'); ?>">Quiénes Somos</a></li>

@@ -28,7 +28,7 @@
 
     <!-- Carrusel de productos infinito en caja -->
     <section class="caja-carrusel">
-      <h2 class="titulo-caja">¡Lo más vendido!</h2>
+      <h2 style= color:#000 class="titulo-caja">¡Lo más vendido!</h2>
     <div class="carrusel-infinito">
        <div class="carousel-track">
 
