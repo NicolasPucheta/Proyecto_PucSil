@@ -2,21 +2,24 @@
 body.comercializacion {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  padding-top: 140px;
+  padding-top: 0px;
   margin-top: 30px;
 }
 
 #comercializacion {
-  background-color: #000; 
+  background-color: #1e1e1e;
+  flex: 1;
+  padding-top: 180px; 
 }
 /* Estilo para el contenedor */
 .container {
-  background-color: rgb(37, 37, 37) ;
+  background-color: rgb(27, 27, 27) ;
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 300px;
+  margin-top: 0px;
   min-height: 100%;
+  padding-top: 0px;
 }
 
 /* Título principal */
@@ -35,7 +38,7 @@ p {
 
 /* Estilo de las cajas (Envíos, Medios de pago, Confiabilidad) */
 .box {
-  background-color: #000;
+  background-color: #0c0c0c;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;

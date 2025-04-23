@@ -25,11 +25,12 @@
           <button type="submit" class="search-button">🔍</button>
         </form>
       </div>
+        
     </div>
 
     <!-- Botones login y carrito alineados a la derecha -->
-    <div class="login-cart d-flex justify-content-end align-items-center mt-3">
-      <a href="<?= base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+    <div class="w-100 d-flex justify-content-end align-items-center mt-3">
+        <a href="<?= base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
         <i class="bi bi-cart-fill"></i> Carrito
       </a>
       <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin">

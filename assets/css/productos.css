@@ -110,7 +110,7 @@ h1.text-center {
   padding: 1rem;
   border-radius: 10px;
   height: fit-content;
-  transform: translateX(100px); /* solo mueve visualmente */
+  transform: translateX(20px); /* solo mueve visualmente */
 }
 
 

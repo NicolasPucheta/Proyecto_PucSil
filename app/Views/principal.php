@@ -28,7 +28,7 @@
 
     <!-- Carrusel de productos infinito en caja -->
     <section class="caja-carrusel">
-      <h2 style= color:#000 class="titulo-caja">¡Lo más vendido!</h2>
+      <h2 style= color:white class="titulo-caja">¡Lo más vendido!</h2>
     <div class="carrusel-infinito">
        <div class="carousel-track">
 
@@ -118,9 +118,10 @@
 </section>
     
        <!-- Info Envios -->
-    <a href="<?= base_url('comercializacion'); ?>">    
+    <a href="<?= base_url('comercializacion'); ?>" style = "text-decoration: none;" >    
     <section class="info-section">
       <div class="info-container">
+    
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\camion.png" alt="camion">
           <h2>Envios a todo el Pais</h2>
