@@ -4,41 +4,58 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('principal') ;
+        $data['Titulo'] = 'principal';
+        echo view('principal');
     }
 
-    public function legal(): string
+    public function legal()
     {
         $data['Titulo'] = 'Legal';
-        return view('front/head_view') . view('front/Legal', $data) . view('front/footer_view');
+        echo view('front/head_view');
+        echo view('front/Legal', $data);
+        echo view('front/footer_view');
     }
 
-    public function quienesSomos(): string
+    public function quienesSomos()
     {
         $data['Titulo'] = 'Quienes Somos?';
-        return view('front/head_view') . view('front/Quienes_Somos', $data) . view('front/footer_view');
+        echo view('front/head_view');
+        echo view('front/Quienes_Somos', $data);
+        echo view('front/footer_view');
     }
 
-    public function ayuda(): string
+    public function ayuda()
     {
         $data['Titulo'] = 'Ayuda';
-        return view('front/head_view') . view('front/Ayuda', $data) . view('front/footer_view');
+        echo view('front/head_view');
+        echo view('front/Ayuda', $data);
+        echo view('front/footer_view');
     }
-    public function comercializacion(): string
+
+    public function comercializacion()
     {
         $data['Titulo'] = 'Comercializacion';
-        return view('front/head_view') . view('front/Comercializacion', $data). view('front/footer_view');
+        echo view('front/head_view');
+        echo view('front/Comercializacion', $data);
+        echo view('front/footer_view');
     }
-    public function productos(): string
+
+    public function productos()
     {
         $data['Titulo'] = 'Productos';
-        return view('front/head_view') . view('front/Productos', $data). view('front/footer_view');
+        echo view('front/head_view');
+        echo view('front/Productos', $data);
+        echo view('front/footer_view');
     }
-    public function carrito(): string
+
+    public function carrito()
     {
         $data['Titulo'] = 'Carrito';
-        return view('front/head_view') . view('front/Carrito', $data). view('front/Carrito');
+        echo view('front/head_view');
+        echo view('front/Carrito', $data);
+        echo view('front/footer_view');
     }
 }
+

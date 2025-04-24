@@ -1,3 +1,5 @@
+
+
 <footer class="footer">
     <div class="container2">
         <div class="row">
@@ -41,8 +43,8 @@
     <!-- Parte Inferior -->
     <div class="footer-inferior">
         <div class="footer-links">
-            <a href="<?= base_url('quienesSomos'); ?>">Sobre nosotros</a>
-            <a href="<?= base_url('legal'); ?>"><em>Términos y condiciones</em></a>
+            <a href="<?php echo base_url('quienesSomos'); ?>">Sobre nosotros</a>
+            <a href="<?php echo base_url('legal'); ?>"><em>Términos y condiciones</em></a>
         </div>
         <div class="footer-mediosPagos">
             <p>© 2025 GGHardware. Todos los derechos reservados.</p>

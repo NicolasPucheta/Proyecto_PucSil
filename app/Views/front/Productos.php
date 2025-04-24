@@ -16,11 +16,11 @@
     <div class="nav-vertical p-3" style="width: 250px;">
     <h5 class="text-white text-center mb-3">Categorías</h5>
       <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="<?= base_url('procesadores'); ?>">Procesadores</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?= base_url('motherboard'); ?>">Motherboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?= base_url('placas_video'); ?>">Placas de video</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?= base_url('ram'); ?>">Memorias Ram</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?= base_url('almacenamiento'); ?>">Almacenamiento</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('procesadores'); ?>">Procesadores</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('motherboard'); ?>">Motherboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('placas_video'); ?>">Placas de video</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('ram'); ?>">Memorias Ram</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('almacenamiento'); ?>">Almacenamiento</a></li>
       </ul>
     </div>
 
