@@ -1,7 +1,4 @@
-
 <main class="legal bg-dark text-light">
->>>>>>> dc8c870 (actualizacion de  organizacion)
-
   <div class="container py-5 px-4">
     <div class="text-center mb-5">
     <h1 class="display-5 fw-bold text-warning mt-5" style="color:  #17c6e4 !important;">Términos y Condiciones</h1>

@@ -1,7 +1,5 @@
 
 <main class="productos">
->>>>>>> dc8c870 (actualizacion de  organizacion)
-
   <div class="contenedor-principal d-flex" style="height: 100vh;">
 
     <!-- NAV VERTICAL -->

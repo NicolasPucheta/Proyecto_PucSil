@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data['Titulo'] = 'principal';
+        $data['Titulo'] = 'GGHardware';
         echo view('front/head_view',$data);
         echo view('front/navbar',$data);
         echo view('principal');
