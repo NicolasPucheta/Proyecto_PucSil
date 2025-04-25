@@ -1,53 +1,56 @@
 
+        <footer class="footer">
+            <div class="container2">
+                <div class="row">
+                    <!-- Parte Superior -->
+                    <div class="col-md-4 ps-4">
+                        <div class="footer-contacto">
+                            <p><em>Consultas:</em></p>
+                        
 
-<footer class="footer">
-    <div class="container2">
-        <div class="row">
-            <!-- Parte Superior -->
-            <div class="col-md-4 ps-4">
-                <div class="footer-contacto">
-                    <p><em>Consultas:</em></p>
-                  
+                            <!-- Botones Email y WhatsApp -->
+                            <div class="mt-3">
+                                <a href="mailto:axelsilva281@gmail.com" class="btn btn-primary me-2">
+                                    📧 Axel 
+                                </a>
+                                <a href="mailto:nicopuche112005@gmail.com" class="btn btn-primary me-2">
+                                    📧 Nico
+                                </a>
+                                <a href="https://wa.me/5437820800" target="_blank" class="btn btn-success">
+                                    💬 WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Botones Email y WhatsApp -->
-                    <div class="mt-3">
-                        <a href="mailto:axelsilva281@gmail.com" class="btn btn-primary me-2">
-                            📧 Axel 
-                        </a>
-                        <a href="mailto:nicopuche112005@gmail.com" class="btn btn-primary me-2">
-                            📧 Nico
-                        </a>
-                        <a href="https://wa.me/5437820800" target="_blank" class="btn btn-success">
-                            💬 WhatsApp
-                        </a>
+                    <div class="col-md-8 d-flex justify-content-end align-items-center">
+                        <div class="text-end me-3">
+                            <p class="mb-0">¡Seguinos!</p>
+                        </div>
+                        <div class="Iconos-redes">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="assets\img\facebook-logo_2504792.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img src="assets\img\instagram_4494488.png" alt="Instagram">
+                            </a>
+                        </div>
+>>>>>>> dc8c870 (actualizacion de  organizacion)
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8 d-flex justify-content-end align-items-center">
-                <div class="text-end me-3">
-                    <p class="mb-0">¡Seguinos!</p>
+            <!-- Parte Inferior -->
+            <div class="footer-inferior">
+                <div class="footer-links">
+                    <a href="<?php echo base_url('quienesSomos'); ?>">Sobre nosotros</a>
+                    <a href="<?php echo base_url('legal'); ?>"><em>Términos y condiciones</em></a>
                 </div>
-                <div class="Iconos-redes">
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="assets\img\facebook-logo_2504792.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets\img\instagram_4494488.png" alt="Instagram">
-                    </a>
+                <div class="footer-mediosPagos">
+                    <p>© 2025 GGHardware. Todos los derechos reservados.</p>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Parte Inferior -->
-    <div class="footer-inferior">
-        <div class="footer-links">
-            <a href="<?php echo base_url('quienesSomos'); ?>">Sobre nosotros</a>
-            <a href="<?php echo base_url('legal'); ?>"><em>Términos y condiciones</em></a>
-        </div>
-        <div class="footer-mediosPagos">
-            <p>© 2025 GGHardware. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
+        </footer>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

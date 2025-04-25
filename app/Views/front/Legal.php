@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal | GGHardware</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Tu CSS personalizado -->
-  <link href="assets/css/legal.css?v=1.0" rel="stylesheet">
-</head>
-<body class="legal bg-dark text-light">
+<main class="legal bg-dark text-light">
+>>>>>>> dc8c870 (actualizacion de  organizacion)
 
   <div class="container py-5 px-4">
     <div class="text-center mb-5">
@@ -45,7 +35,5 @@
       </p>
     </div>
   </div>
+</main>
 
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

@@ -1,5 +1,6 @@
 
-<link href="<?= base_url('assets/css/Comercializacion.css') ?>" rel="stylesheet">
+
+<main style="background-color:rgb(34, 33, 33);">
 
 <section id="comercializacion">
   <div class="container py-5">
@@ -54,8 +55,9 @@
             <li><strong>Envios Responsables:</strong> Nuestros productos siempre llegan en perfecto estado, asegurando que no haya daños durante el transporte, con un embalaje de calidad.</li>
             <li><strong>Compromiso Ambiental:</strong> Estamos comprometidos con la sostenibilidad, por lo que ofrecemos opciones de reciclaje y empaques amigables con el medio ambiente.</li>
           </ul>
-          <p>Si tienes alguna duda o necesitas ayuda, nuestro equipo está disponible para ayudarte a lo largo del proceso de compra. Nos esforzamos por brindarte la mejor experiencia de compra en todo momento.</p>
-        </div>
+
+         </div>
+
       </div>
     </div>
 
@@ -65,3 +67,5 @@
     </div>
   </div>
 </section>
+</main>
+

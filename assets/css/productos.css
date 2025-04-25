@@ -1,5 +1,7 @@
 /* Fondo general */
-body.productos {
+
+main.productos {
+>>>>>>> dc8c870 (actualizacion de  organizacion)
   background-color: #000;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;

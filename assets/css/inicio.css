@@ -21,6 +21,12 @@ body {
   background-color: #000;
 }
 
+main{
+  flex: 1;
+  padding-top: 150px;
+}
+
+>>>>>>> dc8c870 (actualizacion de  organizacion)
 /* Ajustar el tamaño del carrusel */
 #carouselExampleIndicators {
   max-width: 100%;  /* Ajusta al porcentaje deseado */

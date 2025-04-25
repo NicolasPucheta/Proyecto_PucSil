@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?= view('front/head_view'); ?>
+=======
+
+>>>>>>> dc8c870 (actualizacion de  organizacion)
     <!-- Carousel de imagenes -->
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
@@ -128,15 +132,15 @@
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\pagos.png" alt="pagos">
-          <h2>Aceptamos Tarjetas debito/credito</h2>
+
+          <h2>Todos los medios de pago</h2>
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\paquete2.png" alt="camion">
-          <h2>%100 Confiables</h2>
+          <h2>%100 Confiablesss</h2>
+
         </div>
       </div>
     </section>
   </a>
 
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <?= view('front/footer_view'); ?>

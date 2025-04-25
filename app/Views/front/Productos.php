@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos | GGHardware</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <link href="<?= base_url('assets/css/productos.css') ?>" rel="stylesheet">
-</head>
-<body class="productos">
+
+<main class="productos">
+>>>>>>> dc8c870 (actualizacion de  organizacion)
 
   <div class="contenedor-principal d-flex" style="height: 100vh;">
 
@@ -74,5 +66,5 @@
     </div>
   </div>
 
-</body>
-</html>
+</main>
+

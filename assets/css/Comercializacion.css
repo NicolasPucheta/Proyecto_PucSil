@@ -1,16 +1,11 @@
-/* Estilo principal del body */
-body.comercializacion {
+
+main.comercializacion {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  padding-top: 0px;
-  margin-top: 30px;
 }
 
-#comercializacion {
-  background-color: #1e1e1e;
-  flex: 1;
-  padding-top: 180px; 
-}
+
+>>>>>>> dc8c870 (actualizacion de  organizacion)
 /* Estilo para el contenedor */
 .container {
   background-color: rgb(27, 27, 27) ;
