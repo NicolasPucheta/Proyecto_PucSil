@@ -133,7 +133,7 @@
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\pagos.png" alt="pagos">
 
-          <h2>Todos los medios de pago</h2>
+          <h2>Todos los medios de pagos</h2>
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\paquete2.png" alt="camion">
