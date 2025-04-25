@@ -1,7 +1,4 @@
-
 <main class="ayuda bg-dark text-light">
-
-
   <div class="container py-5">
     <!-- Título principal -->
     <div class="text-center mb-4">
@@ -42,7 +39,6 @@
       </div>
     </div>
   </div>
-
 </main>
 
 

@@ -137,8 +137,7 @@
         </div>
         <div class="info-card" tabindex="-1">
           <img src="assets\img\iconos\paquete2.png" alt="camion">
-          <h2>%100 Confiablesss</h2>
-
+          <h2>%100 Confiables</h2>
         </div>
       </div>
     </section>

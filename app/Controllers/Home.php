@@ -11,7 +11,6 @@ class Home extends BaseController
         echo view('front/navbar',$data);
         echo view('principal');
         echo view('front/footer_view');
-
     }
 
     public function legal()
