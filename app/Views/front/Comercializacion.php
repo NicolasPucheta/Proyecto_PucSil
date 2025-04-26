@@ -25,21 +25,15 @@
         </div>
       </div>
 
-      <!-- Medios de Pago -->
-      <div class="col-12 col-md-4 mb-4">
-        <div class="box p-4">
-          <h3 class="h5 text-info">Medios de Pago</h3>
-          <p>Facilitamos tu compra con diversas opciones de pago para que elijas la más conveniente para ti. Contamos con seguridad total en las transacciones, por lo que puedes confiar en que tus datos estarán protegidos en todo momento. Además, trabajamos con plataformas de pago reconocidas para brindarte una experiencia sin complicaciones.</p>
-          <ul>
-            <li><strong>Tarjetas de Crédito y Débito:</strong> Visa, Mastercard, American Express, y otras opciones de tarjetas bancarias.</li>
-            <li><strong>PayPal:</strong> Realiza tus pagos de manera rápida y segura, sin necesidad de compartir tus datos bancarios.</li>
-            <li><strong>Transferencia Bancaria:</strong> Pago directo a través de tu banco. Perfecto para aquellos que prefieren una opción de pago tradicional.</li>
-            <li><strong>MercadoPago:</strong> Opciones de pago como PAGO FACIL, RAPI PAGO, entre otras. Con MercadoPago puedes pagar de manera rápida en puntos de pago físicos o con transferencia electrónica.</li>
-            <li><strong>Pago en efectivo:</strong> Algunas opciones permiten realizar pagos en efectivo a través de comercios asociados.</li>
-          </ul>
-          <p>En GGHardware, la seguridad es nuestra prioridad. Todos los pagos están protegidos con encriptación avanzada, lo que garantiza que tus compras sean 100% seguras.</p>
-        </div>
-      </div>
+<!-- Comercialización -->
+<div class="col-12 col-md-4 mb-4">
+  <div class="box p-4">
+    <h3 class="h5 text-info">Comercialización</h3>
+    <p>En <strong>GGHardware</strong> trabajamos en alianza con las principales marcas del mercado para garantizarte productos originales, de alta calidad y con respaldo oficial. Nuestra estrategia de comercialización se basa en mantener relaciones directas con fabricantes y distribuidores autorizados, asegurando disponibilidad y precios competitivos.</p>
+    <p>Priorizamos la transparencia en cada transacción, ofreciendo información detallada sobre cada producto y asistencia personalizada para que encuentres exactamente lo que necesitás. Nuestro objetivo es construir relaciones de confianza a largo plazo con nuestros clientes, acompañándolos en cada etapa de su compra.</p>
+  </div>
+</div>
+
 
       <!-- Por qué Confiar en Nosotros -->
       <div class="col-12 col-md-4 mb-4">
@@ -61,11 +55,7 @@
       </div>
     </div>
 
-    <!-- Botón de contacto -->
-    <div class="text-center mt-4">
-      <a href="contacto.html" class="btn btn-primary btn-lg">Contáctanos para más información</a>
-    </div>
-  </div>
+  
 </section>
 </main>
 

@@ -48,36 +48,3 @@ h3 {
     border-color: #0097a7;
 }
 
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 576px) {
-    h3 {
-        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
-    }
-
-    .container {
-        padding: 20px;
-    }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-    .container {
-        padding: 30px;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-    }
-}
-
-/* Para pantallas grandes */
-@media (min-width: 992px) {
-    .container {
-        padding: 40px;
-    }
-
-    h3 {
-        font-size: 2.5rem;
-    }
-}
-

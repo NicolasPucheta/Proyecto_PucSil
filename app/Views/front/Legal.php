@@ -25,7 +25,8 @@
       <p>En caso de productos defectuosos o fallas técnicas cubiertas por la garantía...</p>
 
       <h2 class="text-info mt-4">6. Contacto</h2>
-      <p>Ante cualquier duda, reclamo o solicitud relacionada con compras, envíos, garantías...</p>
+      <p>Ante cualquier duda, reclamo o solicitud relacionada con compras, envíos,podés ingresar a la sección de Ayuda para dejarnos tu consulta, o dirigirte a la parte de Contacto que se encuentra en el pie de página.</p>
+      
 
       <p class="mt-4">
         Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento...

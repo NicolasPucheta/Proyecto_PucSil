@@ -5,16 +5,17 @@ main.ayuda {
   line-height: 1.7;
   background-color: #121212;
   color: #e0e0e0;
-  padding-top: 0px;
+  padding-top: 150px;
+  
 }
 
 /* Estilo para el contenedor */
 .container {
   background-color: #1e1e1e;
   border-radius: 15px;
-  padding: 40px;
+  padding-top: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 100px; /* Ajustable dependiendo del tamaño de pantalla */
+  margin-top: 20px; /* Ajustable dependiendo del tamaño de pantalla */
 }
 
 /* Título principal */
@@ -30,6 +31,7 @@ p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
+
 
 /* Para pantallas pequeñas (móviles) */
 @media (max-width: 576px) {

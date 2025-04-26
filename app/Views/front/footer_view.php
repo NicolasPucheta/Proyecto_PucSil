@@ -1,56 +1,54 @@
+<footer class="footer">
+  <div class="container2">
+    <div class="row">
 
-        <footer class="footer">
-            <div class="container2">
-                <div class="row">
-                    <!-- Parte Superior -->
-                    <div class="col-md-4 ps-4">
-                        <div class="footer-contacto">
-                            <p><em>Consultas:</em></p>
-                        
+      <!-- Parte Superior -->
+      <div class="col-12 col-md-4 ps-4 mb-4 mb-md-0">
+        <div class="footer-contacto">
+          <p><em>Contacto:</em></p>
 
-                            <!-- Botones Email y WhatsApp -->
-                            <div class="mt-3">
-                                <a href="mailto:axelsilva281@gmail.com" class="btn btn-primary me-2">
-                                    📧 Axel 
-                                </a>
-                                <a href="mailto:nicopuche112005@gmail.com" class="btn btn-primary me-2">
-                                    📧 Nico
-                                </a>
-                                <a href="https://wa.me/5437820800" target="_blank" class="btn btn-success">
-                                    💬 WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Botones Email y WhatsApp -->
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=axelsilva281@gmail.com" target="_blank" class="btn btn-primary">
+              📧 Axel
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicopuche112005@gmail.com" target="_blank" class="btn btn-primary">
+              📧 Nico
+            </a>
+            <a href="https://wa.me/5437820800" target="_blank" class="btn btn-success">
+              💬 WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
 
-                    <div class="col-md-8 d-flex justify-content-end align-items-center">
-                        <div class="text-end me-3">
-                            <p class="mb-0">¡Seguinos!</p>
-                        </div>
-                        <div class="Iconos-redes">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <img src="assets\img\facebook-logo_2504792.png" alt="Facebook">
-                            </a>
-                            <a href="https://www.instagram.com" target="_blank">
-                                <img src="assets\img\instagram_4494488.png" alt="Instagram">
-                            </a>
-                        </div>
->>>>>>> dc8c870 (actualizacion de  organizacion)
-                    </div>
-                </div>
-            </div>
+      <!-- Redes Sociales -->
+      <div class="col-12 col-md-8 d-flex flex-column align-items-md-end">
+        <div class="text-end me-3">
+          <p class="mb-2">¡Seguinos!</p>
+        </div>
+        <div class="Iconos-redes d-flex gap-3">
+            <a href="https://www.facebook.com" target="_blank">
+             <img src="assets/img/facebook-logo_2504792.png" alt="Facebook">
+            </a>
+                <a href="https://www.instagram.com" target="_blank">
+                <img src="assets/img/instagram_4494488.png" alt="Instagram">
+                 </a>
+        </div>
 
-            <!-- Parte Inferior -->
-            <div class="footer-inferior">
-                <div class="footer-links">
-                    <a href="<?php echo base_url('quienesSomos'); ?>">Sobre nosotros</a>
-                    <a href="<?php echo base_url('legal'); ?>"><em>Términos y condiciones</em></a>
-                </div>
-                <div class="footer-mediosPagos">
-                    <p>© 2025 GGHardware. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+      </div>
+
+    </div>
+
+    <!-- Parte Inferior -->
+    <div class="footer-inferior mt-4 text-center">
+      <div class="footer-links mb-2">
+        <a href="<?php echo base_url('quienesSomos'); ?>">Sobre nosotros</a> |
+        <a href="<?php echo base_url('legal'); ?>"><em>Términos y condiciones</em></a>
+      </div>
+      <div class="footer-mediosPagos">
+        <p>© 2025 GGHardware. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>

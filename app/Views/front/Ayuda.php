@@ -12,10 +12,6 @@
         <p>
           Bienvenido al centro de ayuda de <strong>GGHardware</strong>. Aquí podrás encontrar respuestas a las preguntas más frecuentes sobre nuestros productos y servicios.
         </p>
-        <p>
-          Si tienes alguna pregunta adicional, no dudes en ponerte en contacto con nosotros a través de nuestra sección de contacto.
-        </p>
-
         <!-- Sección FAQ -->
         <div class="faq-item">
           <h3>¿Cómo realizar un pedido?</h3>
@@ -34,11 +30,54 @@
 
         <div class="faq-item">
           <h3>¿Cómo puedo contactar con atención al cliente?</h3>
-          <p>Puedes contactar con nosotros por correo electrónico o a través de nuestro chat en línea.</p>
+          <p>Puedes contactar con nosotros dirigiéndote al pie de página en la parte de contacto, o en el botón de abajo 👇</i>.</p>
         </div>
       </div>
     </div>
+      <!-- Botón de contacto -->
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
+       Contáctanos para más información
+        </button>
+    </div>
+
+       <!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- acá sigue todo el resto del contenido -->
+
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Dejanos tu consulta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="consulta" class="form-label">Tu consulta</label>
+            <textarea class="form-control" id="consulta" rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+      
+    </div>
+   </div>
   </div>
+
+  </div>
+  </div>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
 </main>
 
 
