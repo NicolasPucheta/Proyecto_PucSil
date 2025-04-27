@@ -410,6 +410,7 @@ p {
   .search-button {
     font-size: 16px; /* Hace más pequeño el ícono de búsqueda en pantallas pequeñas */
   }
+  
 }
 
 
@@ -513,4 +514,100 @@ p {
 .footer-mediosPagos p {
   font-size: 12px;
   color: #E2E8C0;
+}
+
+/* ... tu CSS existente ... */
+
+/* Estilos para el menú en pantallas pequeñas */
+@media (max-width: 991.98px) { /* Para pantallas pequeñas y medianas (hasta el breakpoint de lg en Bootstrap) */
+  .menu {
+    background-color: transparent !important; /* Fondo transparente para que se integre */
+    height: auto; /* Ajustar la altura automáticamente */
+    padding-bottom: 15px; /* Espacio inferior para el contenido desplegado */
+  }
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente para el menú desplegado */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px; /* Espacio entre la barra de búsqueda y el menú desplegado */
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos del menú verticalmente */
+    align-items: center; /* Centrar los elementos del menú horizontalmente */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%; /* Cada item ocupa todo el ancho */
+    text-align: center; /* Centrar el texto de cada item */
+    margin-bottom: 8px; /* Espacio entre los items del menú */
+  }
+
+  .navbar-nav .nav-link {
+    display: block; /* Hacer que los links ocupen todo el ancho de su contenedor */
+    padding: 10px 0 !important; /* Ajustar el padding vertical */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual entre los items */
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none; /* Eliminar el borde inferior del último item */
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-3 {
+    /* Ocultar las columnas que no queremos mostrar en la vista compacta */
+    display: none;
+  }
+
+  /* Mostrar el botón de toggle y centrarlo */
+  .justify-content-right {
+    justify-content: center !important;
+    margin-bottom: 15px;
+  }
+
+  /* Estilos para la búsqueda en pantallas pequeñas */
+  .col-12.col-md-5.d-flex {
+    flex-direction: column; /* Apilar la búsqueda y los links */
+    align-items: center !important; /* Centrar los elementos */
+  }
+
+  .d-flex > .search-home-button {
+    margin-right: 0 !important;
+    margin-bottom: 10px; /* Espacio entre el botón de inicio y la búsqueda */
+  }
+
+  .d-flex > form {
+    width: 100%; /* La búsqueda ocupa todo el ancho disponible */
+  }
+
+  .search-input {
+    border-radius: 20px; /* Bordes redondeados en pantallas pequeñas */
+  }
+
+  .search-button {
+    border-radius: 20px; /* Bordes redondeados en pantallas pequeñas */
+  }
+
+  /* Ocultar el carrito e iniciar sesión de la fila principal */
+  .col-12.col-md-3.d-flex {
+    display: none !important;
+  }
+
+  /* Mostrar el carrito e iniciar sesión dentro del menú desplegable */
+  .navbar-collapse {
+    /* ... otros estilos ... */
+    display: flex !important; /* Asegurarse de que se muestre */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-collapse > a.btn,
+  .navbar-collapse > button.btn {
+    width: 80%;
+    margin-bottom: 10px;
+  }
 }
