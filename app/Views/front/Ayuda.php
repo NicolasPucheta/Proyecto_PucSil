@@ -7,7 +7,6 @@
 
     <!-- Sección de contenido -->
     <div class="row justify-content-center">
-      <!-- Usamos 'col-12', 'col-md-10', 'col-lg-8' para que sea responsive -->
       <div class="col-12 col-md-10 col-lg-8">
         <p>
           Bienvenido al centro de ayuda de <strong>GGHardware</strong>. Aquí podrás encontrar respuestas a las preguntas más frecuentes sobre nuestros productos y servicios.
@@ -45,8 +44,6 @@
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <!-- acá sigue todo el resto del contenido -->
-
       
       <div class="modal-header">
         <h5 class="modal-title" id="contactModalLabel">Dejanos tu consulta</h5>

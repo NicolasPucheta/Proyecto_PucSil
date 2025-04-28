@@ -22,6 +22,7 @@ body {
 
 }
 
+
 main{
   flex: 1;
   padding-top: 150px;
@@ -178,7 +179,6 @@ p {
 
 .menu {
   background-image: url('../img/fondo-liso.png');
-
   background-size: cover;
   background-position: center;
   padding: 5px ;
@@ -462,8 +462,7 @@ p {
     background: transparent;
     position: absolute;
     right: 10px; /* Mueve el botón hacia la derecha */
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centrar */
+    top: 10px; /* Centra verticalmente */
   }
 
   .navbar-toggler-icon {
@@ -750,7 +749,4 @@ p {
       font-size: 12px;
   }
 }
-
-
-
 

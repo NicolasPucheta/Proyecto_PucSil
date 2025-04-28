@@ -1,21 +1,17 @@
 /* Estilo principal del body */
-
 main.ayuda {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  background-color: #121212;
   color: #e0e0e0;
   padding-top: 150px;
-  
 }
 
 /* Estilo para el contenedor */
 .container {
-  background-color: #1e1e1e;
   border-radius: 15px;
   padding-top: 40px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 20px; /* Ajustable dependiendo del tamaño de pantalla */
+  margin-top: 20px; 
 }
 
 /* Título principal */
@@ -33,24 +29,24 @@ p {
 }
 
 
-/* Para pantallas pequeñas (móviles) */
+
 @media (max-width: 576px) {
   .display-4 {
     font-size: 2.5rem; /* Reducir el tamaño del título en pantallas pequeñas */
   }
 
-  /* Ajustamos la imagen de fondo en el contenedor */
+  
   .container {
     padding: 20px;
-    margin-top: 50px; /* Menos margen superior en móviles */
+    margin-top: 50px; 
   }
 
   h2 {
-    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
+    font-size: 1.8rem; 
   }
 
   p {
-    font-size: 1rem; /* Ajustamos el tamaño del texto en pantallas pequeñas */
+    font-size: 1rem; /
   }
 }
 
@@ -58,15 +54,15 @@ p {
 @media (max-width: 768px) {
   .container {
     padding: 30px;
-    margin-top: 60px; /* Ajustamos el margen superior en pantallas medianas */
+    margin-top: 60px; 
   }
 
   h2 {
-    font-size: 2.2rem; /* Reducimos el tamaño del título en pantallas medianas */
+    font-size: 2.2rem; 
   }
 
   p {
-    font-size: 1.05rem; /* Ajustamos el tamaño de los párrafos */
+    font-size: 1.05rem; 
   }
 }
 
