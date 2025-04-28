@@ -32,6 +32,7 @@
         Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento...
       </p>
     </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
   </div>
 </main>
 

@@ -397,9 +397,6 @@ p {
   }
 }
 
-
-
-
 /* Estilos para el menú en pantallas pequeñas */
 @media (max-width: 991.98px) { /* Para pantallas pequeñas y medianas (hasta el breakpoint de lg en Bootstrap) */
   .menu {
@@ -408,10 +405,15 @@ p {
   }
 
   .navbar-collapse {
-    background-color: transparent !important;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 10px; /* Espacio entre la barra de búsqueda y el menú desplegado */
+    position: absolute;
+    top: calc(100% - 16px); /* Ajusta este valor para el espacio deseado */
+    left: 0;
+    width: 100%;
+    background-image: url('../img/fondoMenu.jpeg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center center; /* Centra la imagen en el fondo */
+    box-shadow: 0 0 10px 2px rgba(29, 85, 158, 0.8); /* Borde "luminoso" blanco */
+    
   }
 
   .navbar-nav {
@@ -419,6 +421,8 @@ p {
     flex-direction: column; /* Alinear los elementos del menú verticalmente */
     align-items: center; /* Centrar los elementos del menú horizontalmente */
     width: 100%; /* Ocupar todo el ancho del contenedor */
+    padding: 10px; /* O el espaciado que necesites para el contenido del menú */
+    border-radius: 5px; /* Opcional: bordes redondeados para el contenido */
   }
 
   .navbar-nav .nav-item {
@@ -430,6 +434,7 @@ p {
   .navbar-nav .nav-link {
     display: block; /* Hacer que los links ocupen todo el ancho de su contenedor */
     padding: 10px 0 !important; /* Ajustar el padding vertical */
+    color: #E2E8C0 !important; /* Asegúrate de que el texto sea legible */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual entre los items */
   }
 
@@ -437,7 +442,6 @@ p {
     border-bottom: none; /* Eliminar el borde inferior del último item */
   }
 
-  .col-md-4,
   .col-md-5,
   .col-md-3 {
     /* Ocultar las columnas que no queremos mostrar en la vista compacta */

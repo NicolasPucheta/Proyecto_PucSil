@@ -6,7 +6,6 @@
       <div class="col-12 col-md-4 ps-4 mb-4 mb-md-0">
         <div class="footer-contacto">
           <p><em>Contacto:</em></p>
-
           <!-- Botones Email y WhatsApp -->
           <div class="mt-3 d-flex flex-wrap gap-2">
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=axelsilva281@gmail.com" target="_blank" class="btn btn-primary">
