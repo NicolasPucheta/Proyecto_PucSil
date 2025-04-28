@@ -69,7 +69,7 @@ p {
   font-weight: bold;
 }
 
-/*Estilo para la seccion de envios*/
+/* Estilo para la sección de envíos */
 .info-card {
   flex: 1;
   min-width: 250px;
@@ -80,11 +80,16 @@ p {
   background-color: #247BA0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  border-radius: 10px; /* Opcional: bordes redondeados */
   overflow: hidden; /* Para que las imágenes no se salgan del borde redondeado */
   box-shadow: 0 0 20px rgba(36, 123, 160, 0.4), 
-  0 0 40px rgba(36, 123, 160, 0.2), 
-  0 0 60px rgba(17, 107, 146, 0.1);
+              0 0 40px rgba(36, 123, 160, 0.2), 
+              0 0 60px rgba(17, 107, 146, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 220px; /* Asegura una altura mínima uniforme para todas las tarjetas */
 }
 
 .info-card:hover {
@@ -94,12 +99,9 @@ p {
 }
 
 .info-section {
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  padding-right: 5px;
+  padding: 20px 10px 5px 10px;
   background-color: #000;
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 
 .info-container {
@@ -113,7 +115,6 @@ p {
   flex-wrap: wrap;
 }
 
-
 .info-card h2 {
   font-size: 25px;
   margin-top: 10px;
@@ -121,13 +122,59 @@ p {
   color: black;
   font-family: 'Rajdhani', sans-serif;
 }
+
 .info-card img {
   width: 120px;
   height: 120px;
   object-fit: contain;
   margin-bottom: 10px;
-
 }
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .info-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-card {
+    max-width: 90%; /* Ocupa un poco menos del 100% en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+
+  .info-card h2 {
+    font-size: 18px;
+  }
+
+  .info-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Responsividad para pantallas extra pequeñas */
+@media (max-width: 480px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .info-card h2 {
+    font-size: 16px;
+  }
+
+  .info-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
 .menu {
   background-image: url('../img/Logo3.jpeg');
   background-size: cover;
@@ -172,9 +219,13 @@ p {
   padding: 10px 20px;
 }
 
-.login-cart .btn {
-  white-space: nowrap;
+/* Estilo adicional para asegurarse de que los íconos sean más pequeños en pantallas pequeñas */
+@media (max-width: 576px) {
+  .btn i {
+      font-size: 1.5rem; /* Ajusta el tamaño del ícono en pantallas pequeñas */
+  }
 }
+
 
 
 .navbar-nav .nav-link {
@@ -200,14 +251,6 @@ p {
     margin-bottom: 10px;
   }
 
-  .login-cart {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .navbar-toggler {
-    align-self: center;
-  }
 }
 
 /*Estilo para los precios y productos del carrusel*/
@@ -259,20 +302,22 @@ p {
 }
 
 
-/*Estilo para el Carrusel infinito*/
+/* Estilo para el Carrusel infinito */
 .caja-carrusel {
   background-color: #247BA0;
-  border: 5px solid #247Ba0;
+  border: 5px solid #247BA0;
   border-radius: 1rem;
   padding: 2rem 0;
-  margin: 2rem ;
-  width: auto;
-  border-radius: 10px; /* Opcional: bordes redondeados */
+  margin: 2rem;
+  width: 97%;
+  margin: 2rem auto; /* Centrar el contenedor */
+  border-radius: 10px;
   box-shadow: 0 0 20px rgba(36, 123, 160, 0.4), 
-  0 0 40px rgba(36, 123, 160, 0.2), 
-  0 0 60px rgba(36, 123, 160, 0.1);
+              0 0 40px rgba(36, 123, 160, 0.2), 
+              0 0 60px rgba(36, 123, 160, 0.1);
 }
 
+/* Titulo del carrusel */
 .titulo-caja {
   font-size: 2rem;
   font-weight: 700;
@@ -282,17 +327,20 @@ p {
   font-family: 'Rajdhani', sans-serif;
 }
 
+/* Carrusel infinito */
 .carrusel-infinito {
   overflow: hidden;
   width: 100%;
 }
 
+/* Track del carrusel */
 .carousel-track {
   display: flex;
   width: fit-content;
   animation: scroll-left 30s linear infinite;
 }
 
+/* Estilo de las imágenes dentro del carrusel */
 .carousel-track img {
   width: 150px;
   height: auto;
@@ -301,10 +349,12 @@ p {
   transition: transform 0.3s ease;
 }
 
+/* Efecto al pasar el ratón sobre las imágenes */
 .carousel-track img:hover {
   transform: scale(1.1);
 }
 
+/* Animación del desplazamiento del carrusel */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -314,16 +364,111 @@ p {
   }
 }
 
-/* Estilo para la seccion de informacion */
+/* Responsividad */
+@media (max-width: 768px) {
+  .titulo-caja {
+    font-size: 1.5rem; /* Ajustar tamaño del título en pantallas pequeñas */
+  }
+
+  .carousel-track img {
+    width: 120px; /* Reducir el tamaño de las imágenes en pantallas pequeñas */
+    margin: 0 0.5rem; /* Reducir el margen entre imágenes */
+  }
+
+  .caja-carrusel {
+    padding: 1.5rem 0; /* Reducir padding para pantallas pequeñas */
+    margin: 1rem; /* Reducir margen */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-caja {
+    font-size: 1.2rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .carousel-track img {
+    width: 100px; /* Reducir aún más el tamaño de las imágenes */
+    margin: 0 0.3rem; /* Reducir más el margen entre imágenes */
+  }
+
+  .caja-carrusel {
+    padding: 1rem 0; /* Menos padding en pantallas muy pequeñas */
+    margin: 0.5rem; /* Menos margen en pantallas muy pequeñas */
+  }
+}
 
 
 
 
-/* Estilo para la barra de búsqueda */
+/* Estilos para el menú en pantallas pequeñas */
+@media (max-width: 991.98px) { /* Para pantallas pequeñas y medianas (hasta el breakpoint de lg en Bootstrap) */
+  .menu {
+    height: auto; /* Ajusta la altura automáticamente */
+    padding-bottom: 15px; /* Espacio inferior para el contenido desplegado */
+  }
 
+  .navbar-collapse {
+    background-color: transparent !important;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px; /* Espacio entre la barra de búsqueda y el menú desplegado */
+  }
 
-/* Contenedor para el botón de la casita y la barra de búsqueda */
- .search-container {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos del menú verticalmente */
+    align-items: center; /* Centrar los elementos del menú horizontalmente */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%; /* Cada item ocupa todo el ancho */
+    text-align: center; /* Centrar el texto de cada item */
+    margin-bottom: 8px; /* Espacio entre los items del menú */
+  }
+
+  .navbar-nav .nav-link {
+    display: block; /* Hacer que los links ocupen todo el ancho de su contenedor */
+    padding: 10px 0 !important; /* Ajustar el padding vertical */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual entre los items */
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none; /* Eliminar el borde inferior del último item */
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-3 {
+    /* Ocultar las columnas que no queremos mostrar en la vista compacta */
+    display: none;
+  }
+
+  /* Estilos para la búsqueda en pantallas pequeñas */
+  .col-12.col-md-5.d-flex {
+    flex-direction: column; /* Apilar la búsqueda y los links */
+    align-items: center !important; /* Centrar los elementos */
+  }
+
+  /* Toggler alineado a la derecha */
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 10px; /* Mueve el botón hacia la derecha */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centrar */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #0082fc; /* Icono con color personalizado */
+    border-radius: 5px;
+    padding: 8px; /* Añade algo de espacio alrededor del icono */
+  }
+}
+
+/* Ajustes para la barra de búsqueda y los botones sin cambios */
+.search-container {
   display: flex;
   align-items: center; /* Alinea verticalmente el botón y la barra de búsqueda */
   justify-content: flex-start; /* Alinea todo a la izquierda */
@@ -333,12 +478,12 @@ p {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px; /* Limita el ancho máximo para que no se extienda demasiado */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
-/* Estilo para el botón de la casita */
 .search-home-button {
-  background-color: rgb(21, 90, 218);       /* Celeste vibrante */
-  color: black;                    /* Ícono blanco */
+  background-color: rgb(21, 90, 218); /* Celeste vibrante */
+  color: black; /* Ícono blanco */
   border: none;
   padding: 8px 12px;
   font-size: 1.2rem;
@@ -349,29 +494,27 @@ p {
   justify-content: center;
 }
 
-/* Estilo para el botón de la casita al pasar el cursor */
 .search-home-button:hover {
   background-color: white; /* Color de fondo cuando el cursor pasa sobre el botón */
 }
 
-/* Estilo para la barra de búsqueda */
 .search-input {
-  width: 350px;
+  width: 100%; /* Hace que la barra ocupe todo el espacio disponible */
   height: 38px;
   border-radius: 20px 0 0 20px;
   font-size: 14px;
   padding: 5px 15px;
-  border: 1px solid #ccc;
+  border: 3px solid #0082fc;
 }
 
 .search-input:focus {
-  border-color: #443742;
+  border-color: #1364ce;
+  outline: none;
 }
 
-/* Estilo del botón de búsqueda */
 .search-button {
-  background-color: rgb(21, 90, 218);       /* Celeste vibrante */
-  color: black;                    /* Ícono blanco */
+  background-color: rgb(21, 90, 218); /* Celeste vibrante */
+  color: black; /* Ícono blanco */
   border: none;
   padding: 8px 12px;
   font-size: 1.2rem;
@@ -396,21 +539,42 @@ p {
     flex-direction: column; /* Apila los elementos en pantallas pequeñas */
     align-items: center; /* Centra el contenido */
     width: 90%; /* Hace la barra de búsqueda más estrecha en móviles */
+    padding: 8px; /* Reduce el padding en pantallas más pequeñas */
   }
 
   .search-input {
-    width: 80%; /* Barra de búsqueda más pequeña en dispositivos móviles */
+    width: 100%; /* La barra de búsqueda ocupa todo el ancho disponible */
+    margin-top: 10px; /* Espacio entre la barra de búsqueda y los botones */
   }
 
   .search-home-button {
     padding: 5px 8px; /* Reduce el tamaño del botón en pantallas pequeñas */
     font-size: 16px; /* Reduce el tamaño del ícono */
+    margin-bottom: 10px; /* Da espacio entre el botón y la barra de búsqueda */
   }
 
   .search-button {
     font-size: 16px; /* Hace más pequeño el ícono de búsqueda en pantallas pequeñas */
+    margin-top: 10px; /* Espacio entre el botón y la barra de búsqueda */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    width: 90%; /* Asegura que el contenedor se ajuste en pantallas muy pequeñas */
+  }
+
+  .search-input {
+    font-size: 12px; /* Reduce el tamaño del texto en la barra de búsqueda */
+  }
+
+  .search-home-button {
+    font-size: 14px; /* Reduce aún más el tamaño del ícono en pantallas muy pequeñas */
+  }
+
+  .search-button {
+    font-size: 14px; /* Reduce el tamaño del ícono de búsqueda en pantallas muy pequeñas */
+  }
 }
 
 
@@ -433,15 +597,25 @@ p {
 }
 
 
+/* Estilo para el pie de página */
+/* Responsividad para el container2 */
 .container2 {
   padding-top: 20px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 30px;
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
 }
 
+/* Hacemos que el contenido dentro del container2 también sea responsivo */
+@media (max-width: 768px) {
+  .container2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
-/* Estilo para el pie de pag */
 .footer {
   background-color: #030e27;
   color: white;
@@ -462,6 +636,7 @@ p {
   padding-top: 15px;
 }
 
+/* Contacto */
 .footer-contacto {
   flex: 1;
   min-width: 250px;
@@ -472,6 +647,7 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Redes sociales */
 .footer-redes {
   flex: 1;
   min-width: 250px;
@@ -511,103 +687,64 @@ p {
   text-decoration: underline;
 }
 
-.footer-mediosPagos p {
-  font-size: 12px;
-  color: #E2E8C0;
-}
-
-/* ... tu CSS existente ... */
-
-/* Estilos para el menú en pantallas pequeñas */
-@media (max-width: 991.98px) { /* Para pantallas pequeñas y medianas (hasta el breakpoint de lg en Bootstrap) */
-  .menu {
-    background-color: transparent !important; /* Fondo transparente para que se integre */
-    height: auto; /* Ajustar la altura automáticamente */
-    padding-bottom: 15px; /* Espacio inferior para el contenido desplegado */
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-superior {
+      display: block;
+      text-align: center;
   }
 
-  .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente para el menú desplegado */
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 10px; /* Espacio entre la barra de búsqueda y el menú desplegado */
+  /* Contacto y redes sociales */
+  .footer-contacto {
+      flex: none;
+      min-width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
   }
 
-  .navbar-nav {
-    display: flex;
-    flex-direction: column; /* Alinear los elementos del menú verticalmente */
-    align-items: center; /* Centrar los elementos del menú horizontalmente */
-    width: 100%; /* Ocupar todo el ancho del contenedor */
+  .footer-redes {
+      flex: none;
+      min-width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
   }
 
-  .navbar-nav .nav-item {
-    width: 100%; /* Cada item ocupa todo el ancho */
-    text-align: center; /* Centrar el texto de cada item */
-    margin-bottom: 8px; /* Espacio entre los items del menú */
+  /* Botones de contacto (Email, WhatsApp) */
+  .footer-contacto .mt-3 {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
   }
 
-  .navbar-nav .nav-link {
-    display: block; /* Hacer que los links ocupen todo el ancho de su contenedor */
-    padding: 10px 0 !important; /* Ajustar el padding vertical */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual entre los items */
+  .footer-redes .Iconos-redes {
+      justify-content: center;
+      gap: 15px;
   }
 
-  .navbar-nav .nav-link:last-child {
-    border-bottom: none; /* Eliminar el borde inferior del último item */
+  /* Parte inferior */
+  .footer-inferior {
+      display: block;
+      text-align: center;
   }
 
-  .col-md-4,
-  .col-md-5,
-  .col-md-3 {
-    /* Ocultar las columnas que no queremos mostrar en la vista compacta */
-    display: none;
-  }
-
-  /* Mostrar el botón de toggle y centrarlo */
-  .justify-content-right {
-    justify-content: center !important;
-    margin-bottom: 15px;
-  }
-
-  /* Estilos para la búsqueda en pantallas pequeñas */
-  .col-12.col-md-5.d-flex {
-    flex-direction: column; /* Apilar la búsqueda y los links */
-    align-items: center !important; /* Centrar los elementos */
-  }
-
-  .d-flex > .search-home-button {
-    margin-right: 0 !important;
-    margin-bottom: 10px; /* Espacio entre el botón de inicio y la búsqueda */
-  }
-
-  .d-flex > form {
-    width: 100%; /* La búsqueda ocupa todo el ancho disponible */
-  }
-
-  .search-input {
-    border-radius: 20px; /* Bordes redondeados en pantallas pequeñas */
-  }
-
-  .search-button {
-    border-radius: 20px; /* Bordes redondeados en pantallas pequeñas */
-  }
-
-  /* Ocultar el carrito e iniciar sesión de la fila principal */
-  .col-12.col-md-3.d-flex {
-    display: none !important;
-  }
-
-  /* Mostrar el carrito e iniciar sesión dentro del menú desplegable */
-  .navbar-collapse {
-    /* ... otros estilos ... */
-    display: flex !important; /* Asegurarse de que se muestre */
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar-collapse > a.btn,
-  .navbar-collapse > button.btn {
-    width: 80%;
-    margin-bottom: 10px;
+  .footer-links {
+      display: block;
+      gap: 10px;
   }
 }
+
+/* Responsividad para pantallas extra pequeñas */
+@media (max-width: 480px) {
+  .footer {
+      font-size: 12px;
+      padding: 1rem;
+  }
+
+  .footer-links {
+      font-size: 12px;
+  }
+}
+
+
+
+
