@@ -17,8 +17,9 @@ body {
   margin: 0;
   padding-top: auto;
   font-family: 'Roboto', sans-serif;
-  overflow-x:hidden;
+  overflow-x:hidden; 
   background-color: #000;
+
 }
 
 main{
@@ -176,7 +177,8 @@ p {
 
 
 .menu {
-  background-image: url('../img/Logo3.jpeg');
+  background-image: url('../img/fondo-liso.png');
+
   background-size: cover;
   background-position: center;
   padding: 5px ;

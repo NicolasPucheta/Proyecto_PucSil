@@ -50,13 +50,31 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    public function productos()
+    public function Productos()
     {
         $data['Titulo'] = 'Productos';
         echo view('front/head_view',$data);
         echo view('front/navbar',$data);
-        echo view('front/Productos');
-        echo view('front/footer_view');
+        echo view('front/productos',$data);
+        echo view('front/footer_view',$data);
+    }
+    
+    public function Almacenamiento()
+    {
+        $data['Titulo'] = 'Almacenamiento';
+        echo view('front/head_view', $data);
+        echo view('front/navbar',$data);
+        echo view('front/almacenamiento',$data);
+        echo view('front/footer_view',$data );
+    }
+
+    public function Motherboard()
+    {
+        $data['Titulo'] = 'Motherboard';
+        echo view('front/head_view', $data);
+        echo view('front/navbar',$data);
+        echo view('front/motherboard',$data);
+        echo view('front/footer_view',$data );
     }
 
     public function carrito()

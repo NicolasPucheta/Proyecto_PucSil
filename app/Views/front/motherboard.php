@@ -12,7 +12,7 @@
         <div class="collapse show" id="categorias">
           <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#">Procesadores</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('motherboard'); ?>">Motherboards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Motherboards</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Placas de Video</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url('almacenamiento'); ?>">Almacenamiento</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Memorias RAM</a></li>

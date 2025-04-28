@@ -15,7 +15,11 @@ $routes->get('ayuda', 'Home::ayuda');
 
 $routes->get('comercializacion', 'Home::comercializacion');
 
-$routes->get('productos', 'Home::productos');
+$routes->get('productos', 'Home::Productos');
 
 $routes->get('carrito', 'Home::carrito');
 
+$routes->get('almacenamiento', 'Home::Almacenamiento');
+
+
+$routes->get('motherboard', 'Home::Motherboard');
