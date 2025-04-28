@@ -11,12 +11,11 @@
 
         <div class="collapse show" id="categorias">
           <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Procesadores</a></li>
+           <li class="nav-item"><a class="nav-link" href="<?php echo base_url('Procesadores'); ?>">Procesadores</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url('motherboard'); ?>">Motherboards</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Placas de Video</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('placas-videos'); ?>">Placas de Video</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url('almacenamiento'); ?>">Almacenamiento</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Memorias RAM</a></li>
-          </ul>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('memoria-ram'); ?>">Memorias RAM</a></li>
         </div>
       </div>
 
@@ -26,12 +25,8 @@
 
           <?php
           $productos = [
-            ['nombre' => 'Intel Core i5', 'precio' => 416100, 'imagen' => base_url('assets/img/Procesadores/i5.jpg')],
-            ['nombre' => 'Intel Core i7', 'precio' => 451550, 'imagen' => base_url('assets/img/Procesadores/i7.jpg')],
-            ['nombre' => 'AMD Ryzen 3', 'precio' => 90000, 'imagen' => base_url('assets/img/Procesadores/ryzen3.jpeg')],
-            ['nombre' => 'AsRock B550M', 'precio' => 120000, 'imagen' => base_url('assets/img/mothers/amd/b550m.jpg')],
-            ['nombre' => 'Asus Prime A520M', 'precio' => 100000, 'imagen' => base_url('assets/img/mothers/amd/a520m.jpg')],
-            ['nombre' => 'RX 7600', 'precio' => 80000, 'imagen' => base_url('assets/img/placasDeVideo/rx7600.jpg')]
+            ['nombre' => 'Memoria Ram 16gb XPG', 'precio' => 25000, 'imagen' => base_url('assets/img/rams/RamXpg.png')],
+            ['nombre' => 'Memoria Ram 32gb RGB', 'precio' => 80000, 'imagen' => base_url('assets/img/rams/ram32.png')]
           ];
           ?>
 

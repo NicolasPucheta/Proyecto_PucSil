@@ -58,13 +58,13 @@ class Home extends BaseController
         echo view('front/productos',$data);
         echo view('front/footer_view',$data);
     }
-    
-    public function Almacenamiento()
+
+    public function Procesadores()
     {
-        $data['Titulo'] = 'Almacenamiento';
+        $data['Titulo'] = 'Procesadores';
         echo view('front/head_view', $data);
         echo view('front/navbar',$data);
-        echo view('front/almacenamiento',$data);
+        echo view('front/Procesadores',$data);
         echo view('front/footer_view',$data );
     }
 
@@ -74,6 +74,31 @@ class Home extends BaseController
         echo view('front/head_view', $data);
         echo view('front/navbar',$data);
         echo view('front/motherboard',$data);
+        echo view('front/footer_view',$data );
+    }
+    public function placas_video()
+    {
+        $data['Titulo'] = 'Placas de Video';
+        echo view('front/head_view', $data);
+        echo view('front/navbar',$data);
+        echo view('front/placas-videos',$data);
+        echo view('front/footer_view',$data );
+    }
+
+    public function Almacenamiento()
+    {
+        $data['Titulo'] = 'Almacenamiento';
+        echo view('front/head_view', $data);
+        echo view('front/navbar',$data);
+        echo view('front/almacenamiento',$data);
+        echo view('front/footer_view',$data );
+    }
+    public function memorias_ram() 
+    {
+        $data['Titulo'] = 'Memoria RAM';
+        echo view('front/head_view', $data);
+        echo view('front/navbar',$data);
+        echo view('front/memorias-ram',$data);
         echo view('front/footer_view',$data );
     }
 
