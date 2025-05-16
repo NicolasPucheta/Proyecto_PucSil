@@ -10,11 +10,7 @@ class Login_controller extends BaseController
     public function index()
     {
         helper(['form', 'url']);
-        $data['Titulo'] = 'Login';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/inicio_sesion', $data); // Cambiado la ruta de la vista
-        echo view('front/footer_view',$data );
+        
     }
 
     public function auth()
@@ -23,12 +19,16 @@ class Login_controller extends BaseController
         $model = new Usuarios_model();
 
         $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password'); // Cambiado 'pass' a 'password'
+        $password = $this->request->getVar('password'); 
 
         $data = $model->where('email', $email)->first();
 
         if ($data) {
             $pass = $data['pass'];
+                $ba= $data ['baja'];
+                if($ba == 'SI'){
+                    $session -> setFlashdata('msj', 'usuario dado de baja')
+                    return redirect()->to('/')                }
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
@@ -45,11 +45,11 @@ class Login_controller extends BaseController
                 return redirect()->to('/principal'); // Asegúrate de que esta ruta exista
             } else {
                 session()->setFlashdata('msg', 'Password incorrecto');
-                return redirect()->to('/login'); // Asumo que tienes una ruta '/login' para mostrar el formulario
+                return redirect()->to('/login'); 
             }
         } else {
             session()->setFlashdata('msg', 'No ingresó un email o el mismo es incorrecto');
-            return redirect()->to('/login'); // Asumo que tienes una ruta '/login' para mostrar el formulario
+            return redirect()->to('/login'); 
         }
     }
 
@@ -57,6 +57,6 @@ class Login_controller extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login'); // Asumo que tienes una ruta '/login'
+        return redirect()->to('/login'); 
     }
 }

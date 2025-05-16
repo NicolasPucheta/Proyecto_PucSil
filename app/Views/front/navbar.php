@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row w-100 align-items-center">
 
-            <div class="col-12 col-md-4 d-flex align-items-center">
+            <div class="col-12 col-md-4 d-flex align-items-center  ">
                 <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -14,6 +14,7 @@
                 <a class="navbar-brand d-block d-lg-none" href="<?php echo base_url() ?>">
                     <img src="assets/img/iconos/favicon.ico" alt="Logo pequeño" height="40">
                 </a>
+                
             </div>
 
             <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-center mb-3 mb-lg-0 mt-1">
@@ -35,10 +36,19 @@
                         <li class="nav-item"><a href="<?php echo base_url('ayuda'); ?>" class="nav-link">Ayuda</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('legal'); ?>" class="nav-link">Legal</a></li>
                     </ul>
+
+                    <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-3 mb-lg-0 ">
+                        <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+                            <i class="bi bi-cart-fill"></i> Carrito
+                        </a>
+                        <a href="<?php echo base_url('login'); ?>" class="btn btn-outline-success">
+                            <i class="bi bi-person-fill"></i> Iniciar Sesión
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-3 d-flex justify-content-end align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-md-3 d-flex justify-content-end align-items-center mb-3 mb-lg-0 d-none d-md-block">
                 <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
                     <i class="bi bi-cart-fill"></i> Carrito
                 </a>
@@ -51,22 +61,3 @@
     </div>
 </nav>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasLoginLabel">Iniciar Sesión</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-    </div>
-    <div class="offcanvas-body">
-        <form action="<?= base_url('login'); ?>" method="post">
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="usuario@correo.com" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Entrar</button>
-        </form>
-    </div>
-</div>

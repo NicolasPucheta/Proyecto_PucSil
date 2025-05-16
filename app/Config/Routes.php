@@ -30,8 +30,11 @@ $routes->get('almacenamiento', 'Home::Almacenamiento');
 $routes->get('memoria-ram', 'Home::memorias_ram');
 
 /*rutas para el login*/
-$routes->get('/login', 'Login_controller::index');
+$routes->get('/login', 'Home::login');
 $routes->post('/enviarlogin', 'Login_controller::auth');
 $routes->post('/panel', 'Panel_controller::index',['filter' => 'auth']);
 $routes->get('/logout', 'Login_controller::logout');
 
+/*rutas del registro de Usuario*/
+$routes->get('/registro', 'Home::registro');
+$routes->post('/enviar-form','Usuario_controller::formValidation');

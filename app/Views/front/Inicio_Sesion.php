@@ -20,9 +20,9 @@
                     <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
                 </form>
             </div>
-            <div class="card-footer text-center">
-                <small>¿No tienes cuenta? <a href="#">Regístrate aquí</a></small>
-            </div>
+                <div style="text-align: center;">
+                    ¿No tienes cuenta? <a href="<?= base_url('registro') ?>">Regístrate aquí</a>
+                </div>
         </div>
     </div>
 
