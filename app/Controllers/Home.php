@@ -110,5 +110,15 @@ class Home extends BaseController
         echo view('front/Carrito');
         echo view('front/footer_view');
     }
+
+    public function iniciar_sesion()
+    {
+        $data['Titulo'] = 'iniciar sesion';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('front/Inicio_Sesion.php');
+        echo view('front/footer_view');
+    }
 }
+
 
