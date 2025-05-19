@@ -29,6 +29,10 @@ $routes->get('almacenamiento', 'Home::Almacenamiento');
 
 $routes->get('memoria-ram', 'Home::memorias_ram');
 
+
+$routes->get('detalleCompra', 'Home::finalizarCompra');
+
+
 /*rutas para el login*/
 $routes->get('/login', 'Home::login');
 $routes->post('/enviarlogin', 'Login_controller::auth');

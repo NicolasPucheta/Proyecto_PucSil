@@ -111,6 +111,15 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
+     public function finalizarCompra()
+    {
+        $data['Titulo'] = 'Finalizar Compra';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('front/detalleCompra');
+        echo view('front/footer_view');
+    }
+
     public function registro()
     {
         $data['Titulo'] = 'Registro';
@@ -129,6 +138,7 @@ class Home extends BaseController
         echo view('front/footer_view',$data );
 
     }
+
 }
 
 

@@ -1,0 +1,70 @@
+CRITICAL - 2025-05-19 18:01:51 --> ErrorException: Undefined variable $productos
+[Method: GET, Route: carrito]
+in APPPATH\Views\front\Carrito.php on line 15.
+ 1 APPPATH\Views\front\Carrito.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\Carrito.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\Carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/Carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('front/Carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 18:03:16 --> ErrorException: Undefined variable $productos
+[Method: GET, Route: carrito]
+in APPPATH\Views\front\Carrito.php on line 15.
+ 1 APPPATH\Views\front\Carrito.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\Carrito.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\Carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/Carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('front/Carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 18:17:17 --> ErrorException: Undefined variable $compra_exitosa
+[Method: GET, Route: detalleCompra]
+in APPPATH\Views\front\detalleCompra.php on line 2.
+ 1 APPPATH\Views\front\detalleCompra.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $compra_exitosa', 'C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/detalleCompra', [], true)
+ 5 APPPATH\Controllers\Home.php(119): view('front/detalleCompra')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->finalizarCompra()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 18:18:16 --> ErrorException: Undefined variable $compra_exitosa
+[Method: GET, Route: detalleCompra]
+in APPPATH\Views\front\detalleCompra.php on line 2.
+ 1 APPPATH\Views\front\detalleCompra.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $compra_exitosa', 'C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/detalleCompra', [], true)
+ 5 APPPATH\Controllers\Home.php(119): view('front/detalleCompra')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->finalizarCompra()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 18:18:17 --> ErrorException: Undefined variable $compra_exitosa
+[Method: GET, Route: detalleCompra]
+in APPPATH\Views\front\detalleCompra.php on line 2.
+ 1 APPPATH\Views\front\detalleCompra.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $compra_exitosa', 'C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_PucSil\\app\\Views\\front\\detalleCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/detalleCompra', [], true)
+ 5 APPPATH\Controllers\Home.php(119): view('front/detalleCompra')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->finalizarCompra()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
