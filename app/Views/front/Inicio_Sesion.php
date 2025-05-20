@@ -6,7 +6,7 @@
                 <h3>Iniciar Sesión</h3>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('/login/auth') ?>" method="POST">
+                <form action="<?= base_url('/enviarlogin') ?>" method="post">
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="usuario@correo.com" required>

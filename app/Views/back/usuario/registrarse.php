@@ -6,7 +6,7 @@
                 <h3>Registrate</h3>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('/login/auth') ?>" method="POST">
+                <form action="<?= base_url('/enviar-form') ?>" method="POST">
 
                     <!--Registro de nombre--> 
                     <div class="mb-3">
