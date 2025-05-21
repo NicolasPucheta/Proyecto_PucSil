@@ -15,8 +15,7 @@
       <!-- Ejemplo de producto en el carrito -->
       <tr id="producto-1">
         <td>
-          <img src="assets/img/producto1.jpg" alt="Producto 1" class="img-fluid" style="width: 60px;">
-          Producto 1
+          <img src="assets/img/producto1.jpg" alt="no disponible" class="img-fluid" style="width: 60px;">
         </td>
         <td class="precio" data-precio="1500">$1500</td>
         <td>
@@ -33,15 +32,12 @@
       <!-- Fin ejemplo -->
     </tbody>
   </table>
-
-  <!-- Total y botón de finalizar compra -->
   <div class="carrito-total mt-5 p-4 text-center bg-dark-subtle rounded shadow-sm">
     <h4 class="text-light">Total: <span id="totalCarrito">$1500</span></h4>
-    <button class="btn btn-success mt-3 w-100">
-        <a href="<?php echo base_url('detalleCompra'); ?>">Finalizar Compra</a> |
+    <button class="btn btn-success mt-3 w-100" onclick="window.location.href='<?php echo base_url('detalleCompra'); ?>'">
+        Finalizar Compra
     </button>
-  </div>
-   
+</div>
 
   <script>
   let cantidades = { 1: 1 }; // Clave: ID del producto

@@ -40,7 +40,7 @@ class Usuario_controller extends Controller
             echo view('back/usuario/registrarse', ['validation' => $this->validator]);
             echo view('front/footer_view');
         } else {
-            $formModel->save([
+            $formModel->save(  [
                 'nombre'     => $this->request->getVar('nombre'),
                 'apellido'   => $this->request->getVar('apellido'),
                 'usuario'    => $this->request->getVar('usuario'),
@@ -48,10 +48,10 @@ class Usuario_controller extends Controller
                 'pass'       => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
                 // password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido.
             ]);
-
             // Flashdata funciona solo en redirigir la función en el controlador en la vista de carga.
             session()->setFlashdata('success', 'Usuario registrado con exito');
-            return $this->response->redirect(to_url('/registro'));
+            return redirect()->to('/registro');
+
         }
     }
 }

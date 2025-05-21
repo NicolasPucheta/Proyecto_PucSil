@@ -14,7 +14,7 @@
     <link href="assets/css/ayuda.css?v=1.0" rel="stylesheet">
     <link href="assets/css/Comercializacion.css" rel="stylesheet">
     <link href="assets/css/inicio.css" rel="stylesheet">
-    <link href="assets/css/inicioSesion-Carrito" rel="stylesheet">
+    <link href="assets/css/inicioSesion-Carrito.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets\img\iconos\favicon.ico">
   
     

@@ -1,6 +1,5 @@
 
-<body class="quienesSomos bg-dark text-light">
-
+<main class="quienesSomos bg-dark text-light">
   <div class="container py-5">
     <!-- Título principal -->
     <div class="text-center mb-4">
@@ -65,5 +64,5 @@
     </div>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
   </div>
-</body>
+</main>
 

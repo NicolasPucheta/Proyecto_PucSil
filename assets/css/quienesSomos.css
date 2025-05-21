@@ -1,12 +1,12 @@
 
 /* Estilo principal del body */
-body.quienesSomos {
+main.quienesSomos {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
   background-color: #121212;
   color: #e0e0e0;
   padding-top: 150px;
-  
+  flex: 1;
 }
 
 /* Estilo para el contenedor */

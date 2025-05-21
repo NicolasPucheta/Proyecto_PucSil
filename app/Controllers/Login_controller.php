@@ -19,7 +19,7 @@ class Login_controller extends BaseController
         $model = new Usuarios_model(); //instanciamos el modelo
 
         //traemos los datos del fomrulario
-        $email = $this->request->getVar('email'); //corre 
+        $email = $this->request->getVar('email'); //correo 
         $password = $this->request->getVar('password'); //password
 
         $data = $model->where('email', $email)->first();
@@ -28,8 +28,8 @@ class Login_controller extends BaseController
             $pass = $data['pass'];
                 $ba= $data ['baja'];
                 if($ba == 'SI'){
-                    $session -> setFlashdata('msg', 'usuario dado de baja')
-                    return redirect()->to('/')                }
+                    $session -> setFlashdata('msg', 'usuario dado de baja');
+                    return redirect()->to('/');               }
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
