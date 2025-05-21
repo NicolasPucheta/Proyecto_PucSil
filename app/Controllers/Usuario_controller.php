@@ -14,7 +14,7 @@ class Usuario_controller extends Controller
 
     public function create()
     {
-        $data['Titulo'] = 'Registro'; // Cambiado a $data y $Titulo
+        $data['Titulo'] = 'Registro'; 
         echo view('front/head_view', $data);
         echo view('front/navbar');
         echo view('back/usuario/registrarse');
@@ -24,9 +24,9 @@ class Usuario_controller extends Controller
     public function formValidation()
     {
         $input = $this->validate([
-            'nombre'     => 'required|min_length[3]',
-            'apellido'   => 'required|min_length[3]|max_length[25]',
-            'usuario'    => 'required|min_length[3]',
+            'Nombre'     => 'required|min_length[3]',
+            'Apellido'   => 'required|min_length[3]|max_length[25]',
+            'Usuario'    => 'required|min_length[3]',
             'email'      => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
             'pass'       => 'required|min_length[3]|max_length[10]',
         ]);
@@ -34,16 +34,17 @@ class Usuario_controller extends Controller
         $formModel = new Usuarios_model();
 
         if (!$input) {
-            $data['Titulo'] = 'Registro'; // Cambiado a $Titulo
+       
+            $data['Titulo'] = 'Intento de Registro'; 
             echo view('front/head_view', $data);
             echo view('front/navbar');
             echo view('back/usuario/registrarse', ['validation' => $this->validator]);
             echo view('front/footer_view');
         } else {
             $formModel->save(  [
-                'nombre'     => $this->request->getVar('nombre'),
-                'apellido'   => $this->request->getVar('apellido'),
-                'usuario'    => $this->request->getVar('usuario'),
+                'nombre'     => $this->request->getVar('Nombre'),
+                'apellido'   => $this->request->getVar('Apellido'),
+                'usuario'    => $this->request->getVar('Usuario'),
                 'email'      => $this->request->getVar('email'),
                 'pass'       => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
                 // password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido.

@@ -20,7 +20,7 @@ class Login_controller extends BaseController
 
         //traemos los datos del fomrulario
         $email = $this->request->getVar('email'); //correo 
-        $password = $this->request->getVar('password'); //password
+        $password = $this->request->getVar('pass'); //password
 
         $data = $model->where('email', $email)->first();
 
@@ -34,8 +34,8 @@ class Login_controller extends BaseController
             if ($verify_pass) {
                 $ses_data = [
                     'id_usuario' => $data['id_usuario'],
-                    'nombre' => $data['nombre'],
-                    'apellido' => $data['apellido'],
+                    'nombre' => $data['Nombre'],
+                    'apellido' => $data['Apellido'],
                     'email' => $data['email'],
                     'usuario' => $data['usuario'],
                     'perfil_id' => $data['perfil_id'],
@@ -43,7 +43,7 @@ class Login_controller extends BaseController
                 ];
                 $session->set($ses_data);
                 session()->setFlashdata('msg', '¡Bienvenido!');
-                return redirect()->to('/principal'); // Asegúrate de que esta ruta exista
+                return redirect()->to('/principal'); 
             } else {
                 session()->setFlashdata('msg', 'Password incorrecto');
                 return redirect()->to('/login'); 
