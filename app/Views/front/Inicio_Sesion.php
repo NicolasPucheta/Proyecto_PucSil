@@ -14,7 +14,7 @@
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                        <input type="password" class="form-control" id="pass" name="pass" placeholder="••••••••" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>

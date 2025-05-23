@@ -120,6 +120,16 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
+
+    public function principal()
+    {
+    $data['Titulo'] = 'Principal';
+    echo view('front/head_view', $data);
+    echo view('front/navbar', $data);
+    echo view('principal', $data);
+    echo view('front/footer_view', $data);
+    }
+
     public function registro()
     {
         $data['Titulo'] = 'Registro';

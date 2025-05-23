@@ -32,10 +32,11 @@ class Login_controller extends BaseController
                     return redirect()->to('/');               }
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
+                echo "OK - usuario autenticado"; exit;
                 $ses_data = [
                     'id_usuario' => $data['id_usuario'],
-                    'nombre' => $data['Nombre'],
-                    'apellido' => $data['Apellido'],
+                    'nombre' => $data['nombre'],
+                    'apellido' => $data['apellido'],
                     'email' => $data['email'],
                     'usuario' => $data['usuario'],
                     'perfil_id' => $data['perfil_id'],
