@@ -48,3 +48,6 @@ $routes->get('/principal', 'Home::principal');
 /*rutas del registro de Usuario*/
 $routes->get('/registro', 'Home::registro');
 $routes->post('/enviar-form','Usuario_controller::formValidation');
+
+/*rutas navbar <Administrador></Administrador>*/
+$routes->get('crudProductos', 'Home::CRUD_Productos');
