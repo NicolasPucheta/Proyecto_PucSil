@@ -158,6 +158,16 @@ class Home extends BaseController
         echo view('front/footer_view',$data);
     }
 
+    public function Cargar_Producto()
+    {
+        $data['Titulo'] = 'Nuevo Producto';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('back/producto/alta_producto_view',$data);
+        echo view('front/footer_view',$data);
+    }
+
+    
 }
 
 

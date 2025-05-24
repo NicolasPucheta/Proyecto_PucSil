@@ -52,7 +52,7 @@ $perfil = $session->get('perfil_id');
                 </div>
             </div>
             
-            <div class="d-lg-none d-flex justify-content-center mt-3">
+            <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center">
                 <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
                     <i class="bi bi-cart-fill"></i> Carrito
                 </a>
@@ -109,9 +109,9 @@ $perfil = $session->get('perfil_id');
                     </div>
                 </div>
 
-                <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center mb-3 mb-lg-0">
+                <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center">
                     <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                                <i class="bi bi-person-fill"></i> Cerrar Sesión
+                        <i class="bi bi-person-fill"></i> Cerrar Sesión
                     </a>
                 </div>
             </div>
@@ -165,12 +165,12 @@ $perfil = $session->get('perfil_id');
                 </div>
             </div>
             
-            <div class="d-lg-none d-flex justify-content-center mt-3">
+            <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center">
                 <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
                     <i class="bi bi-cart-fill"></i> Carrito
                 </a>
                 <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                    <i class="bi bi-person-fill"></i> iniciar Sesión
+                    <i class="bi bi-person-fill"></i> Iniciar Sesión
                 </a>
             </div>
         </div>

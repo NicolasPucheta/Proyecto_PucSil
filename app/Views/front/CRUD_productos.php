@@ -1,5 +1,5 @@
 
-<main class="bg-dark text-white min-vh-100 py-5">
+<main class="bg-dark text-white">
   <div class="container">
     <h1 class="text-center mb-4">CRUD de Productos</h1>
 
@@ -25,6 +25,7 @@
             <th>ID</th>
             <th>Nombre</th>
             <th>Precio</th>
+            <th>Precio_Vta</th>
             <th>Acciones</th>
           </tr>
         </thead>
