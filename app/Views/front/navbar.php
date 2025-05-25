@@ -96,7 +96,7 @@ $perfil = $session->get('perfil_id');
 
                     <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">CRUD Usuario</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('crudUsuarios'); ?>" class="nav-link">CRUD Usuario</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('crudProductos'); ?>" class="nav-link">CRUD Productos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">Muestra ventas</a></li>
                         <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">Consultas</a></li>

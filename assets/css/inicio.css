@@ -1,3 +1,34 @@
+/*Estilos mas general*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #121212;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: auto;
+  font-family: 'Roboto', sans-serif;
+  overflow-x:hidden; 
+  background-color: #000;
+}
+
+
+main {
+  flex: 1;
+  padding-top: 150px;
+}
+
+
+footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
 /* Eliminamos márgenes y paddings por defecto del navegador */
 * {
   margin: 0;
@@ -10,22 +41,6 @@
 
 .back-to-top:focus {
   outline: none; /* Elimina el borde de enfoque */
-}
-
-/* Estilo general para el <body> */
-body {
-  margin: 0;
-  padding-top: auto;
-  font-family: 'Roboto', sans-serif;
-  overflow-x:hidden; 
-  background-color: #000;
-
-}
-
-
-main{
-  flex: 1;
-  padding-top: 150px;
 }
 
 /* Ajustar el tamaño del carrusel */
