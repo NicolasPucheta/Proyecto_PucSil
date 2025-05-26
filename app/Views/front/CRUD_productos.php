@@ -1,25 +1,26 @@
-
 <main class="bg-dark text-white">
   <div class="container">
     <h1 class="text-center mb-4">CRUD de Productos</h1>
 
-    <!-- Formulario -->
-    <form id="formProducto" class="row g-3 mb-4">
-      <input type="hidden" id="idProducto">
-      <div class="col-md-5">
-        <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto" required>
-      </div>
-      <div class="col-md-5">
-        <input type="number" id="precio" class="form-control" placeholder="Precio" required>
-      </div>
-      <div class="col-md-2 d-grid">
-        <button type="submit" class="btn btn-primary">Guardar</button>
-      </div>
-    </form>
+
+  <div class="d-flex justify-content-center mb-4 gap-4">
+    <button onclick="window.location.href='<?= base_url('crear'); ?>'"
+            class="btn btn-success px-4 py-2 shadow rounded-pill">
+      <i class="bi bi-cloud-upload"></i> CARGAR
+    </button>
+
+    <button class="btn btn-warning text-dark px-4 py-2 shadow rounded-pill">
+      <i class="bi bi-pencil-square"></i> EDITAR
+    </button>
+    <button class="btn btn-danger px-4 py-2 shadow rounded-pill">
+      <i class="bi bi-trash"></i> ELIMINAR
+    </button>
+  </div>
+
 
     <!-- Tabla -->
     <div class="table-responsive">
-      <table class="table table-dark table-bordered table-hover">
+      <table class="table table-dark table-bordered table-hover text-center align-middle">
         <thead>
           <tr>
             <th>ID</th>
@@ -49,6 +50,7 @@
                 <td>${p.id}</td>
                 <td>${p.nombre}</td>
                 <td>$${p.precio}</td>
+                <td>$${p.precio_vta ?? '-'}</td>
                 <td>
                   <button class="btn btn-warning btn-sm me-2" onclick="editar(${p.id}, '${p.nombre}', ${p.precio})">Editar</button>
                   <button class="btn btn-danger btn-sm" onclick="eliminar(${p.id})">Eliminar</button>
