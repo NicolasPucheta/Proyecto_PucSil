@@ -166,6 +166,15 @@ class Home extends BaseController
         echo view('back/producto/alta_producto_view',$data);
         echo view('front/footer_view',$data);
     }
+   
+    public function Crud_Usuarios()
+    {
+        $data['Titulo'] = 'CRUD Productos';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('front/CRUD_usuario',$data);
+        echo view('front/footer_view',$data);
+    }
 
     
 }

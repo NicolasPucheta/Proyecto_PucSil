@@ -51,6 +51,7 @@ $routes->post('/enviar-form','Usuario_controller::formValidation');
 
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'Home::CRUD_Productos');
+$routes->get('crudUsuarios', 'Home::CRUD_usuarios');
 
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario

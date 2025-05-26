@@ -16,6 +16,7 @@
     <link href="assets/css/inicio.css" rel="stylesheet">
     <link href="assets/css/inicioSesion-Carrito.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets\img\iconos\favicon.ico">
+    <link href="assets/css/CrudUsuarios.css" rel="stylesheet">
   
     
 </head>
