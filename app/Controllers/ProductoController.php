@@ -46,44 +46,35 @@ class ProductoController extends Controller {
     public function store() {
         $input = $this->validate([
             'nombre_prod' => 'required|min_length[3]',
-            'categoria' => 'is_not_unique[categorias.id]',
+            'categoria' => 'required|is_not_unique[categorias.id]',
             'precio' => 'required|numeric',
             'precio_vta' => 'required|numeric',
             'stock' => 'required|numeric',
             'stock_min' => 'required|numeric',
-            'imagen' => 'uploaded[imagen]'
+            'imagen' => 'uploaded[imagen]|is_image[imagen]|max_size[imagen,2048]'
         ]);
-
-        $productoModel = new Producto_Model();
-
-        if ($input) {
-            $categoria_model = new categoria_model();
-            $data['categorias'] = $categoria_model->getCategorias();
-            $data['validation'] = $this->validator;
-
-            $data['Titulo'] = 'Alta';
-            echo view('front/head_view', $data);
-            echo view('front/navbar');
-            echo view('back/productos/alta_producto_view', $data);
-        } else {
-            $img = $this->request->getFile('imagen');
-            $nombre_aleatorio = $img->getRandomName();
-            $img->move(ROOTPATH . 'assets/uploads/', $nombre_aleatorio);
-
-            $data = [
-                'nombre_prod' => $this->request->getVar('nombre_prod'),
-                'imagen' => $img->getName(),
-                'categoria_id' => $this->request->getVar('categoria'),
-                'precio' => $this->request->getVar('precio'),
-                'precio_vta' => $this->request->getVar('precio_vta'),
-                'stock' => $this->request->getVar('stock'),
-                'stock_min' => $this->request->getVar('stock_min')
-            ];
-
-            $producto = new Producto_Model();
-            $producto->insert($data);
-            session()->setFlashdata('success', 'Alta Exitosa...');
-            return $this->response->redirect(site_url('crear'));
+    
+        if (!$input) {
+            return $this->response->setJSON(['error' => $this->validator->getErrors()]);
         }
+    
+        $img = $this->request->getFile('imagen');
+        $nombre_aleatorio = $img->getRandomName();
+        $img->move(ROOTPATH . 'assets/uploads/', $nombre_aleatorio);
+    
+        $data = [
+            'nombre_prod' => $this->request->getVar('nombre_prod'),
+            'imagen' => $nombre_aleatorio,
+            'categoria_id' => $this->request->getVar('categoria'),
+            'precio' => $this->request->getVar('precio'),
+            'precio_vta' => $this->request->getVar('precio_vta'),
+            'stock' => $this->request->getVar('stock'),
+            'stock_min' => $this->request->getVar('stock_min')
+        ];
+    
+        $producto = new Producto_Model();
+        $producto->insert($data);
+    
+        return $this->response->setJSON(['success' => 'Producto creado correctamente.']);
     }
-}
+}    

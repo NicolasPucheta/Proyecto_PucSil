@@ -29,52 +29,51 @@
 
         <div class="faq-item">
           <h3>¿Cómo puedo contactar con atención al cliente?</h3>
-          <p>Puedes contactar con nosotros dirigiéndote al pie de página en la parte de contacto, o en el botón de abajo 👇</i>.</p>
+          <p>Puedes contactar con nosotros dirigiéndote al pie de página en la parte de contacto, o en el botón de abajo 👇</p>
         </div>
       </div>
     </div>
-      <!-- Botón de contacto -->
+
+    <!-- Botón de contacto -->
     <div class="text-center mt-4">
       <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
-       Contáctanos para más información
-        </button>
+        Contáctanos para más información
+      </button>
     </div>
 
-       <!-- Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">Dejanos tu consulta</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Dejanos tu consulta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
-          <div class="mb-3">
-            <label for="consulta" class="form-label">Tu consulta</label>
-            <textarea class="form-control" id="consulta" rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+
+          <div class="modal-body">
+            <form method="POST" action="<?= base_url('/guardar-consulta') ?>">
+              <?= csrf_field() ?>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Tu consulta</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje aquí..." required></textarea>
+              </div>
+
+              <div class="modal-footer px-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
           </div>
-        </form>
+
+        </div>
       </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
-      
     </div>
-   </div>
   </div>
 
-  </div>
-  </div>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 </main>
-
-

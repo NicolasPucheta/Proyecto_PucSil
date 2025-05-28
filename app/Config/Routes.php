@@ -56,3 +56,5 @@ $routes->get('crudUsuarios', 'Home::CRUD_usuarios');
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)
+ /*Consulta*/
+ $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
