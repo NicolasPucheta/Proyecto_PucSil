@@ -1,5 +1,5 @@
 
-  <main class="bg-light">
+  <main class="bg-dark bg-light">
     <div class="container py-5">
       <h2 class="mb-4 text-center">CRUD de Usuarios</h2>
 
@@ -23,6 +23,7 @@
             <th>#</th>
             <th>Nombre</th>
             <th>Email</th>
+            <th>ROL</th>
             <th>Acciones</th>
           </tr>
         </thead>

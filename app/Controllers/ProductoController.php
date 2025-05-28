@@ -23,7 +23,7 @@ class ProductoController extends Controller {
         $data['Titulo'] = 'Crud productos';
         echo view('front/head_view', $data);
         echo view('front/navbar');
-        echo view('back/productos/producto_nuevo_view', $data);
+        echo view('front/CRUD_productos', $data);
         echo view('front/footer_view');
     }
 
@@ -75,6 +75,15 @@ class ProductoController extends Controller {
         $producto = new Producto_Model();
         $producto->insert($data);
     
-        return $this->response->setJSON(['success' => 'Producto creado correctamente.']);
+        session()->setFlashdata(['success' => 'Producto creado correctamente.']);
+        return $this->response->redirect(site_url('crear'));
+    }
+
+    public function listar()
+    {
+        $productoModel = new Producto_Model();
+        $productos = $productoModel->where('activo', 1)->findAll();
+
+        return $this->response->setJSON($productos);
     }
 }    

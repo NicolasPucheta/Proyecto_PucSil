@@ -50,11 +50,12 @@ $routes->get('/registro', 'Home::registro');
 $routes->post('/enviar-form','Usuario_controller::formValidation');
 
 /*rutas navbar <Administrador></Administrador>*/
-$routes->get('crudProductos', 'Home::CRUD_Productos');
-$routes->get('crudUsuarios', 'Home::CRUD_usuarios');
+$routes->get('crudProductos', 'ProductoController::index');
+$routes->get('crudUsuarios', 'UsuarioCOntroller::index');
 
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)
+$routes->get('/producto/listar', 'ProductoController::listar');
  /*Consulta*/
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
