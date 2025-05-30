@@ -12,6 +12,19 @@ class Usuario_controller extends Controller
         helper(['form', 'url']);
     }
 
+    // Método para mostrar el CRUD de usuarios con datos de la base de datos
+    public function index()
+    {
+        $userModel = new Usuarios_model();
+        $data['usuarios'] = $userModel->findAll(); // Obtiene todos los usuarios de la base de datos
+        $data['Titulo'] = 'CRUD de Usuarios';
+
+        echo view('front/head_view', $data);
+        echo view('front/navbar');
+        echo view('front/CRUD_usuario', $data); // Carga la vista CRUD_usuarios.PHP
+        echo view('front/footer_view');
+    }
+
     public function create()
     {
         $data['Titulo'] = 'Registro'; 
@@ -34,7 +47,7 @@ class Usuario_controller extends Controller
         $formModel = new Usuarios_model();
 
         if (!$input) {
-       
+        
             $data['Titulo'] = 'Intento de Registro'; 
             echo view('front/head_view', $data);
             echo view('front/navbar');
@@ -54,5 +67,23 @@ class Usuario_controller extends Controller
             return redirect()->to('/registro');
 
         }
+    }
+
+    public function guardarRol()
+    {
+        $userId = $this->request->getPost('user_id');
+        $nuevoRol = $this->request->getPost('rol');
+
+        $userModel = new Usuarios_model();
+        $data = ['perfil_id' => $nuevoRol];
+        $updated = $userModel->update($userId, $data);
+
+        if ($updated) {
+            session()->setFlashdata('success', 'Rol de usuario actualizado correctamente.');
+        } else {
+            session()->setFlashdata('error', 'Hubo un error al actualizar el rol del usuario.');
+        }
+
+        return redirect()->to('crudUsuarios'); // Redirige de vuelta a la lista de usuarios
     }
 }

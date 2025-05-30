@@ -18,7 +18,7 @@ class ProductoController extends Controller {
         $productoModel = new Producto_Model();
         // Asegúrate de que 'eliminado' sea la columna correcta para productos activos/inactivos
         // Si 'activo' es tu columna, úsala aquí. Asumo 'eliminado' = 0 para activos.
-        $data['producto'] = $productoModel->where('eliminado', 0)->findAll(); 
+        $data['productos'] = $productoModel->where('eliminado', 0)->findAll(); 
 
         $data['Titulo'] = 'Crud productos';
         echo view('front/head_view', $data);

@@ -16,6 +16,7 @@
     <link href="assets/css/inicio.css" rel="stylesheet">
     <link href="assets/css/inicioSesion-Carrito.css" rel="stylesheet">
     <link href="assets/css/CrudUsuarios.css" rel="stylesheet">
+    <link href="assets/css/CrudProductos.css" rel="stylesheet">
     <link href="assets/css/Consultas.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets\img\iconos\favicon.ico">
   

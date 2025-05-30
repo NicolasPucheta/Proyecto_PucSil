@@ -52,8 +52,8 @@ $routes->post('/enviar-form','Usuario_controller::formValidation');
 
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'ProductoController::index');
-$routes->get('crudUsuarios', 'UsuarioController::index');
-
+$routes->get('crudUsuarios', 'Usuario_Controller::index');
+$routes->post('guardar_rol', 'Usuario_controller::guardarRol');
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)

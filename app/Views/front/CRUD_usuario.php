@@ -1,94 +1,87 @@
-
-  <main class="bg-dark bg-light">
+<main class="bg-dark text-white">
     <div class="container py-5">
-      <h2 class="mb-4 text-center">CRUD de Usuarios</h2>
+        <h2 class="mb-4 text-center">CRUD de Usuarios</h2>
 
-      <form id="userForm" class="mb-4">
-        <div class="row g-2">
-          <div class="col-md-4">
-            <input type="text" id="name" class="form-control" placeholder="Nombre" required>
-          </div>
-          <div class="col-md-4">
-            <input type="email" id="email" class="form-control" placeholder="Email" required>
-          </div>
-          <div class="col-md-4 d-grid">
-            <button type="submit" class="btn btn-primary" id="submitBtn">Agregar Usuario</button>
-          </div>
-        </div>
-      </form>
+        <?php if (session()->getFlashdata('success')): ?>
+            <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('success') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <script>
+                setTimeout(function() {
+                    var alertElement = document.getElementById('success-alert');
+                    if (alertElement) {
+                        alertElement.remove();
+                    }
+                }, 1500); // 1500 milisegundos = 1.5 segundos
+            </script>
+        <?php endif; ?>
 
-      <table class="table table-bordered table-hover">
-        <thead class="table-dark">
-          <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>ROL</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="userTableBody"></tbody>
-      </table>
+        <?php if (session()->getFlashdata('error')): ?>
+            <div id="error-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= session()->getFlashdata('error') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <script>
+                setTimeout(function() {
+                    var alertElement = document.getElementById('error-alert');
+                    if (alertElement) {
+                        alertElement.remove();
+                    }
+                }, 1500); // 1500 milisegundos = 1.5 segundos
+            </script>
+        <?php endif; ?>
+
+        <table class="table table-bordered table-hover table-dark text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>ROL</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <?php if (!empty($usuarios)): ?>
+                    <?php foreach ($usuarios as $usuario): ?>
+                        <form method="post" action="<?= base_url('guardar_rol') ?>">
+                            <tr>
+                                <td><?= $usuario['id'] ?></td>
+                                <td><?= $usuario['nombre'] ?></td>
+                                <td><?= $usuario['apellido'] ?></td>
+                                <td><?= $usuario['usuario'] ?></td>
+                                <td><?= $usuario['email'] ?></td>
+                                <td>
+                                    <input type="hidden" name="user_id" value="<?= $usuario['id'] ?>">
+                                    <select class="form-select form-select-sm" name="rol">
+                                        <option value="1" <?= ($usuario['perfil_id'] == 1) ? 'selected' : '' ?>>Admin</option>
+                                        <option value="2" <?= ($usuario['perfil_id'] == 2) ? 'selected' : '' ?>>Cliente</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-success">Guardar Rol</button>
+                                    <button class="btn btn-sm btn-danger" onclick="deleteUser(<?= $usuario['id'] ?>)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </form>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr><td colspan="7" class="text-center">No hay usuarios registrados.</td></tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
     </div>
 
     <script>
-      let users = [];
-      let editIndex = null;
-
-      const userForm = document.getElementById('userForm');
-      const userTableBody = document.getElementById('userTableBody');
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const submitBtn = document.getElementById('submitBtn');
-
-      userForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-
-        if (editIndex === null) {
-          users.push({ name, email });
-        } else {
-          users[editIndex] = { name, email };
-          editIndex = null;
-          submitBtn.textContent = 'Agregar Usuario';
+        function editUser(userId) {
+            console.log('Editar usuario con ID:', userId);
         }
 
-        userForm.reset();
-        renderTable();
-      });
-
-      function renderTable() {
-        userTableBody.innerHTML = '';
-        users.forEach((user, index) => {
-          userTableBody.innerHTML += `
-            <tr>
-              <td>${index + 1}</td>
-              <td>${user.name}</td>
-              <td>${user.email}</td>
-              <td>
-                <button class="btn btn-sm btn-warning me-1" onclick="editUser(${index})">Editar</button>
-                <button class="btn btn-sm btn-danger" onclick="deleteUser(${index})">Eliminar</button>
-              </td>
-            </tr>
-          `;
-        });
-      }
-
-      function editUser(index) {
-        const user = users[index];
-        nameInput.value = user.name;
-        emailInput.value = user.email;
-        editIndex = index;
-        submitBtn.textContent = 'Actualizar Usuario';
-      }
-
-      function deleteUser(index) {
-        if (confirm('¿Seguro que deseas eliminar este usuario?')) {
-          users.splice(index, 1);
-          renderTable();
+        function deleteUser(userId) {
+            console.log('Solicitud de eliminación para el usuario con ID:', userId);
         }
-      }
     </script>
-  </main>
+</main>
