@@ -20,7 +20,7 @@ $routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront')
 
 $routes->get('carrito', 'Home::carrito');
 
-$routes->get('Procesadores', 'Home::Procesadores');
+/*$routes->get('Procesadores', 'Home::Procesadores');
 
 $routes->get('motherboard', 'Home::Motherboard');
 
@@ -30,8 +30,11 @@ $routes->get('almacenamiento', 'Home::Almacenamiento');
 
 $routes->get('memoria-ram', 'Home::memorias_ram');
 
-
 $routes->get('detalleCompra', 'Home::finalizarCompra');
+*/
+
+$routes->get('productos', 'ProductoController::productosPorCategoria');
+$routes->get('productos/categoria/(:num)', 'ProductoController::productosPorCategoria/$1');
 
 
 /*rutas para el login*/
@@ -54,13 +57,13 @@ $routes->post('/enviar-form','Usuario_controller::formValidation');
 $routes->get('crudProductos', 'ProductoController::index');
 $routes->get('crudUsuarios', 'Usuario_Controller::index');
 $routes->post('guardar_rol', 'Usuario_controller::guardarRol');
+
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)
 $routes->get('/producto/listar', 'ProductoController::listar');
 
  /*Consulta*/
-
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
  // Muestra la lista de consultas
 $routes->get('/consultas', 'Consulta_controller::verConsultas');

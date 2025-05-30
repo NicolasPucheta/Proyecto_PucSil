@@ -24,27 +24,26 @@
       <div class="col-12 col-md-10 p-4">
         <div class="row g-4">
 
-          <?php
-          $productos = [
-            ['nombre' => 'RX 7600', 'precio' => 80000, 'imagen' => base_url('assets/img/placasDeVideo/rx7600.jpg')]
-          ];
-          ?>
-
-          <?php foreach ($productos as $Productos): ?>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-              <div class="producto w-100">
-                <div class="producto-img-container">
-                  <img src="<?= $Productos['imagen'] ?>" alt="<?= $Productos['nombre'] ?>" class="producto-img">
-                </div>
-                <div class="producto-info">
-                  <h5 class="titulo"><?= $Productos['nombre'] ?></h5>
-                  <p class="precio">$<?= number_format($Productos['precio'], 0, ',', '.') ?></p>
-                  <p class="descripcion">Descripción breve del producto.</p>
-                  <button class="boton-comprar">Comprar</button>
+          <?php if (!empty($productos)): // Verifica si hay productos para mostrar ?>
+            <?php foreach ($productos as $producto): // Cambié $Productos a $producto por convención ?>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                <div class="producto w-100">
+                  <div class="producto-img-container">
+                    <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" class="producto-img">
+                  </div>
+                  <div class="producto-info">
+                    <h5 class="titulo"><?= $producto['nombre_prod'] ?></h5>
+                    <p class="precio">$<?= number_format($producto['precio_vta'], 0, ',', '.') ?></p>
+                    <button class="boton-comprar">Comprar</button>
+                  </div>
                 </div>
               </div>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <div class="col-12">
+              <p>No hay productos disponibles en este momento.</p>
             </div>
-          <?php endforeach; ?>
+          <?php endif; ?>
 
         </div>
       </div>

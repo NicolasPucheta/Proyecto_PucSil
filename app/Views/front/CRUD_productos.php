@@ -40,8 +40,9 @@
                             <td><?= $producto['stock'] ?></td>
                             <td style="width: 60px; height: 60px; overflow: hidden; vertical-align: middle;">
                                 <?php if (!empty($producto['imagen'])): ?>
-                                    <img src="<?= base_url($producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" class="tabla-imagen" style="display: block; width: 100%; height: 100%; object-fit: contain;">
-                                <?php else: ?>
+                                   <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" 
+                                   class="tabla-imagen" style="display: block; width: 100%; height: 100%; object-fit: contain;">
+                                    <?php else: ?>
                                     Sin imagen
                                 <?php endif; ?>
                             </td>

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title><?=$Titulo?></title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto&display=swap" rel="stylesheet">
-    <!-- estilos-->
-    <link href="assets/css/quienesSomos.css?v=1.0" rel="stylesheet">
-    <link href="assets/css/legal.css?v=1.0" rel="stylesheet">
-    <link href="assets/css/productos.css" rel="stylesheet">
-    <link href="assets/css/ayuda.css?v=1.0" rel="stylesheet">
-    <link href="assets/css/Comercializacion.css" rel="stylesheet">
-    <link href="assets/css/inicio.css" rel="stylesheet">
-    <link href="assets/css/inicioSesion-Carrito.css" rel="stylesheet">
-    <link href="assets/css/CrudUsuarios.css" rel="stylesheet">
-    <link href="assets/css/CrudProductos.css" rel="stylesheet">
-    <link href="assets/css/Consultas.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets\img\iconos\favicon.ico">
-  
-    
+    <title><?= $Titulo ?></title>
+
+    <!-- Bootstrap y fuentes -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto&display=swap">
+
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/quienesSomos.css?v=1.0') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/legal.css?v=1.0') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/productos.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/ayuda.css?v=1.0') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/Comercializacion.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/inicio.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/inicioSesion-Carrito.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/CrudUsuarios.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/CrudProductos.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/Consultas.css') ?>">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/iconos/favicon.ico') ?>">
 </head>
-
-
-

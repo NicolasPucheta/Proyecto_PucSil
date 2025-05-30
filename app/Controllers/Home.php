@@ -49,6 +49,7 @@ class Home extends BaseController
 
         echo view('front/footer_view');
     }
+    /*
     public function Procesadores()
     {
         $data['Titulo'] = 'Procesadores';
@@ -91,7 +92,7 @@ class Home extends BaseController
         echo view('front/memorias-ram',$data);
         echo view('front/footer_view',$data );
     }
-
+    */
     public function carrito()
     {
         $data['Titulo'] = 'Carrito';

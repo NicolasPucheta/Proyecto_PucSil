@@ -1,4 +1,4 @@
-<main class="productos">
+<main class="procesadores">
   <div class="container-fluid">
     <div class="row">
 
@@ -9,29 +9,27 @@
 
         <div class="collapse show" id="categorias">
           <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('Procesadores'); ?>">Procesadores</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('motherboard'); ?>">Motherboards</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('placa-videos'); ?>">Placas de Video</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('almacenamiento'); ?>">Almacenamiento</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('memoria-ram'); ?>">Memorias RAM</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('productos/categoria/1') ?>">Procesadores</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('productos/categoria/2') ?>">Motherboards</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('productos/categoria/3') ?>">Memoria RAM</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('productos/categoria/4') ?>">Placas de Video</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('productos/categoria/5') ?>">Almacenamiento</a></li>
           </ul>
         </div>
       </div>
 
       <div class="col-12 col-md-10 p-4">
         <div class="row g-4">
-
           <?php if (!empty($productos)): // Verifica si hay productos para mostrar ?>
             <?php foreach ($productos as $producto): // Cambié $Productos a $producto por convención ?>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <div class="producto w-100">
                   <div class="producto-img-container">
-                    <img src="<?= base_url($producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" class="producto-img">
+                    <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" class="producto-img">
                   </div>
                   <div class="producto-info">
                     <h5 class="titulo"><?= $producto['nombre_prod'] ?></h5>
                     <p class="precio">$<?= number_format($producto['precio_vta'], 0, ',', '.') ?></p>
-                    <p class="descripcion"><?= isset($producto['descripcion']) ? $producto['descripcion'] : 'Descripción breve del producto.' ?></p>
                     <button class="boton-comprar">Comprar</button>
                   </div>
                 </div>
