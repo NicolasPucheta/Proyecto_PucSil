@@ -25,12 +25,28 @@
             <th>Nombre</th>
             <th>Precio</th>
             <th>Precio_Vta</th>
-            <th>ROL</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-         <!--falta recorrer con el forech-->
+        <?php if (!empty($productos)): // Verifica si hay productos para mostrar ?>
+            <?php foreach ($productos as $producto): // Cambié $Productos a $producto por convención ?>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                <div class="producto w-100">
+                  <div class="producto-img-container">
+                    <img src="<?= base_url($producto['imagen']) ?>" alt="<?= $producto['nombre_prod'] ?>" class="producto-img">
+                  </div>
+                  <div class="producto-info">
+                    <h5 class="titulo"><?= $producto['nombre_prod'] ?></h5>
+                    <p class="precio">$<?= number_format($producto['precio_vta'], 0, ',', '.') ?></p>
+                    <p class="descripcion"><?= isset($producto['descripcion']) ? $producto['descripcion'] : 'Descripción breve del producto.' ?></p>
+                    <button class="boton-comprar">Comprar</button>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          <?php else: ?>
+          <?php endif; ?>
 
 
         </tbody>

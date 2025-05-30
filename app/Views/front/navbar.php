@@ -35,7 +35,7 @@ $perfil = $session->get('perfil_id');
 
                 <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="<?php echo base_url('productos'); ?>" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('productos-catalogo'); ?>" class="nav-link">Productos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('comercializacion'); ?>" class="nav-link">Comercialización</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('quienesSomos'); ?>" class="nav-link">Quiénes Somos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('ayuda'); ?>" class="nav-link">Ayuda</a></li>
@@ -99,7 +99,7 @@ $perfil = $session->get('perfil_id');
                         <li class="nav-item"><a href="<?php echo base_url('crudUsuarios'); ?>" class="nav-link">CRUD Usuario</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('crudProductos'); ?>" class="nav-link">CRUD Productos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">Muestra ventas</a></li>
-                        <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">Consultas</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('consultas'); ?>" class="nav-link">Consultas</a></li>
                     </ul>
                         <div class="d-lg-none d-flex justify-content-center mt-3">
                             <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
@@ -148,7 +148,7 @@ $perfil = $session->get('perfil_id');
 
                 <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="<?php echo base_url('productos'); ?>" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('productos-catalogo'); ?>" class="nav-link">Productos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('comercializacion'); ?>" class="nav-link">Comercialización</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('quienesSomos'); ?>" class="nav-link">Quiénes Somos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('ayuda'); ?>" class="nav-link">Ayuda</a></li>

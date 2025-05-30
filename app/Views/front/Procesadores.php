@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <!-- Columna de Productos esta parte  weno arios-->
+      <!-- Columna de Productos esta parte-->
       <div class="col-12 col-md-10 p-4">
         <div class="row g-4">
 

@@ -36,4 +36,35 @@ class Consulta_controller extends Controller
         // Flash y redirección
         return redirect()->to('/ayuda')->with('success', 'Consulta enviada correctamente. Gracias por escribirnos.');
     }
+
+
+    
+    public function verConsultas()
+    {
+        $consultaModel = new Consulta_model();
+        $data['consultas'] = $consultaModel->findAll();
+        $data['Titulo'] = 'Consultas recibidas';
+    
+        echo view('front/head_view', $data);
+        echo view('front/navbar');
+        echo view('back/Consultas/Consultas_view', $data);
+        echo view('front/footer_view');
+    }
+    
+    public function marcarLeido($id)
+    {
+        if ($this->request->isAJAX()) {
+            $consultaModel = new Consulta_model();
+    
+            $consulta = $consultaModel->find($id);
+            if ($consulta) {
+                $nuevoEstado = $consulta['leido'] ? 0 : 1;
+                $consultaModel->update($id, ['leido' => $nuevoEstado]);
+                return $this->response->setJSON(['success' => true]);
+            }
+        }
+    
+        return $this->response->setStatusCode(400)->setJSON(['error' => 'Consulta no válida']);
+    }
+    
 }

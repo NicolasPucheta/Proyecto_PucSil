@@ -15,6 +15,7 @@ class Auth implements FilterInterface
             // Entonces redirige a la página de login
             return redirect()->to('/login');
         }
+        
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

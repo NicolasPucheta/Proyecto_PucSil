@@ -8,9 +8,7 @@ class Consulta_model extends Model
     protected $table = 'consultas';
     protected $primaryKey = 'id';
 
-    // Campos que se pueden guardar
-    protected $allowedFields = ['email', 'mensaje'];
+    protected $allowedFields = ['email', 'mensaje', 'leido'];
 
-    // Si querés guardar fecha de creación y actualización automáticamente
     protected $useTimestamps = true;
 }

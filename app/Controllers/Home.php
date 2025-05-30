@@ -49,16 +49,6 @@ class Home extends BaseController
 
         echo view('front/footer_view');
     }
-
-    public function Productos()
-    {
-        $data['Titulo'] = 'Productos';
-        echo view('front/head_view',$data);
-        echo view('front/navbar',$data);
-        echo view('front/productos',$data);
-        echo view('front/footer_view',$data);
-    }
-
     public function Procesadores()
     {
         $data['Titulo'] = 'Procesadores';
@@ -149,15 +139,6 @@ class Home extends BaseController
 
     }
 
-    /*public function Crud_Productos()
-    {
-        $data['Titulo'] = 'CRUD Productos';
-        echo view('front/head_view',$data);
-        echo view('front/navbar',$data);
-        echo view('front/CRUD_productos',$data);
-        echo view('front/footer_view',$data);
-    }
-*/
     public function Cargar_Producto()
     {
         $data['Titulo'] = 'Nuevo Producto';

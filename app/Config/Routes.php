@@ -15,7 +15,8 @@ $routes->get('ayuda', 'Home::ayuda');
 
 $routes->get('comercializacion', 'Home::comercializacion');
 
-$routes->get('productos', 'Home::Productos');
+  /*rutas front productos*/
+$routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront'); 
 
 $routes->get('carrito', 'Home::carrito');
 
@@ -51,11 +52,20 @@ $routes->post('/enviar-form','Usuario_controller::formValidation');
 
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'ProductoController::index');
-$routes->get('crudUsuarios', 'UsuarioCOntroller::index');
+$routes->get('crudUsuarios', 'UsuarioController::index');
 
 /*cargar un nuevo producto*/
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)
 $routes->get('/producto/listar', 'ProductoController::listar');
+
  /*Consulta*/
+
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
+ // Muestra la lista de consultas
+$routes->get('/consultas', 'Consulta_controller::verConsultas');
+
+// Marca como leído/no leído
+$routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
+
+ 
