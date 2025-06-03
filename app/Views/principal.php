@@ -33,69 +33,60 @@
 
 
 <section class="caja-carrusel">
-  <h2 class="titulo-caja">¡Lo más vendido!</h2>
+  <div class="encabezado-carrusel">
+    <h2 class="titulo-caja">¡Lo más vendido!</h2>
+    <a href="#mas-vendido" class="btn-mas-vendido">Ver todo</a>
+  </div>
+
   <div class="carrusel-infinito">
     <div class="carousel-track">
 
       <!-- Item 1 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i5.jpg" alt="i5">
-      
       </div>
 
       <!-- Item 2 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i7.jpg" alt="i7">
-
       </div>
 
       <!-- Item 3 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4090.jpg" alt="4090">
-     
-      
       </div>
 
       <!-- Item 4 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4060.jpg" alt="4060">
-  
-       
       </div>
 
       <!-- Item 5 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rx7600.jpg" alt="rx7600">
-  
       </div>
 
       <!-- Item 6 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/ryzen7_7700x.jpeg" alt="Ryzen 7">
-
       </div>
 
       <!-- Item 7 -->
       <div class="item-producto">
         <img src="assets/img/rams/ram1.png" alt="Ram">
-     
       </div>
 
       <!-- Duplicados para loop (para hacer el carrusel infinito) -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i5.jpg" alt="i5">
-
       </div>
 
       <div class="item-producto">
         <img src="assets/img/Procesadores/i7.jpg" alt="i7">
-
       </div>
 
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4090.jpg" alt="1">
-   
-
       </div>
 
       <div class="item-producto">
@@ -104,21 +95,19 @@
 
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rx7600.jpg" alt="1">
-     
       </div>
 
       <div class="item-producto">
         <img src="assets/img/Procesadores/ryzen7_7700x.jpeg" alt="1">
-
       </div>
 
       <div class="item-producto">
         <img src="assets/img/rams/ram1.png" alt="1">
-
       </div>
     </div>
   </div>
 </section>
+
     <!-- Info Envios -->
     <a href="<?= base_url('comercializacion'); ?>" style = "text-decoration: none;" >    
     <section class="info-section">

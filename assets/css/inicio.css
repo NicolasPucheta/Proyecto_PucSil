@@ -361,6 +361,7 @@ p {
   text-align: center;
   color: #212529;
   font-family: 'Rajdhani', sans-serif;
+  flex: 1;
 }
 
 /* Carrusel infinito */
@@ -383,6 +384,26 @@ p {
   margin: 0 1rem;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+}
+/*Boton carrusel infinito */
+.encabezado-carrusel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-mas-vendido {
+  background-color:  #0082fc;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mas-vendido:hover {
+  background-color: #0056b3;
 }
 
 /* Efecto al pasar el ratón sobre las imágenes */
@@ -442,10 +463,10 @@ p {
 
   .navbar-collapse {
     position: absolute;
-    top: calc(100% - 16px); /* Ajusta este valor para el espacio deseado */
+    top: calc(100% - 16px); 
     left: 0;
     width: 100%;
-    background-image: url('../img/fondoMenu.jpeg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('../img/fondoMenu.jpeg'); 
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center center; /* Centra la imagen en el fondo */
     box-shadow: 0 0 10px 2px rgba(29, 85, 158, 0.8); /* Borde "luminoso" blanco */
@@ -637,7 +658,7 @@ p {
 
 
 /* Estilo para el pie de página */
-/* Responsividad para el container2 */
+
 .container2 {
   padding-top: 20px;
   padding-right: 5px;
