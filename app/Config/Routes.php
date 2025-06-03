@@ -15,6 +15,8 @@ $routes->get('ayuda', 'Home::ayuda');
 
 $routes->get('comercializacion', 'Home::comercializacion');
 
+$routes->get('/usuarioData', 'Usuario_controller::usuarioData');
+
   /*rutas front productos*/
 $routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront'); 
 

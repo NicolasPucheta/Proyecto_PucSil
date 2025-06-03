@@ -46,7 +46,15 @@ class Home extends BaseController
         echo view('front/head_view',$data);
         echo view('front/navbar',$data);
         echo view('front/Comercializacion');
-
+        echo view('front/footer_view');
+    }
+    
+    public function usuarioData()
+    {
+        $data['Titulo'] = 'Mis datos';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('back/usuarioData');
         echo view('front/footer_view');
     }
     /*

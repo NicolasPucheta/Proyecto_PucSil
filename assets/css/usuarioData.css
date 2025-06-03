@@ -1,0 +1,55 @@
+/* public/css/usuarioData.css */
+
+main.usuarioData {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que main ocupe todo el ancho */
+}
+
+.info-Usuario {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%; /* Ajustamos el ancho del contenedor blanco */
+    max-width: 600px; /* Limitamos el ancho máximo del contenedor blanco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    text-align: left; /* Alineamos el texto dentro a la izquierda */
+}
+
+.usuarioData h1 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    text-align: center; /* Centramos el título dentro del contenedor blanco */
+}
+
+.info-Usuario p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.info-Usuario strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.usuarioData a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.usuarioData a:hover {
+    background-color: #0056b3;
+}

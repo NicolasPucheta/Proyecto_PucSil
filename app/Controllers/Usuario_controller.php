@@ -86,4 +86,20 @@ class Usuario_controller extends Controller
 
         return redirect()->to('crudUsuarios'); // Redirige de vuelta a la lista de usuarios
     }
+
+    public function usuarioData()
+    {
+        // Proteger esta vista: solo si está logueado y es cliente
+        if (!session()->get('logged_in') || session()->get('perfil_id') != 2) {
+            return redirect()->to('/login');
+        }
+
+        $data['main_content'] = view('front/usuarioData'); // Carga la vista principal
+        $data['Titulo'] = 'Datos del Cliente'; // Puedes pasar datos adicionales si lo necesitas
+
+        echo view('front/head_view', $data); // Renderiza el header, pasando $data si es necesario
+        echo view('front/navbar',$data);
+        echo $data['main_content'];                 // Renderiza el contenido principal
+        echo view('front/footer_view');         // Renderiza el footer
+    }
 }

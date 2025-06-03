@@ -103,7 +103,7 @@ class ProductoController extends Controller {
         $productoModel->insert($data);
     
         session()->setFlashdata('success', 'Producto creado correctamente.');
-        return $this->response->redirect(site_url('crearProducto')); // Redirige a la página de creación de productos
+        return $this->response->redirect(site_url('crudProductos')); // Redirige a la página de creación de productos
     }
 
     public function listar()
@@ -115,42 +115,41 @@ class ProductoController extends Controller {
         return $this->response->setJSON($productos);
     }
 
-    public function productosPorCategoria($categoriaId = null)
-{
-    $productoModel = new Producto_Model();
-    $categoriaModel = new categoria_model();
+    public function productosPorCategoria($categoriaId = null){
+        $productoModel = new Producto_Model();
+        $categoriaModel = new categoria_model();
 
-    // Si se pasa un ID de categoría
-    if ($categoriaId) {
-        // Buscar categoría
-        $categoria = $categoriaModel->find($categoriaId);
+        // Si se pasa un ID de categoría
+        if ($categoriaId) {
+            // Buscar categoría
+            $categoria = $categoriaModel->find($categoriaId);
 
-        if (!$categoria) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Categoría no encontrada');
+            if (!$categoria) {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Categoría no encontrada');
+            }
+
+            // Obtener productos de esa categoría
+            $productos = $productoModel
+                ->where('eliminado', 0)
+                ->where('categoria_id', $categoriaId)
+                ->findAll();
+
+            $titulo = 'Categoría: ' . $categoria['descripcion'];
+        } else {
+            // Si no hay categoría, mostrar todos los productos
+            $productos = $productoModel->where('eliminado', 0)->findAll();
+            $titulo = 'Todos los Productos';
         }
 
-        // Obtener productos de esa categoría
-        $productos = $productoModel
-            ->where('eliminado', 0)
-            ->where('categoria_id', $categoriaId)
-            ->findAll();
+        $data = [
+            'productos' => $productos,
+            'Titulo' => $titulo
+        ];
 
-        $titulo = 'Categoría: ' . $categoria['descripcion'];
-    } else {
-        // Si no hay categoría, mostrar todos los productos
-        $productos = $productoModel->where('eliminado', 0)->findAll();
-        $titulo = 'Todos los Productos';
+        echo view('front/head_view', $data);
+        echo view('front/navbar');
+        echo view('front/Productos', $data);
+        echo view('front/footer_view');
     }
-
-    $data = [
-        'productos' => $productos,
-        'Titulo' => $titulo
-    ];
-
-    echo view('front/head_view', $data);
-    echo view('front/navbar');
-    echo view('front/Productos', $data);
-    echo view('front/footer_view');
-}
 
 }
