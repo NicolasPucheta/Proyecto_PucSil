@@ -27,13 +27,13 @@
           <p class="mb-2">¡Seguinos!</p>
         </div>
         <div class="Iconos-redes d-flex gap-3">
-            <a href="https://www.facebook.com" target="_blank">
-             <img src="assets/img/facebook-logo_2504792.png" alt="Facebook">
-            </a>
-                <a href="https://www.instagram.com" target="_blank">
-                <img src="assets/img/instagram_4494488.png" alt="Instagram">
-                 </a>
-        </div>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="<?= base_url('assets/img/facebook-logo_2504792.png') ?>" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="<?= base_url('assets/img/instagram_4494488.png') ?>" alt="Instagram">
+      </a>
+    </div>
 
       </div>
 

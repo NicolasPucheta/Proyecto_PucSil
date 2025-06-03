@@ -40,93 +40,81 @@
       <!-- Item 1 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i5.jpg" alt="i5">
-        <p class="precio">Precio Lista: $125.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+      
       </div>
 
       <!-- Item 2 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i7.jpg" alt="i7">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
 
       <!-- Item 3 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4090.jpg" alt="4090">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+     
+      
       </div>
 
       <!-- Item 4 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4060.jpg" alt="4060">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+  
+       
       </div>
 
       <!-- Item 5 -->
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rx7600.jpg" alt="rx7600">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+  
       </div>
 
       <!-- Item 6 -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/ryzen7_7700x.jpeg" alt="Ryzen 7">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
 
       <!-- Item 7 -->
       <div class="item-producto">
         <img src="assets/img/rams/ram1.png" alt="Ram">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+     
       </div>
 
       <!-- Duplicados para loop (para hacer el carrusel infinito) -->
       <div class="item-producto">
         <img src="assets/img/Procesadores/i5.jpg" alt="i5">
-        <p class="precio">Precio Lista: $125.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
 
       <div class="item-producto">
         <img src="assets/img/Procesadores/i7.jpg" alt="i7">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
 
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4090.jpg" alt="1">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+   
+
       </div>
 
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rtx4060.jpg" alt="1">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
       </div>
 
       <div class="item-producto">
         <img src="assets/img/placasDeVideo/rx7600.jpg" alt="1">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+     
       </div>
 
       <div class="item-producto">
         <img src="assets/img/Procesadores/ryzen7_7700x.jpeg" alt="1">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
 
       <div class="item-producto">
         <img src="assets/img/rams/ram1.png" alt="1">
-        <p class="precio">Precio Lista: $90.000</p>
-        <img class="carrito-icono" src="assets/img/carrito.png" alt="Agregar al carrito">
+
       </div>
     </div>
   </div>

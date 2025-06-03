@@ -13,12 +13,12 @@ $perfil = $session->get('perfil_id');
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand d-none d-lg-block" href="<?php echo base_url() ?>">
-                    <img src="assets/img/Logo3.png" alt="Logo" height="80">
+                <a class="navbar-brand d-none d-lg-block" href="<?= base_url() ?>">
+                    <img src="<?= base_url('assets/img/Logo3.png') ?>" alt="Logo" height="80">
                 </a>
 
                 <a class="navbar-brand d-block d-lg-none" href="<?php echo base_url() ?>">
-                    <img src="assets/img/iconos/favicon.ico" alt="Logo pequeño" height="40">
+                    <img src="<?= base_url('assets/img/iconos/favicon.ico') ?>" alt="Logo pequeño" height="40">
                 </a>
             </div>
 
@@ -64,7 +64,6 @@ $perfil = $session->get('perfil_id');
     </div>
 </nav>
 
-
 <?php elseif ($perfil == 1): ?>
     <nav class="menu navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -74,12 +73,12 @@ $perfil = $session->get('perfil_id');
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand d-none d-lg-block" href="<?php echo base_url() ?>">
-                        <img src="assets/img/Logo3.png" alt="Logo" height="80">
+                    <a class="navbar-brand d-none d-lg-block" href="<?= base_url() ?>">
+                        <img src="<?= base_url('assets/img/Logo3.png') ?>" alt="Logo" height="80">
                     </a>
 
                     <a class="navbar-brand d-block d-lg-none" href="<?php echo base_url() ?>">
-                        <img src="assets/img/iconos/favicon.ico" alt="Logo pequeño" height="40">
+                        <img src="<?= base_url('assets/img/iconos/favicon.ico') ?>" alt="Logo pequeño" height="40">
                     </a>
                 </div>
 
@@ -95,12 +94,12 @@ $perfil = $session->get('perfil_id');
                     </div>
 
                     <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="<?php echo base_url('crudUsuarios'); ?>" class="nav-link">CRUD Usuario</a></li>
-                        <li class="nav-item"><a href="<?php echo base_url('crudProductos'); ?>" class="nav-link">CRUD Productos</a></li>
-                        <li class="nav-item"><a href="<?php echo base_url(''); ?>" class="nav-link">Muestra ventas</a></li>
-                        <li class="nav-item"><a href="<?php echo base_url('consultas'); ?>" class="nav-link">Consultas</a></li>
-                    </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="<?php echo base_url('crudUsuarios'); ?>" class="nav-link">CRUD Usuario</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('crudProductos'); ?>" class="nav-link">CRUD Productos</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('muestra-ventas'); ?>" class="nav-link">Muestra ventas</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('consultas'); ?>" class="nav-link">Consultas</a></li>
+                        </ul>
                         <div class="d-lg-none d-flex justify-content-center mt-3">
                             <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
                                 <i class="bi bi-person-fill"></i> Cerrar Sesión
@@ -117,8 +116,9 @@ $perfil = $session->get('perfil_id');
             </div>
         </div>
     </nav>
-    <?php else: ?>
-    <nav class="menu navbar navbar-expand-lg navbar-light">
+
+<?php else: ?>
+<nav class="menu navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <div class="row w-100 align-items-center">
             <div class="col-12 col-md-4 d-flex align-items-center">
@@ -127,11 +127,11 @@ $perfil = $session->get('perfil_id');
                 </button>
 
                 <a class="navbar-brand d-none d-lg-block" href="<?php echo base_url() ?>">
-                    <img src="assets/img/Logo3.png" alt="Logo" height="80">
+                    <img src="<?= base_url('assets/img/Logo3.png') ?>" alt="Logo" height="80">
                 </a>
 
                 <a class="navbar-brand d-block d-lg-none" href="<?php echo base_url() ?>">
-                    <img src="assets/img/iconos/favicon.ico" alt="Logo pequeño" height="40">
+                    <img src="<?= base_url('assets/img/iconos/favicon.ico') ?>" alt="Logo pequeño" height="40">
                 </a>
             </div>
 
@@ -176,7 +176,6 @@ $perfil = $session->get('perfil_id');
         </div>
     </div>
 </nav>
-
 <?php endif; ?>
 
   

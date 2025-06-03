@@ -14,7 +14,9 @@
         <li class="list-group-item d-flex justify-content-between align-items-start <?= $consulta['leido'] ? 'leido' : 'no-leido' ?>" data-email="<?= esc(strtolower($consulta['email'])) ?>" data-id="<?= $consulta['id'] ?>">
           <div class="ms-2 me-auto">
             <div class="fw-bold"><?= esc($consulta['email']) ?></div>
-            <?= esc($consulta['mensaje']) ?>
+            <?= esc($consulta['mensaje']) ?><br>
+            <small class="fecha-consulta">Enviado el <?= date('d/m/Y H:i', strtotime($consulta['created_at'])) ?></small>
+
           </div>
           <button class="btn btn-sm <?= $consulta['leido'] ? 'btn-secondary' : 'btn-success' ?> btn-toggle-leido">
             <?= $consulta['leido'] ? '<i class="bi bi-check-circle-fill"></i> Leído' : 'Leído' ?>
