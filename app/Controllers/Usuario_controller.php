@@ -12,16 +12,15 @@ class Usuario_controller extends Controller
         helper(['form', 'url']);
     }
 
-    // Método para mostrar el CRUD de usuarios con datos de la base de datos
     public function index()
     {
         $userModel = new Usuarios_model();
-        $data['usuarios'] = $userModel->findAll(); // Obtiene todos los usuarios de la base de datos
+        $data['usuarios'] = $userModel->findAll();
         $data['Titulo'] = 'CRUD de Usuarios';
 
         echo view('front/head_view', $data);
         echo view('front/navbar');
-        echo view('front/CRUD_usuario', $data); // Carga la vista CRUD_usuarios.PHP
+        echo view('front/CRUD_usuario', $data);
         echo view('front/footer_view');
     }
 
@@ -47,25 +46,22 @@ class Usuario_controller extends Controller
         $formModel = new Usuarios_model();
 
         if (!$input) {
-        
             $data['Titulo'] = 'Intento de Registro'; 
             echo view('front/head_view', $data);
             echo view('front/navbar');
             echo view('back/usuario/registrarse', ['validation' => $this->validator]);
             echo view('front/footer_view');
         } else {
-            $formModel->save(  [
+            $formModel->save([
                 'nombre'     => $this->request->getVar('Nombre'),
                 'apellido'   => $this->request->getVar('Apellido'),
                 'usuario'    => $this->request->getVar('Usuario'),
                 'email'      => $this->request->getVar('email'),
                 'pass'       => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
-                // password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido.
             ]);
-            // Flashdata funciona solo en redirigir la función en el controlador en la vista de carga.
+
             session()->setFlashdata('success', 'Usuario registrado con exito');
             return redirect()->to('/registro');
-
         }
     }
 
@@ -84,22 +80,62 @@ class Usuario_controller extends Controller
             session()->setFlashdata('error', 'Hubo un error al actualizar el rol del usuario.');
         }
 
-        return redirect()->to('crudUsuarios'); // Redirige de vuelta a la lista de usuarios
+        return redirect()->to('crudUsuarios');
     }
 
     public function usuarioData()
     {
-        // Proteger esta vista: solo si está logueado y es cliente
         if (!session()->get('logged_in') || session()->get('perfil_id') != 2) {
             return redirect()->to('/login');
         }
 
-        $data['main_content'] = view('front/usuarioData'); // Carga la vista principal
-        $data['Titulo'] = 'Datos del Cliente'; // Puedes pasar datos adicionales si lo necesitas
+        $usuario_id = session()->get('id');
+        $usuarioModel = new Usuarios_model();
+        $usuario = $usuarioModel->find($usuario_id);
 
-        echo view('front/head_view', $data); // Renderiza el header, pasando $data si es necesario
-        echo view('front/navbar',$data);
-        echo $data['main_content'];                 // Renderiza el contenido principal
-        echo view('front/footer_view');         // Renderiza el footer
+        $data['usuario'] = $usuario;
+        $data['Titulo'] = 'Datos del Cliente';
+        $data['main_content'] = view('front/usuarioData', $data);
+
+        echo view('front/head_view', $data);
+        echo view('front/navbar', $data);
+        echo $data['main_content'];
+        echo view('front/footer_view');
+    }
+    public function actualizarPerfil()
+    {
+        $id = $this->request->getPost('id');
+        $nombre = $this->request->getPost('nombre');
+        $apellido = $this->request->getPost('apellido');
+        $usuario = $this->request->getPost('usuario');
+        $email = $this->request->getPost('email');
+        $pass = $this->request->getPost('pass');
+    
+        $usuarioModel = new Usuarios_model();
+    
+        $data = [
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'usuario' => $usuario,
+            'email' => $email,
+            'pass' => $pass,
+        ];
+    
+        // Solo actualizamos la contraseña si viene no vacía y encriptada (por seguridad)
+        if (!empty($pass)) {
+            $data['pass'] = password_hash($pass, PASSWORD_DEFAULT);
+        }
+    
+        $usuarioModel->update($id, $data);
+    
+        // Actualizar la sesión con los datos que se hayan cambiado
+        session()->set('nombre', $nombre);
+        session()->set('apellido', $apellido);
+        session()->set('usuario', $usuario);
+        session()->set('email', $email);
+        session()->set('pass', $pass);
+    
+        return redirect()->to('/usuarioData')->with('mensaje', 'Datos actualizados correctamente.');
     }
 }
+    

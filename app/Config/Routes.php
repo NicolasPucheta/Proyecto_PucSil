@@ -22,18 +22,6 @@ $routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront')
 
 $routes->get('carrito', 'Home::carrito');
 
-/*$routes->get('Procesadores', 'Home::Procesadores');
-
-$routes->get('motherboard', 'Home::Motherboard');
-
-$routes->get('placas-videos', 'Home::Placas_video');
-
-$routes->get('almacenamiento', 'Home::Almacenamiento');
-
-$routes->get('memoria-ram', 'Home::memorias_ram');
-
-$routes->get('detalleCompra', 'Home::finalizarCompra');
-*/
 
 $routes->get('productos', 'ProductoController::productosPorCategoria');
 $routes->get('productos/categoria/(:num)', 'ProductoController::productosPorCategoria/$1');
@@ -72,5 +60,9 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 
 // Marca como leído/no leído
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
+
+//Rutas editar datos perfil
+
+$routes->post('/actualizarPerfil', 'Usuario_controller::actualizarPerfil');
 
  
