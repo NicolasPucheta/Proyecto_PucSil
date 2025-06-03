@@ -60,6 +60,8 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 
 // Marca como leído/no leído
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
+//muestra ventas admin
+$routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
 
 //Rutas editar datos perfil
 

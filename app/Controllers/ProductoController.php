@@ -105,7 +105,26 @@ class ProductoController extends Controller {
         session()->setFlashdata('success', 'Producto creado correctamente.');
         return $this->response->redirect(site_url('crudProductos')); // Redirige a la página de creación de productos
     }
-
+    public function mostrarVentas() {
+        // Crear modelo dinámico para la tabla ventas
+        $ventaModel = new class extends \CodeIgniter\Model {
+            protected $table = 'ventas';
+            protected $primaryKey = 'id';
+            protected $allowedFields = ['producto_id', 'cantidad', 'total', 'fecha'];
+        };
+    
+        $ventas = $ventaModel->findAll();
+    
+        $data = [
+            'ventas' => $ventas,
+            'Titulo' => 'Resumen de Ventas'
+        ];
+    
+        echo view('front/head_view', $data);       
+        echo view('front/navbar');
+        echo view('back/ventas/Muestra_ventas', $data);
+        echo view('front/footer_view');
+    }
     public function listar()
     {
         $productoModel = new Producto_Model();

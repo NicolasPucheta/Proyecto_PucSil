@@ -22,4 +22,12 @@ class Producto_model extends Model
     {
         return $this->findAll(); // devuelve todos los productos
     }
+    public function getVentas() {
+        // Utilizamos el modelo de ventas para acceder a la tabla 'ventas'
+        $db = \Config\Database::connect();
+        $builder = $db->table('ventas');
+        
+        // Devolver todas las ventas
+        return $builder->get()->getResult(); 
+    }
 }
