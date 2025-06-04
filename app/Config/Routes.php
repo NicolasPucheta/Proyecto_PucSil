@@ -36,12 +36,13 @@ $routes->get('/logout', 'Login_controller::logout');
 
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
-
 $routes->get('/principal', 'Home::principal');
 
 /*rutas del registro de Usuario*/
 $routes->get('/registro', 'Home::registro');
 $routes->post('/enviar-form','Usuario_controller::formValidation');
+/*Eliminar usuarios*/
+$routes->get('usuarios/eliminar/(:num)', 'UsuarioController::eliminar/$1');
 
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'ProductoController::index');
@@ -52,6 +53,8 @@ $routes->post('guardar_rol', 'Usuario_controller::guardarRol');
 $routes->get('crear', 'ProductoController::crearProducto'); // Muestra el formulario
 $routes->post('enviar-prod', 'ProductoController::store'); // Procesa el formulario (guardar producto)
 $routes->get('/producto/listar', 'ProductoController::listar');
+/*Eliminar producto*/
+$routes->get('producto/eliminar/(:num)', 'ProductoController::eliminar/$1');
 
  /*Consulta*/
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
@@ -64,7 +67,6 @@ $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido
 $routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
 
 //Rutas editar datos perfil
-
 $routes->post('/actualizarPerfil', 'Usuario_controller::actualizarPerfil');
 
  

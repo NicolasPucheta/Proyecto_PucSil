@@ -63,7 +63,9 @@
                                 </td>
                                 <td>
                                     <button type="submit" class="btn btn-sm btn-success">Guardar Rol</button>
-                                    <button class="btn btn-sm btn-danger" onclick="deleteUser(<?= $usuario['id'] ?>)">Eliminar</button>
+
+                                     <a href="<?= base_url('usuarios/eliminar/' . $usuario['id']) ?>" class="btn btn-danger btn-sm"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">Eliminar</a>
                                 </td>
                             </tr>
                         </form>

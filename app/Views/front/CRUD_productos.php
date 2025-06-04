@@ -48,7 +48,8 @@
                             </td>
                             <td>
                                 <button class="btn btn-warning btn-sm me-2" onclick="editar(<?= $producto['id'] ?>, '<?= $producto['nombre_prod'] ?>', <?= $producto['precio'] ?>)">Editar</button>
-                                <button class="btn btn-danger btn-sm" onclick="eliminar(<?= $producto['id'] ?>)">Eliminar</button>
+                                <a href="<?= base_url('producto/eliminar/' . $producto['id']) ?>" class="btn btn-danger btn-sm"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

@@ -137,5 +137,26 @@ class Usuario_controller extends Controller
     
         return redirect()->to('/usuarioData')->with('mensaje', 'Datos actualizados correctamente.');
     }
+
+    public function eliminar($id)
+    {
+        $usuarioModel = new Usuario_model();
+
+        // Verificamos si el producto existe
+        $usuario = $usuarioModel->find($id);
+        if (!$usuario) {
+            session()->setFlashdata('mensaje', 'Producto no encontrado.');
+            session()->setFlashdata('tipo', 'danger');
+            return redirect()->to('/');
+        }
+
+        // Eliminamos el producto
+        $usuarioModel->delete($id);
+
+        session()->setFlashdata('mensaje', 'usuario eliminado correctamente.');
+        session()->setFlashdata('tipo', 'success');
+
+        return redirect()->to('crudUsuarios');
+    }
 }
     

@@ -86,11 +86,11 @@ class ProductoController extends Controller {
         $nombre_aleatorio = $img->getRandomName();
         // Asegúrate de que ROOTPATH . 'assets/uploads/' sea la ruta correcta donde quieres guardar las imágenes.
         // Y que esta ruta sea accesible públicamente desde la web.
-        $img->move(ROOTPATH . 'public/assets/uploads/', $nombre_aleatorio); 
+        $img->move(FCPATH . 'assets/uploads/', $nombre_aleatorio); 
 
         $data = [
             'nombre_prod' => $this->request->getVar('nombre_prod'),
-            'imagen' => 'assets/uploads/' . $nombre_aleatorio, 
+            'imagen' =>  $nombre_aleatorio, 
             'categoria_id' => $this->request->getVar('categoria'),
             'precio' => $this->request->getVar('precio'),
             'precio_vta' => $this->request->getVar('precio_vta'),
@@ -170,5 +170,30 @@ class ProductoController extends Controller {
         echo view('front/Productos', $data);
         echo view('front/footer_view');
     }
+    
+    public function eliminar($id)
+    {
+        $productoModel = new Producto_model();
 
+        // Verificamos si el producto existe
+        $producto = $productoModel->find($id);
+        if (!$producto) {
+            session()->setFlashdata('mensaje', 'Producto no encontrado.');
+            session()->setFlashdata('tipo', 'danger');
+            return redirect()->to('/');
+        }
+
+        // Eliminamos la imagen si existe
+        if (!empty($producto['imagen']) && file_exists(FCPATH . 'assets/uploads/' . $producto['imagen'])) {
+            unlink(FCPATH . 'assets/uploads/' . $producto['imagen']);
+        }
+
+        // Eliminamos el producto
+        $productoModel->delete($id);
+
+        session()->setFlashdata('mensaje', 'Producto eliminado correctamente.');
+        session()->setFlashdata('tipo', 'success');
+
+        return redirect()->to('crudProductos');
+    }
 }
