@@ -33,7 +33,7 @@ class Login_controller extends BaseController
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
-                    'id_usuario' => $data['id'],
+                    'id' => $data['id'],
                     'nombre' => $data['nombre'],
                     'apellido' => $data['apellido'],
                     'email' => $data['email'],
