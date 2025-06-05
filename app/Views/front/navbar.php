@@ -1,7 +1,11 @@
-<?php
+<?php 
 $session = session();
 $nombre = $session->get('nombre');
 $perfil = $session->get('perfil_id');
+
+// Obtener el carrito desde la sesión (si existe)
+$carrito = $session->get('carrito');
+$cantidadCarrito = is_array($carrito) ? count($carrito) : 0;
 ?>
 
 <?php if ($perfil == 2): ?>
@@ -42,23 +46,41 @@ $perfil = $session->get('perfil_id');
                         <li class="nav-item"><a href="<?php echo base_url('legal'); ?>" class="nav-link">Legal</a></li>
                     </ul>
                     <div class="d-lg-none d-flex justify-content-center mt-3">
-                        <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
-                            <i class="bi bi-cart-fill"></i> Carrito
-                        </a>
-                         <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                            <i class="bi bi-person-fill"></i> Cerrar Sesión
-                         </a>
+                        <?php if ($nombre): ?>
+                            <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+                                <i class="bi bi-cart-fill"></i> Carrito
+                                <?php if ($cantidadCarrito > 0): ?>
+                                    <span class="badge bg-danger"><?= $cantidadCarrito ?></span>
+                                <?php endif; ?>
+                            </a>
+                            <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
+                                <i class="bi bi-person-fill"></i> Cerrar Sesión
+                            </a>
+                        <?php else: ?>
+                            <a href="<?php echo base_url('login'); ?>" class="btn btn-outline-success">
+                                <i class="bi bi-person-fill"></i> Iniciar Sesión
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center">
-                <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
-                    <i class="bi bi-cart-fill"></i> Carrito
-                </a>
-                <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                    <i class="bi bi-person-fill"></i> Cerrar Sesión
-                </a>
+                <?php if ($nombre): ?>
+                    <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+                        <i class="bi bi-cart-fill"></i> Carrito
+                        <?php if ($cantidadCarrito > 0): ?>
+                            <span class="badge bg-danger"><?= $cantidadCarrito ?></span>
+                        <?php endif; ?>
+                    </a>
+                    <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
+                        <i class="bi bi-person-fill"></i> Cerrar Sesión
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo base_url('login'); ?>" class="btn btn-outline-success">
+                        <i class="bi bi-person-fill"></i> Iniciar Sesión
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -155,27 +177,43 @@ $perfil = $session->get('perfil_id');
                         <li class="nav-item"><a href="<?php echo base_url('legal'); ?>" class="nav-link">Legal</a></li>
                     </ul>
                     <div class="d-lg-none d-flex justify-content-center mt-3">
-                        <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
-                            <i class="bi bi-cart-fill"></i> Carrito
-                        </a>
-                         <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                            <i class="bi bi-person-fill"></i> Iniciar Sesión
-                         </a>
+                        <?php if ($nombre): ?>
+                            <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+                                <i class="bi bi-cart-fill"></i> Carrito
+                                <?php if ($cantidadCarrito > 0): ?>
+                                    <span class="badge bg-danger"><?= $cantidadCarrito ?></span>
+                                <?php endif; ?>
+                            </a>
+                            <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
+                                <i class="bi bi-person-fill"></i> Cerrar Sesión
+                            </a>
+                        <?php else: ?>
+                            <a href="<?php echo base_url('login'); ?>" class="btn btn-outline-success">
+                                <i class="bi bi-person-fill"></i> Iniciar Sesión
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-3 d-none d-lg-flex justify-content-end align-items-center">
-                <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
-                    <i class="bi bi-cart-fill"></i> Carrito
-                </a>
-                <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
-                    <i class="bi bi-person-fill"></i> Iniciar Sesión
-                </a>
+                <?php if ($nombre): ?>
+                    <a href="<?php echo base_url('carrito'); ?>" class="btn btn-outline-primary me-2">
+                        <i class="bi bi-cart-fill"></i> Carrito
+                        <?php if ($cantidadCarrito > 0): ?>
+                            <span class="badge bg-danger"><?= $cantidadCarrito ?></span>
+                        <?php endif; ?>
+                    </a>
+                    <a href="<?php echo base_url('logout'); ?>" class="btn btn-outline-success">
+                        <i class="bi bi-person-fill"></i> Cerrar Sesión
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo base_url('login'); ?>" class="btn btn-outline-success">
+                        <i class="bi bi-person-fill"></i> Iniciar Sesión
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </nav>
 <?php endif; ?>
-
-  

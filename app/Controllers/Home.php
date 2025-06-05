@@ -57,69 +57,6 @@ class Home extends BaseController
         echo view('back/usuarioData');
         echo view('front/footer_view');
     }
-    /*
-    public function Procesadores()
-    {
-        $data['Titulo'] = 'Procesadores';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/Procesadores',$data);
-        echo view('front/footer_view',$data );
-    }
-
-    public function Motherboard()
-    {
-        $data['Titulo'] = 'Motherboard';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/motherboard',$data);
-        echo view('front/footer_view',$data );
-    }
-    public function placas_video()
-    {
-        $data['Titulo'] = 'Placas de Video';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/placas-videos',$data);
-        echo view('front/footer_view',$data );
-    }
-
-    public function Almacenamiento()
-    {
-        $data['Titulo'] = 'Almacenamiento';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/almacenamiento',$data);
-        echo view('front/footer_view',$data );
-    }
-    public function memorias_ram() 
-    {
-        $data['Titulo'] = 'Memoria RAM';
-        echo view('front/head_view', $data);
-        echo view('front/navbar',$data);
-        echo view('front/memorias-ram',$data);
-        echo view('front/footer_view',$data );
-    }
-    */
-    public function carrito()
-    {
-        $data['Titulo'] = 'Carrito';
-        echo view('front/head_view',$data);
-        echo view('front/navbar',$data);
-        echo view('front/Carrito');
-        echo view('front/footer_view');
-    }
-
-     public function finalizarCompra()
-    {
-        $data['Titulo'] = 'Finalizar Compra';
-        echo view('front/head_view',$data);
-        echo view('front/navbar',$data);
-        echo view('front/detalleCompra');
-        echo view('front/footer_view');
-    }
-
-
     public function principal()
     {
     $data['Titulo'] = 'Principal';

@@ -18,8 +18,9 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('/usuarioData', 'Usuario_controller::usuarioData');
 
 /*rutas front productos*/
-$routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront'); 
-$routes->get('carrito', 'Home::carrito');
+
+$routes->get('detalleCompra', 'carrito_controller::finalizarCompra');
+
 
 /*rutas para el login*/
 $routes->get('/login', 'Home::login');
@@ -63,6 +64,33 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
 //muestra ventas admin
 $routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
+
+// Rutas para el carrito*/
+// muestra todos los productos del catalogo
+$routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront', ['filter' => 'auth']);
+
+// carga la vista carrito_parte_view
+$routes->get('carrito', 'carrito_controller::Carrito', ['filter' => 'auth']);
+
+// actualiza los datos del carrito
+$routes->get('/carrito_actualiza', 'carrito_controller::actualiza_carrito', ['filter' => 'auth']);
+
+// agregar los items seleccionados
+$routes->post('carrito/add', 'carrito_controller::add', ['filter' => 'auth']);
+
+// elimina un item del carrito
+$routes->get('carrito_elimina/(:any)', 'carrito_controller::remove/$1', ['filter' => 'auth']);
+
+// eliminar todo el carrito
+$routes->get('/borrar', 'carrito_controller::borrar_carrito', ['filter' => 'auth']);
+
+// Registrar la venta en las tablas
+$routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta', ['filter' => 'auth']);
+
+// botones de sumar y restar en la vista del carrito
+$routes->get('carrito_suma/(:any)', 'carrito_controller::suma/$1');
+$routes->get('carrito_resta/(:any)', 'carrito_controller::resta/$1');
+
 
 
  
