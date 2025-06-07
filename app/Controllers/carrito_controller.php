@@ -12,20 +12,20 @@ class carrito_controller extends BaseController
     protected $session;
     protected $cart;
 
-      public function __construct()
+    public function __construct()
     {
         helper(['form', 'url', 'cart']);
-        $cart = \Config\Services::cart();
-        $session = session();
+        $this->cart = \Config\Services::cart();
+        $this->session = session();
     }
 
     public function catalogo()
     {
         $productoModel = new Producto_Model();
         $data['producto'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $data['Titulo'] = 'Todos los Productos';
 
-        $dato = ['titulo' => 'Todos los Productos'];
-        echo view('front/head_view', $dato);
+        echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('back/carrito/productos_catalogo_view', $data);
         echo view('front/footer_view');
@@ -36,8 +36,7 @@ class carrito_controller extends BaseController
         $cart = \Config\Services::cart();
         $cart = $cart->contents();
         $data['cart'] = $cart;
-
-        $dato['titulo'] = 'Carrito';
+        $data['Titulo'] = 'Carrito';
         echo view('front/head_view', $data);
         echo view('front/navbar', $data); 
         echo view('front/Carrito', $data); 
