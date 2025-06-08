@@ -20,13 +20,13 @@
           <td class="precio" data-precio="<?= esc($item['price']) ?>">$<?= esc($item['price']) ?></td>
           <td>
             <div class="cantidad-controles">
-              <a href="<?= base_url('carrito_controller/resta/' . $item['rowid']) ?>" class="btn btn-sm btn-outline-info me-1">−</a>
+              <a href="<?= base_url('carrito_resta/' . $item['rowid']) ?>" class="btn btn-sm btn-outline-info me-1">−</a>
               <span class="cantidad"><?= esc($item['qty']) ?></span>
-              <a href="<?= base_url('carrito_controller/suma/' . $item['rowid']) ?>" class="btn btn-sm btn-outline-info ms-1">+</a>
+              <a href="<?= base_url('carrito_suma/' . $item['rowid']) ?>" class="btn btn-sm btn-outline-info ms-1">+</a>
             </div>
           </td>
           <td>
-            <a href="<?= base_url('carrito_controller/eliminar_item/' . $item['rowid']) ?>" class="btn btn-danger btn-sm">Eliminar</a>
+            <a href="<?= base_url('carrito_elimina/' . $item['rowid']) ?>" class="btn btn-danger btn-sm">Eliminar</a>
           </td>
         </tr>
       <?php endforeach; ?>

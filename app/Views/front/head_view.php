@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/CrudProductos.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/Consultas.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/usuarioData.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/procesarPago.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/detalleCompra.css') ?>">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/iconos/favicon.ico') ?>">

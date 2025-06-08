@@ -34,7 +34,7 @@
 
 <section class="caja-carrusel">
   <div class="encabezado-carrusel">
-    <h2 class="titulo-caja">¡Lo más vendido!</h2>
+    <h2 class="titulo-caja">Nuestros Productos</h2>
     <a href="#mas-vendido" class="btn-mas-vendido">Ver todo</a>
   </div>
 

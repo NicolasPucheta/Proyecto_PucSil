@@ -90,6 +90,13 @@ $routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta', ['filter' 
 // botones de sumar y restar en la vista del carrito
 $routes->get('carrito_suma/(:any)', 'carrito_controller::suma/$1');
 $routes->get('carrito_resta/(:any)', 'carrito_controller::resta/$1');
+$routes->post('/procesarPago', 'carrito_controller::procesar_compra');
+// Mostrar la vista con los datos de pago según método seleccionado
+$routes->post('/mostrarDatosPago', 'carrito_controller::mostrarDatosPago', ['filter' => 'auth']);
+
+
+
+
 
 
 

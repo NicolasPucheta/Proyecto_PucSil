@@ -6,6 +6,12 @@ use CodeIgniter\Controller;
 use CodeIgniterCart\Cart;
 use CodeIgniter\Config\Services;
 use App\Models\Producto_Model;
+use App\Models\Pedidos_model;
+use App\Models\DetallePedido_model;
+use App\Models\Ventas_cabecera_model;
+use App\Models\Ventas_detalle_model;
+
+
 
 class carrito_controller extends BaseController
 {
@@ -43,18 +49,28 @@ class carrito_controller extends BaseController
         echo view('front/footer_view');
     }
  
-    public function finalizarCompra()
+        public function finalizarCompra()
     {
-        $data['Titulo'] = 'Finalizar Compra';
+        $carrito = $this->cart->contents();
+        $total = $this->cart->total();
+
+        $data = [
+            'Titulo' => 'Finalizar Compra',
+            'carrito' => $carrito,
+            'total' => $total
+        ];
+
         echo view('front/head_view', $data);
         echo view('front/navbar', $data);
-        echo view('front/detalleCompra'); 
+        echo view('front/detalleCompra', $data); // Asegurate de que este es el archivo donde tenés el código HTML
         echo view('front/footer_view');
     }
 
-    public function add() // Agregar productos al carrito
+
+    public function add()
     {
         $request = \Config\Services::request();
+    
         $this->cart->insert([
             'id' => $request->getPost('id'),
             'qty' => 1,
@@ -62,8 +78,13 @@ class carrito_controller extends BaseController
             'price' => $request->getPost('precio_vta'),
             'imagen' => $request->getPost('imagen'),
         ]);
-        return redirect()->back()->withInput();
+    
+        // Setear mensaje flash
+        $this->session->setFlashdata('success', 'Producto agregado al carrito correctamente.');
+    
+        return redirect()->back();
     }
+    
 
     public function eliminar_item($rowid)
     {
@@ -144,4 +165,103 @@ class carrito_controller extends BaseController
 
         return redirect()->back();
     }
+
+
+    public function procesar_compra()
+{
+    $cart = $this->cart->contents();
+
+    if (empty($cart)) {
+        return redirect()->to(base_url('carrito'))->with('error', 'No hay productos en el carrito.');
+    }
+
+    // Obtener usuario_id de la sesión
+    $usuario_id = session()->get('id');
+    if (!$usuario_id) {
+        return redirect()->to('/login')->with('error', 'Debe iniciar sesión para realizar la compra.');
+    }
+
+    // Calcular total del carrito
+    $total = 0;
+    foreach ($cart as $item) {
+        $total += $item['price'] * $item['qty'];
+    }
+
+    // Obtener método de pago/envío del form
+    $metodo_pago = $this->request->getPost('metodo_pago');
+    $metodo_envio = $this->request->getPost('metodo_envio');
+
+    // Costo de envío
+    $costo_envio = 0;
+    switch ($metodo_envio) {
+        case 'domicilio':
+            $costo_envio = 1000;
+            break;
+        case 'correo':
+            $costo_envio = 1500;
+            break;
+    }
+
+    $total_final = $total + $costo_envio;
+
+    // Insertar en ventas_cabecera
+    $ventaCabeceraModel = new Ventas_cabecera_model();
+    $ventaDetalleModel = new Ventas_detalle_model();
+
+    $idVenta = $ventaCabeceraModel->insert([
+        'usuario_id' => $usuario_id,
+        'total_venta' => $total_final,
+        'fecha' => date('Y-m-d H:i:s')
+    ]);
+
+    // Insertar los detalles de la venta
+    foreach ($cart as $item) {
+        $ventaDetalleModel->insert([
+            'venta_id' => $idVenta,
+            'producto_id' => $item['id'],
+            'cantidad' => $item['qty'],
+            'precio' => $item['price']
+        ]);
+    }
+
+    // MOSTRAR VISTA ANTES DE BORRAR CARRITO
+    echo view('front/procesarPago', [
+        'cart' => $cart,
+        'metodo_pago' => $metodo_pago,
+        'metodo_envio' => $metodo_envio,
+        'total' => $total,
+        'costo_envio' => $costo_envio,
+        'total_final' => $total_final,
+        'confirmacion' => true,
+        'idVenta' => $idVenta,
+        'fecha' => date('Y-m-d H:i:s')
+    ]);
+
+
+    // AHORA sí, destruir el carrito DESPUÉS de mostrar la vista
+    $this->cart->destroy();
+}
+
+public function mostrarDatosPago()
+{
+    // Recibir los datos enviados por POST
+    $metodo_pago = $this->request->getPost('metodo_pago');
+    $metodo_envio = $this->request->getPost('metodo_envio');
+    $total_pagar = $this->request->getPost('total_pagar');
+
+    // Pasar datos a la vista
+    $data = [
+        'metodo_pago' => $metodo_pago,
+        'metodo_envio' => $metodo_envio,
+        'total_pagar' => $total_pagar,
+    ];
+
+    return view('front/mostrarDatosPago', $data);
+}
+
+
+   
+    
+
+
 }

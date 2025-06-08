@@ -22,13 +22,6 @@ main {
   padding-top: 150px;
 }
 
-
-footer {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-
 /* Eliminamos márgenes y paddings por defecto del navegador */
 * {
   margin: 0;
@@ -683,6 +676,8 @@ p {
   font-size: 14px;
   margin-top: auto;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Parte superior del footer */
