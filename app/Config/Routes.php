@@ -52,8 +52,12 @@ $routes->get('/producto/listar', 'ProductoController::listar');
 /*Eliminar producto*/
 $routes->get('producto/eliminar/(:num)', 'ProductoController::eliminar/$1');
 
-$routes->get('productos', 'ProductoController::productosPorCategoria');
+$routes->get('productos/categoria', 'ProductoController::productosPorCategoria');
 $routes->get('productos/categoria/(:num)', 'ProductoController::productosPorCategoria/$1');
+
+/*Editar y actalizar un producto*/
+$routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
+$routes->post('admin/actualizarProducto', 'ProductoController::actualizarProducto');
 
 //RUTAS PARA CONSULTAS
  /*Consulta*/

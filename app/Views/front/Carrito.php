@@ -14,7 +14,7 @@
       <?php foreach ($cart as $item): ?>
         <tr id="producto-<?= esc($item['id']) ?>">
           <td>
-            <img src="<?= base_url('assets/img/' . ($item['imagen'] ?? 'default.jpg')) ?>" alt="Imagen" class="img-fluid" style="width: 60px;">
+            <img src="<?= base_url('assets/uploads/' . ($item['imagen'] ?? 'default.jpg')) ?>" alt="Imagen" class="img-fluid" style="width: 60px;">
             <?= esc($item['name']) ?>
           </td>
           <td class="precio" data-precio="<?= esc($item['price']) ?>">$<?= esc($item['price']) ?></td>
@@ -34,12 +34,16 @@
   </table>
 
   <div class="carrito-total mt-5 p-4 text-center bg-dark-subtle rounded shadow-sm">
-    <h4 class="text-light">
-      Total: $
-      <?= number_format(array_reduce($cart, fn($acum, $prod) => $acum + $prod['subtotal'], 0), 2) ?>
-    </h4>
-    <!-- Botón en carrito para ir a finalizar compra -->
-<a href="<?= base_url('detalleCompra') ?>" class="btn btn-success">Finalizar Compra</a>
-
+    <?php if (!empty($cart)): ?>
+      <h4 class="text-dark">
+        Total: $
+        <?= number_format(array_reduce($cart, fn($acum, $prod) => $acum + $prod['subtotal'], 0), 2) ?>
+      </h4>
+      <a href="<?= base_url('detalleCompra') ?>" class="btn btn-success">Finalizar Compra</a>
+    <?php else: ?>
+      <h4 class="text-dark">Tu carrito está vacío</h4>
+      <a href="<?= base_url('productos/categoria') ?>" class="btn btn-outline-info">Seguir comprando</a>
+    <?php endif; ?>
   </div>
+
 </main>

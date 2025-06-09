@@ -39,7 +39,7 @@ $cantidadCarrito = is_array($carrito) ? count($carrito) : 0;
 
                 <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="<?php echo base_url('productos-catalogo'); ?>" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('productos/categoria'); ?>" class="nav-link">Productos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('comercializacion'); ?>" class="nav-link">Comercialización</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('quienesSomos'); ?>" class="nav-link">Quiénes Somos</a></li>
                         <li class="nav-item"><a href="<?php echo base_url('ayuda'); ?>" class="nav-link">Ayuda</a></li>

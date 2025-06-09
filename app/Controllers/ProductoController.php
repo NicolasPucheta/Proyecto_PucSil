@@ -196,4 +196,69 @@ class ProductoController extends Controller {
 
         return redirect()->to('crudProductos');
     }
+
+public function editar($id)
+{
+    $productoModel = new Producto_model();
+    $producto = $productoModel->find($id);
+    $categoriaModel = new \App\Models\Categoria_model();
+    $categorias = $categoriaModel->findAll();
+
+    if (!$producto) {
+       return redirect()->to('crudProductos')->with('fail', 'Producto no encontrado');
+    }
+
+    echo view('front/head_view', ['Titulo' => 'Editar Producto']);
+    echo view('front/navbar');
+    echo view('back/productos/editar_producto', [
+        'producto' => $producto,
+        'categorias' => $categorias
+    ]);
+    echo view('front/footer_view');
+
+}
+
+public function actualizarProducto()
+{
+    $productoModel = new Producto_model();
+    $id = $this->request->getPost('id');
+
+    $rules = [
+        'nombre_prod' => 'required|min_length[3]',
+        'categoria' => 'required|is_natural_no_zero',
+        'precio' => 'required|decimal',
+        'precio_vta' => 'required|decimal',
+        'stock' => 'required|integer',
+        'stock_min' => 'required|integer',
+        'imagen' => 'uploaded[imagen]|max_size[imagen,2048]|is_image[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png]'
+    ];
+
+    // Si no se sube una nueva imagen, no validamos el campo
+    if ($this->request->getFile('imagen')->getError() === 4) {
+        unset($rules['imagen']);
+    }
+
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('validation', $this->validator);
+    }
+
+    $data = [
+        'nombre_prod' => $this->request->getPost('nombre_prod'),
+        'categoria_id' => $this->request->getPost('categoria'),
+        'precio' => $this->request->getPost('precio'),
+        'precio_vta' => $this->request->getPost('precio_vta'),
+        'stock' => $this->request->getPost('stock'),
+        'stock_min' => $this->request->getPost('stock_min')
+    ];
+
+    $imagen = $this->request->getFile('imagen');
+    if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+        $nombreImagen = $imagen->getRandomName();
+        $imagen->move(FCPATH . 'assets/uploads/', $nombreImagen);
+        $data['imagen'] = $nombreImagen;
+    }
+
+    $productoModel->update($id, $data);
+     return redirect()->to('crudProductos')->with('success', 'Producto actualizado correctamente');
+}
 }

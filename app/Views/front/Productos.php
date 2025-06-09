@@ -36,6 +36,7 @@
                         <?= form_hidden('id', $producto['id']) ?>
                         <?= form_hidden('precio_vta', $producto['precio_vta']) ?>
                         <?= form_hidden('nombre_prod', $producto['nombre_prod']) ?>
+                        <?= form_hidden('imagen', $producto['imagen']) ?>
                         <?php
                           $btn = array(
                             'class' => 'btn btn-secondary fuenteBotones',

@@ -47,9 +47,9 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <button class="btn btn-warning btn-sm me-2" onclick="editar(<?= $producto['id'] ?>, '<?= $producto['nombre_prod'] ?>', <?= $producto['precio'] ?>)">Editar</button>
-                                <a href="<?= base_url('producto/eliminar/' . $producto['id']) ?>" class="btn btn-danger btn-sm"
-                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
+                            <a href="<?= base_url('producto/editar/' . $producto['id']) ?>" class="btn btn-warning btn-sm me-2">Editar</a>
+                            <a href="<?= base_url('producto/eliminar/' . $producto['id']) ?>" class="btn btn-danger btn-sm"
+                             onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -60,7 +60,6 @@
             </table>
         </div>
     </div>
-
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -78,5 +77,4 @@
             console.log('Eliminar producto con ID:', id);
         }
     </script>
-
 </main>

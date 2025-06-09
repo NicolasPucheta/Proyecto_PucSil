@@ -1,7 +1,7 @@
+
 <footer class="footer">
   <div class="container2">
     <div class="row">
-
       <!-- Parte Superior -->
       <div class="col-12 col-md-4 ps-4 mb-4 mb-md-0">
         <div class="footer-contacto">
@@ -51,3 +51,5 @@
     </div>
   </div>
 </footer>
+</body>
+</html>

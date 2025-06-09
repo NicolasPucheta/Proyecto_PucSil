@@ -223,7 +223,9 @@ class carrito_controller extends BaseController
             'precio' => $item['price']
         ]);
     }
-
+    $data['Titulo'] = 'Proceso compra';
+    echo view('front/head_view', $data);
+    echo view('front/navbar');    
     // MOSTRAR VISTA ANTES DE BORRAR CARRITO
     echo view('front/procesarPago', [
         'cart' => $cart,
@@ -236,7 +238,7 @@ class carrito_controller extends BaseController
         'idVenta' => $idVenta,
         'fecha' => date('Y-m-d H:i:s')
     ]);
-
+    echo view('front/footer_view');
 
     // AHORA sí, destruir el carrito DESPUÉS de mostrar la vista
     $this->cart->destroy();
@@ -255,8 +257,12 @@ public function mostrarDatosPago()
         'metodo_envio' => $metodo_envio,
         'total_pagar' => $total_pagar,
     ];
+    $data['Titulo'] = 'Datos pago';
+    echo view('front/head_view', $data);
+    echo view('front/navbar'); 
+    echo view('front/mostrarDatosPago', $data);
+    echo view('front/footer_view');
 
-    return view('front/mostrarDatosPago', $data);
 }
 
 

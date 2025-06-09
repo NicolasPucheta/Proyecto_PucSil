@@ -36,10 +36,10 @@
     <p><strong>Total de productos:</strong> <?= $totalProductos ?></p>
           <!-- Métodos de pago -->
         <div class="metodo-pago mt-5 p-4 bg-dark-subtle rounded shadow-sm">
-          <h4 class="text-light">Método de Pago</h4>
+          <h4 class="text-dark">Método de Pago</h4>
           <form action="<?= base_url('procesarPago') ?>" method="POST">
       <div class="form-group">
-        <label class="text-light">Seleccione un método de pago</label>
+        <label class="text-dark">Seleccione un método de pago</label>
         <select name="metodo_pago" class="form-select">
           <option value="tarjeta">Tarjeta</option>
           <option value="paypal">PayPal</option>
@@ -49,7 +49,7 @@
 
       <!-- Método de envío -->
       <div class="form-group mt-3">
-        <label class="text-light">Seleccione un método de envío</label>
+        <label class="text-dark">Seleccione un método de envío</label>
         <select name="metodo_envio" class="form-select">
           <option value="retiro">Retiro en tienda</option>
           <option value="domicilio">Domicilio ($1000)</option>

@@ -28,3 +28,5 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/iconos/favicon.ico') ?>">
 </head>
+<body>
+    

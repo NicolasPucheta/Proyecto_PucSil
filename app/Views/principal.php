@@ -1,5 +1,4 @@
 <main>
- 
   <!-- Carousel de imágenes -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
