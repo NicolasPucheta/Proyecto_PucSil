@@ -39,9 +39,10 @@
                         <?= form_hidden('imagen', $producto['imagen']) ?>
                         <?php
                           $btn = array(
-                            'class' => 'btn btn-secondary fuenteBotones',
+                            'class' => 'btn btn-secondary fuenteBotones btn-custom',
                             'value' => 'Agregar al Carrito',
                             'name'  => 'action'
+                            
                           );
                           echo form_submit($btn);
                           echo form_close();

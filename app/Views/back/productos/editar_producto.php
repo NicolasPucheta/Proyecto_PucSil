@@ -71,7 +71,8 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-success">Actualizar</button>
-            <a href="<?= base_url('admin/productos'); ?>" class="btn btn-secondary">Cancelar</a>
+            <a href="<?= base_url('crudProductos'); ?>" class="btn btn-secondary">Cancelar</a>
+
         </div>
 
         </form>

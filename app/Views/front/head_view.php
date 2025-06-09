@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/usuarioData.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/procesarPago.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/detalleCompra.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/carrito.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/pagos.css') ?>">
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/iconos/favicon.ico') ?>">

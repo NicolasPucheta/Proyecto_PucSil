@@ -3,10 +3,10 @@ main.detalles-compra {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
     color: #e0e0e0;
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-  }
+}
   
   /* Título */
   main.detalles-compra h2 {
@@ -41,6 +41,10 @@ main.detalles-compra {
   main.detalles-compra table.table tbody tr:hover {
     background-color: #007bff33;
     cursor: default;
+  }
+
+  main.detalles-compra.container {
+    margin-top: 150px !important; /* override para aumentar margen arriba */
   }
   
   /* Imagenes en la tabla */

@@ -1,26 +1,30 @@
 /*Estilos mas general*/
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #121212;
+  background-color: #121212; /* fondo oscuro */
+  font-family: 'Roboto', sans-serif; /* mejor declarar la fuente aquí para que sea global */
+  overflow-x: hidden; /* evitar scroll horizontal */
 }
 
+/* El body como flex container vertical */
 body {
   display: flex;
   flex-direction: column;
-  padding-top: auto;
-  font-family: 'Roboto', sans-serif;
-  overflow-x:hidden; 
-  background-color: #000;
+  /* padding-top: auto;  <-- "auto" no tiene sentido aquí, mejor quitarlo */
+  background-color: #000; /* Override fondo para body */
+  min-height: 100vh; /* asegurar que ocupe al menos toda la altura */
 }
+
 
 
 main {
   flex: 1;
-  padding-top: 150px;
+  padding-top: 150px; /* para que el contenido no quede tapado por el menú fijo */
+  color: white;
 }
-
 /* Eliminamos márgenes y paddings por defecto del navegador */
 * {
   margin: 0;

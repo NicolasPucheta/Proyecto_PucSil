@@ -93,6 +93,12 @@ main.productos {
   color: #00e5ff; /* Celeste brillante */
   margin: 5px 0;
 }
+/*boton agregar al carrito*/
+.btn-custom {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+}
 
 /* Botón comprar */
 .boton-comprar {

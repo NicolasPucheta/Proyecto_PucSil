@@ -41,11 +41,11 @@
       btn.addEventListener("click", () => {
         const li = btn.closest("li");
         const id = li.dataset.id;
-
-        fetch(`/consultas/marcarLeido/${id}`, {
+        fetch(`<?= base_url('consultas/marcarLeido') ?>/${id}`, {
           method: 'POST',
           headers: { 'X-Requested-With': 'XMLHttpRequest' }
         })
+
         .then(response => response.json())
         .then(data => {
           if (data.success) {

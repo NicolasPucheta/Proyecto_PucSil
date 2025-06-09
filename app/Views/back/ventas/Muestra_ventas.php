@@ -44,14 +44,11 @@
         const tablaVentas = document.getElementById('tabla-ventas');
         tablaVentas.innerHTML = '';
 
-        if (!data.length) {
-          tablaVentas.innerHTML = `
-            <tr>
-              <td colspan="6" class="text-muted">No hay ventas registradas.</td>
-            </tr>
-          `;
-          return;
-        }
+                tablaVentas.innerHTML = `
+          <tr>
+            <td colspan="6" style="color:  #0dcaf0; font-weight: bold;">No hay ventas registradas.</td>
+          </tr>`;
+
 
         data.forEach((venta, i) => {
           const fila = document.createElement('tr');

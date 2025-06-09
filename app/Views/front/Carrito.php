@@ -1,4 +1,5 @@
 <main class="carrito container my-5">
+  
   <h2 class="text-center mb-4 text-info">Mis Compras</h2>
 
   <table class="table table-dark table-striped">

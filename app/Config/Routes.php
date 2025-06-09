@@ -59,6 +59,7 @@ $routes->get('productos/categoria/(:num)', 'ProductoController::productosPorCate
 $routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
 $routes->post('admin/actualizarProducto', 'ProductoController::actualizarProducto');
 
+
 //RUTAS PARA CONSULTAS
  /*Consulta*/
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
@@ -66,6 +67,7 @@ $routes->post('admin/actualizarProducto', 'ProductoController::actualizarProduct
 $routes->get('/consultas', 'Consulta_controller::verConsultas');
 // Marca como leído/no leído
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
+
 //muestra ventas admin
 $routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
 

@@ -1,6 +1,4 @@
 <main class="detalles-compra container my-5">
-
-
   <div id="detallesCompra" class="compra-detalles">
     <h2 class="text-center mb-4 text-info">Detalles de la Compra</h2>
 
@@ -41,10 +39,11 @@
       <div class="form-group">
         <label class="text-dark">Seleccione un método de pago</label>
         <select name="metodo_pago" class="form-select">
-          <option value="tarjeta">Tarjeta</option>
-          <option value="paypal">PayPal</option>
+          <option value="transferencia">Transferencia Bancaria</option>
+          <option value="mercado_pago">Mercado Pago</option>
           <option value="efectivo">Efectivo</option>
         </select>
+
       </div>
 
       <!-- Método de envío -->
