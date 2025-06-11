@@ -13,8 +13,17 @@ class Ventas_detalle_model extends Model
 
     protected $returnType = 'array';
 
-    public function getDetalles($venta_id)
-    {
-        return $this->where('venta_id', $venta_id)->findAll();
+    public function getDetallePorVenta($venta_id = null) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('venta_detalle');
+        $builder->select('*');
+        $builder->join('ventas_cabecera','ventas_cabecera.id = ventas_detalle.venta_id');
+        $builder->join('productos','productos.id = ventas_detalle.producto_id');
+        $builder->join('usuarios','usuarios.id_usuario = ventas_cabecera.usuario.id');
+        if($venta_id != null){
+            $builder->where('venta_cabecera_id', $venta_id);
+        }
+        $query = $builder->get();
+        return $query->getResultArray();
     }
 }

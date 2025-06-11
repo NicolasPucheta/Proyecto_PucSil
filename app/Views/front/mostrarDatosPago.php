@@ -32,6 +32,6 @@
   </div>
 
   <div class="mt-4">
-    <a href="<?= base_url('carrito') ?>" class="btn btn-secondary">Volver al carrito</a>
+    <a href="<?= base_url('principal') ?>" class="btn btn-secondary">Volver</a>
   </div>
 </main>

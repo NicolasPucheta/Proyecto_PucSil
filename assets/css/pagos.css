@@ -20,7 +20,7 @@ main.container.text-dark {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  
+
   /* Caja de información */
   main.container .bg-dark-subtle {
     background-color: #1f1f1f !important;

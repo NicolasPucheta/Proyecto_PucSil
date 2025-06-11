@@ -33,10 +33,10 @@
     <!-- Resumen de la compra -->
     <p><strong>Total de productos:</strong> <?= $totalProductos ?></p>
           <!-- Métodos de pago -->
-        <div class="metodo-pago mt-5 p-4 bg-dark-subtle rounded shadow-sm">
+    <div class="metodo-pago mt-5 p-4 bg-dark-subtle rounded shadow-sm">
           <h4 class="text-dark">Método de Pago</h4>
           <form action="<?= base_url('procesarPago') ?>" method="POST">
-      <div class="form-group">
+        <div class="form-group">
         <label class="text-dark">Seleccione un método de pago</label>
         <select name="metodo_pago" class="form-select">
           <option value="transferencia">Transferencia Bancaria</option>
@@ -60,9 +60,6 @@
         <button type="submit" class="btn btn-success w-100">Proceder con el Pago</button>
       </div>
     </form>
-
-
-
     </div>
   </div>
 </main>

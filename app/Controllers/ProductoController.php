@@ -105,45 +105,8 @@ class ProductoController extends Controller {
         session()->setFlashdata('success', 'Producto creado correctamente.');
         return $this->response->redirect(site_url('crudProductos')); // Redirige a la página de creación de productos
     }
-    public function mostrarVentas()
-{
-    $ventasCabeceraModel = new \App\Models\Ventas_cabecera_model();
-    $ventasDetalleModel = new \App\Models\Ventas_detalle_model();
-    $productoModel = new Producto_Model(); // Instanciamos el modelo de productos
 
-    $id_usuario = session()->get('usuario_id'); // Ajustá esto según tu lógica de login
-    $ventasCabeceras = $ventasCabeceraModel->getVentas($id_usuario);
-
-    $ventas = [];
-
-    foreach ($ventasCabeceras as $venta) {
-        $detalles = $ventasDetalleModel->getDetalles($venta['id']);
-
-        foreach ($detalles as $detalle) {
-            $producto = $productoModel->find($detalle['producto_id']); // Buscamos el producto por ID
-
-            $ventas[] = [
-                'fecha' => date('d/m/Y H:i', strtotime($venta['fecha'])),
-                'producto' => $producto['nombre_prod'] ?? 'Producto desconocido', // Mostramos el nombre real
-                'cantidad' => $detalle['cantidad'],
-                'precio' => number_format($detalle['precio'], 2, ',', '.'),
-                'total' => number_format($detalle['precio'] * $detalle['cantidad'], 2, ',', '.')
-            ];
-        }
-    }
-
-    $data = [
-        'ventas' => $ventas,
-        'Titulo' => 'Resumen de Ventas'
-    ];
-
-    echo view('front/head_view', $data);       
-    echo view('front/navbar');
-    echo view('back/ventas/Muestra_ventas', $data);
-    echo view('front/footer_view');
-}
-
-        public function listar()
+    public function listar()
     {
         $productoModel = new Producto_Model();
         // Revisa si la columna es 'activo' o 'eliminado'. Usaré 'eliminado' = 0.

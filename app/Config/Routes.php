@@ -69,7 +69,7 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
 
 //muestra ventas admin
-$routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
+$routes->get('/ventas', 'Ventas_controller::ventas');
 
 // Rutas para el carrito*/
 // muestra todos los productos del catalogo

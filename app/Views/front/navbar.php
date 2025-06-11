@@ -119,7 +119,7 @@ $cantidadCarrito = is_array($carrito) ? count($carrito) : 0;
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="<?php echo base_url('crudUsuarios'); ?>" class="nav-link">CRUD Usuario</a></li>
                             <li class="nav-item"><a href="<?php echo base_url('crudProductos'); ?>" class="nav-link">CRUD Productos</a></li>
-                            <li class="nav-item"><a href="<?php echo base_url('muestra-ventas'); ?>" class="nav-link">Muestra ventas</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('ventas'); ?>" class="nav-link">Muestra ventas</a></li>
                             <li class="nav-item"><a href="<?php echo base_url('consultas'); ?>" class="nav-link">Consultas</a></li>
                         </ul>
                         <div class="d-lg-none d-flex justify-content-center mt-3">

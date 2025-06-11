@@ -38,7 +38,7 @@
 <!-- JavaScript para llenar la tabla de ventas -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    fetch('<?= base_url('ProductoController/mostrarVentas') ?>')
+    fetch('<?= base_url('Ventas_Controller/ventas') ?>')
       .then(response => response.json())
       .then(data => {
         const tablaVentas = document.getElementById('tabla-ventas');

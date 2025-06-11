@@ -1,6 +1,7 @@
 <main class="container my-5 text-dark">
-  <div class="mb-4 p-3 bg-dark-subtle rounded">
+  
     <h5 class="text-dark"><strong>Total Productos:</strong></h5>
+    <div class="mb-4 p-3 bg-dark-subtle rounded">
     <p class="text-dark"><?= count($cart) ?> productos</p>
 
     <hr>

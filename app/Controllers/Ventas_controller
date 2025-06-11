@@ -11,7 +11,7 @@ use CodeIgniterCart\Cart;
 use CodeIgniter\Config\Services;
 
 
-class Ventascontroller extends Controller
+class Ventas_controller extends Controller
 {
     
     public function registrar_venta()
@@ -90,7 +90,7 @@ class Ventascontroller extends Controller
     //función del usuario cliente para ver sus compras
 
 
-
+/*
 public function ver_factura($venta_id)
 {
     //echo $venta_id;die;
@@ -98,23 +98,60 @@ public function ver_factura($venta_id)
     $data['venta'] = $detalle_ventas->getDetalles($venta_id);
     $data['titulo'] = "Mi compra";
 
-    echo view('front/head_view_crud', $data);
-    echo view('front/nav_view');
+    echo view('front/head_view', $data);
+    echo view('front/navbar');
     echo view('back/compras/vista_compras', $data);
     echo view('front/footer_view');
 }
 
 //función del cliente para ver el detalle de sus facturas de compras
-
 public function ver_facturas_usuario($id_usuario){
     $ventas = new Ventas_cabecera_model();
     $data['ventas'] = $ventas->getVentas($id_usuario);
     $data['titulo'] = "Todos mis compras";
 
-    echo view('front/head_view_crud', $data);
+    echo view('front/head_view', $data);
     echo view('front/nav_view');
     echo view('back/compras/ver_factura_usuario', $data);
     echo view('front/footer_view');
 }
+*/
+    public function ventas()
+{
+    $ventasCabeceraModel = new Ventas_cabecera_model();
+    $ventasDetalleModel = new Ventas_detalle_model();
+    $productoModel = new Producto_Model(); // Instanciamos el modelo de productos
 
+    $id_usuario = session()->get('usuario_id'); // Ajustá esto según tu lógica de login
+    $ventasCabeceras = $ventasCabeceraModel->getVentas($id_usuario);
+
+    $ventas = [];
+
+    foreach ($ventasCabeceras as $venta) {
+        $detalles = $ventasDetalleModel->getDetalles($venta['id']);
+
+        foreach ($detalles as $detalle) {
+            $producto = $productoModel->find($detalle['producto_id']); // Buscamos el producto por ID
+
+            $ventas[] = [
+                'fecha' => date('d/m/Y H:i', strtotime($venta['fecha'])),
+                'producto' => $producto['nombre_prod'] ?? 'Producto desconocido', // Mostramos el nombre real
+                'cantidad' => $detalle['cantidad'],
+                'precio' => number_format($detalle['precio'], 2, ',', '.'),
+                'total' => number_format($detalle['precio'] * $detalle['cantidad'], 2, ',', '.')
+            ];
+        }
+    }
+
+    $data = [
+        'ventas' => $ventas,
+        'Titulo' => 'Resumen de Ventas'
+    ];
+
+    echo view('front/head_view', $data);       
+    echo view('front/navbar');
+    echo view('back/ventas/Muestra_ventas', $data);
+    echo view('front/footer_view');
+}
+  
 }
