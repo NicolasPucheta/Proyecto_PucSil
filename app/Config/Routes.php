@@ -59,7 +59,6 @@ $routes->get('productos/categoria/(:num)', 'ProductoController::productosPorCate
 $routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
 $routes->post('admin/actualizarProducto', 'ProductoController::actualizarProducto');
 
-
 //RUTAS PARA CONSULTAS
  /*Consulta*/
  $routes->post('/guardar-consulta', 'Consulta_controller::guardarConsulta');
@@ -68,9 +67,10 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 // Marca como leído/no leído
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
 
-//muestra ventas admin
-$routes->get('/ventas', 'Ventas_controller::ventas');
-
+//muestra ventas cliente
+$routes->get('Ventas_Controller/ventas', 'Ventas_Controller::ventas');
+// --- NUEVA RUTA PARA EL ADMINISTRADOR ---
+$routes->get('adminVentas', 'Ventas_controller::mostrarTodasLasVentasAdmin'); 
 // Rutas para el carrito*/
 // muestra todos los productos del catalogo
 $routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront', ['filter' => 'auth']);
