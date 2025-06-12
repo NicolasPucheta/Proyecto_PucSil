@@ -67,10 +67,11 @@ $routes->get('/consultas', 'Consulta_controller::verConsultas');
 // Marca como leído/no leído
 $routes->post('/consultas/marcarLeido/(:num)', 'Consulta_controller::marcarLeido/$1');
 
-//muestra ventas cliente
-$routes->get('Ventas_Controller/ventas', 'Ventas_Controller::ventas');
-// --- NUEVA RUTA PARA EL ADMINISTRADOR ---
-$routes->get('adminVentas', 'Ventas_controller::mostrarTodasLasVentasAdmin'); 
+//muestra ventas admin
+$routes->get('muestra-ventas', 'ProductoController::mostrarVentas');
+$routes->get('ventas/data', 'ProductoController::obtenerVentas');
+
+
 // Rutas para el carrito*/
 // muestra todos los productos del catalogo
 $routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront', ['filter' => 'auth']);

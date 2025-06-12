@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $Titulo ?></title>
+    <title> GGHardware </title>
 
     <!-- Bootstrap y fuentes -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/procesarPago.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/detalleCompra.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/carrito.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/pagos.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/procesarPago.css') ?>">
 
 
     <!-- Favicon -->

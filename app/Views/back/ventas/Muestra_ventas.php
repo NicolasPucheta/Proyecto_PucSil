@@ -38,17 +38,19 @@
 <!-- JavaScript para llenar la tabla de ventas -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    fetch('<?= base_url('Ventas_Controller/ventas') ?>')
+    fetch('<?= base_url('ventas/data') ?>')
       .then(response => response.json())
       .then(data => {
         const tablaVentas = document.getElementById('tabla-ventas');
         tablaVentas.innerHTML = '';
 
-                tablaVentas.innerHTML = `
-          <tr>
-            <td colspan="6" style="color:  #0dcaf0; font-weight: bold;">No hay ventas registradas.</td>
-          </tr>`;
-
+        if (data.length === 0) {
+          tablaVentas.innerHTML = `
+            <tr>
+              <td colspan="6" style="color: #0dcaf0; font-weight: bold;">No hay ventas registradas.</td>
+            </tr>`;
+          return;
+        }
 
         data.forEach((venta, i) => {
           const fila = document.createElement('tr');
@@ -66,3 +68,4 @@
       .catch(error => console.error('Error al cargar ventas:', error));
   });
 </script>
+

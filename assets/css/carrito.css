@@ -2,7 +2,7 @@
 
 /* Container principal */
 main.carrito.container {
-    margin-top: 100px; /* espacio para bajar respecto al header */
+    margin-top: 200px; /* espacio para bajar respecto al header */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0dcaf0; /* color celeste (igual que el título "Mis Compras") */
   }
