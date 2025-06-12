@@ -7,11 +7,8 @@
                     class="btn btn-success px-4 py-2 shadow rounded-pill">
                 <i class="bi bi-cloud-upload"></i> CARGAR
             </button>
-
-            <button class="btn btn-warning text-dark px-4 py-2 shadow rounded-pill">
-                <i class="bi bi-pencil-square"></i> EDITAR
-            </button>
-            <button class="btn btn-danger px-4 py-2 shadow rounded-pill">
+            <button onclick="window.location.href='<?= base_url('productosEliminados'); ?>'" 
+                 class="btn btn-danger px-4 py-2 shadow rounded-pill">
                 <i class="bi bi-trash"></i> ELIMINADOS
             </button>
         </div>
@@ -35,7 +32,7 @@
                         <tr style="min-height: 80px;">
                             <td><?= $producto['id'] ?></td>
                             <td><?= $producto['nombre_prod'] ?></td>
-                            <td>$<?= number_format($producto['precio'], 0, ',', '.') ?></td>
+                            <td>$<?= number_format($producto['precio'], 2, ',', '.') ?></td>
                             <td>$<?= number_format($producto['precio_vta'], 0, ',', '.') ?></td>
                             <td><?= $producto['stock'] ?></td>
                             <td style="width: 60px; height: 60px; overflow: hidden; vertical-align: middle;">
