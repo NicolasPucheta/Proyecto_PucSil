@@ -87,35 +87,24 @@ class Ventascontroller extends Controller
         $session->setFlashdata('mensaje', 'Venta registrada exitosamente.');
         return redirect()->to(base_url('vista_compras/' . $venta_id));
     }
-    //función del usuario cliente para ver sus compras
+    public function mostrar_resumen_ventas()
+    {
+        $ventasModel = new \App\Models\Ventas_cabecera_model();
+        $sumaTotal = $ventasModel->obtenerSumaTotalVentas();
+
+        $data = [
+            'Titulo' => 'Resumen de Ventas',
+            'sumaTotal' => $sumaTotal,
+            // Otros datos como la lista de ventas si es necesario
+        ];
 
 
+        echo view('front/head_view', $data);
+        echo view('front/navbar');
+        echo view('back/Muestra_ventas', $data);
+        echo view('front/footer_view');
+       
+    }
 
-/*
-public function ver_factura($venta_id)
-{
-    //echo $venta_id;die;
-    $detalle_ventas = new Ventas_detalle_model();
-    $data['venta'] = $detalle_ventas->getDetalles($venta_id);
-    $data['titulo'] = "Mi compra";
-
-    echo view('front/head_view_crud', $data);
-    echo view('front/nav_view');
-    echo view('back/compras/vista_compras', $data);
-    echo view('front/footer_view');
-}
-
-//función del cliente para ver el detalle de sus facturas de compras
-
-public function ver_facturas_usuario($id_usuario){
-    $ventas = new Ventas_cabecera_model();
-    $data['ventas'] = $ventas->getVentas($id_usuario);
-    $data['titulo'] = "Todos mis compras";
-
-    echo view('front/head_view_crud', $data);
-    echo view('front/nav_view');
-    echo view('back/compras/ver_factura_usuario', $data);
-    echo view('front/footer_view');
-}*/
 
 }

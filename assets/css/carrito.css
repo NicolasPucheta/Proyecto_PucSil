@@ -1,118 +1,116 @@
-/* carrito.css */
-
-/* Container principal */
-main.carrito.container {
-    margin-top: 200px; /* espacio para bajar respecto al header */
+/* Contenedor principal */
+main.carrito {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #0dcaf0; /* color celeste (igual que el título "Mis Compras") */
-  }
-  
-  /* Título */
-  main.carrito h2.text-info {
-    color: #0dcaf0 !important; /* forzar el mismo color celeste */
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 80px 20px 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    margin-top: 150px;
+}
+
+/* Título */
+main.carrito h2.text-info {
+    color: #00bcd4 !important;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-  
-  /* Tabla */
-  main.carrito table.table {
-    background-color: #121212; /* fondo oscuro */
-    color: #0dcaf0; /* texto color celeste */
+    letter-spacing: 2px;
+}
+
+/* Tabla */
+main.carrito table.table {
+    background-color: #1f1f1f;
     border-radius: 10px;
     overflow: hidden;
-    border-collapse: separate; /* para el border radius */
+    border-collapse: separate;
     border-spacing: 0;
-  }
-  
-  /* Encabezado de tabla */
-  main.carrito table thead th {
-    border-bottom: 2px solid #0dcaf0;
-    color: #0dcaf0 !important; 
+    color: #ccc;
+}
+
+/* Encabezado de tabla */
+main.carrito table thead th {
+    border-bottom: 2px solid #00bcd4;
+    color: #00e5ff;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.9rem;
     padding: 12px;
-  }
+}
 
-  /* Nombre del producto (primera columna) y precio (clase .precio) */
-  main.carrito table tbody td:first-child,
-  main.carrito table tbody td.precio {
-    color: #0dcaf0;
-    font-weight: 600;
-  }
-  
-  /* Celdas de tabla */
-  main.carrito table tbody td {
+/* Celdas de tabla */
+main.carrito table tbody td {
     border-top: 1px solid #333;
     vertical-align: middle;
     padding: 12px;
-  }
-  
-  /* Hover filas */
-  main.carrito table tbody tr:hover {
-    background-color: #0dcaf033; /* celeste transparente */
+}
+
+/* Hover en filas */
+main.carrito table tbody tr:hover {
+    background-color: #007bff33;
     cursor: default;
-  }
-  
-  /* Imagen en tabla */
-  main.carrito table tbody img {
+}
+
+/* Imagen del producto */
+main.carrito table tbody img {
     border-radius: 6px;
-    box-shadow: 0 0 6px #0dcaf055;
+    box-shadow: 0 0 6px rgba(0,188,212,0.3);
     margin-right: 8px;
     vertical-align: middle;
-  }
-  
-  /* Controles cantidad */
-  main.carrito .cantidad-controles a.btn-outline-info {
-    color: #0dcaf0;
-    border-color: #0dcaf0;
+}
+
+/* Controles cantidad */
+main.carrito .cantidad-controles a.btn-outline-info {
+    color: #00bcd4;
+    border-color: #00bcd4;
     font-weight: 600;
     padding: 2px 8px;
     font-size: 0.9rem;
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  main.carrito .cantidad-controles a.btn-outline-info:hover {
-    background-color: #0dcaf0;
-    color: #121212;
-  }
+}
 
-  /* Botón eliminar */
-  main.carrito table tbody a.btn-danger {
-    background-color: #0dcaf0;
-    border-color: #0dcaf0;
+main.carrito .cantidad-controles a.btn-outline-info:hover {
+    background-color: #00bcd4;
+    color: #121212;
+}
+
+/* Botón eliminar */
+main.carrito table tbody a.btn-danger {
+    background-color: #00bcd4;
+    border: none;
     color: #121212;
     font-weight: 700;
     transition: background-color 0.3s ease;
     border-radius: 6px;
     padding: 4px 12px;
     font-size: 0.85rem;
-  }
-  
-  main.carrito table tbody a.btn-danger:hover {
-    background-color: #0aa8c9;
-    border-color: #0aa8c9;
+}
+
+main.carrito table tbody a.btn-danger:hover {
+    background-color: #0097a7;
     color: #fff;
-  }
-  
-  /* Total y botones */
-  main.carrito .carrito-total {
-    background-color: #121212;
+}
+
+/* Resumen del carrito */
+main.carrito .carrito-total {
+    background-color: #1c1c1c;
     border-radius: 12px;
-    box-shadow: 0 0 15px #0dcaf044;
-    color: #0dcaf0;
-    padding: 1.5rem;
-  }
-  
-  main.carrito .carrito-total h4 {
+    padding: 25px;
+    box-shadow: 0 0 12px rgba(0,188,212,0.3);
+    margin-top: 40px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+main.carrito .carrito-total h4 {
     font-weight: 700;
     margin-bottom: 1rem;
-  }
-  
-  main.carrito .carrito-total a.btn-success {
-    background-color: #0dcaf0;
+    color: #00bcd4;
+}
+
+/* Botón finalizar compra */
+main.carrito .carrito-total a.btn-success {
+    background-color: #00bcd4;
     border: none;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -123,24 +121,24 @@ main.carrito.container {
     border-radius: 6px;
     display: inline-block;
     width: auto;
-  }
-  
-  main.carrito .carrito-total a.btn-success:hover {
-    background-color: #0aa8c9;
+}
+
+main.carrito .carrito-total a.btn-success:hover {
+    background-color: #0097a7;
     color: #fff;
-  }
-  
-  /* Botón "Seguir comprando" */
-  main.carrito .carrito-total a.btn-outline-info {
-    color: #0dcaf0;
-    border-color: #0dcaf0;
+}
+
+/* Botón seguir comprando */
+main.carrito .carrito-total a.btn-outline-info {
+    color: #00bcd4;
+    border-color: #00bcd4;
     font-weight: 600;
     padding: 8px 20px;
     border-radius: 6px;
     text-transform: uppercase;
-  }
-  
-  main.carrito .carrito-total a.btn-outline-info:hover {
-    background-color: #0dcaf0;
+}
+
+main.carrito .carrito-total a.btn-outline-info:hover {
+    background-color: #00bcd4;
     color: #121212;
-  }
+}

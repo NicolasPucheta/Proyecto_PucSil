@@ -43,4 +43,9 @@ class Ventas_cabecera_model extends Model
         // Ejecutamos la consulta y devolvemos los resultados como un array de arrays
         return $builder->get()->getResultArray();
     }
+    public function obtenerSumaTotalVentas()
+    {
+        return $this->selectSum('total')->first()['total'];
+    }
+
 }

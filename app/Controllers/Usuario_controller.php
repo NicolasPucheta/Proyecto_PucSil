@@ -106,7 +106,7 @@ class Usuario_controller extends Controller
     public function actualizarPerfil()
     {
         $session = session();
-        $usuarioModel = new Usuarios_model(); // No es necesario el \App\Models\ porque ya lo importaste arriba
+        $usuarioModel = new Usuarios_model(); 
 
         $id = $session->get('id');
 
@@ -146,8 +146,7 @@ class Usuario_controller extends Controller
 
         // 4. Manejar la unicidad del email (si ha cambiado)
         $currentUser = $usuarioModel->find($id); // Obtener el usuario actual para comparar el email
-        if ($currentUser && $data['email'] !== $currentUser->email) {
-
+        if ($currentUser && $data['email'] !== $currentUser['email']) {
             $existingUserWithNewEmail = $usuarioModel->where('email', $data['email'])->first();
             if ($existingUserWithNewEmail) {
                 return redirect()->back()->withInput()->with('mensaje', 'El email ya está registrado por otro usuario.');
@@ -159,11 +158,12 @@ class Usuario_controller extends Controller
             // 6. Si la actualización fue exitosa, refrescar la sesión
             $usuarioActualizado = $usuarioModel->find($id); // Volver a buscar el usuario para obtener los datos más recientes
 
+                
             if ($usuarioActualizado) {
-                $session->set('nombre', $usuarioActualizado->nombre);
-                $session->set('apellido', $usuarioActualizado->apellido);
-                $session->set('usuario', $usuarioActualizado->usuario);
-                $session->set('email', $usuarioActualizado->email);
+                $session->set('nombre', $usuarioActualizado['nombre']);
+                $session->set('apellido', $usuarioActualizado['apellido']);
+                $session->set('usuario', $usuarioActualizado['usuario']);
+                $session->set('email', $usuarioActualizado['email']);
                 
                 // La contraseña no se guarda en sesión por seguridad
 

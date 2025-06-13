@@ -5,6 +5,7 @@
         <div class="card ventas-card">
           <div class="card-header bg-info text-dark">
             <h3 class="mb-0">Resumen de Ventas</h3>
+            
           </div>
           <div class="card-body">
             <!-- Tabla de ventas -->

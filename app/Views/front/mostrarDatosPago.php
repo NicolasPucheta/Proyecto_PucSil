@@ -35,6 +35,20 @@
 
     <div class="mt-4 text-center">
       <a href="<?= base_url('principal') ?>" class="btn btn-secondary">Volver</a>
+      <button id="btn-descargar" class="btn btn-primary">Descargar Factura</button>
     </div>
   </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  document.getElementById('btn-descargar').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Obtener el contenido que querés pasar a PDF (puede ser el div con la factura)
+    let contenido = document.querySelector('.compra-detalles').innerText;
+
+    doc.text(contenido, 10, 10);
+    doc.save('factura.pdf');
+  });
+</script>
