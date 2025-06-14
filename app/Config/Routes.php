@@ -18,9 +18,7 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('/usuarioData', 'Usuario_controller::usuarioData');
 
 /*rutas front productos*/
-
 $routes->get('detalleCompra', 'carrito_controller::finalizarCompra');
-
 
 /*rutas para el login*/
 $routes->get('/login', 'Home::login');
@@ -34,15 +32,18 @@ $routes->get('/principal', 'Home::principal');
 /*rutas del registro de Usuario*/
 $routes->get('/registro', 'Home::registro');
 $routes->post('/enviar-form','Usuario_controller::formValidation');
-/*Eliminar usuarios*/
+/*Eliminar usuarios
 $routes->get('usuarios/eliminar/(:num)', 'Usuario_Controller::eliminar/$1');
+*/
 //Rutas editar datos perfil
 $routes->post('/actualizarPerfil', 'Usuario_controller::actualizarPerfil');
-
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'ProductoController::index');
 $routes->get('crudUsuarios', 'Usuario_Controller::index');
 $routes->post('guardar_rol', 'Usuario_controller::guardarRol');
+/*Cambair estado de usuario*/
+$routes->get('Usuario_controller/darDeBaja/(:num)', 'Usuario_controller::darDeBaja/$1');
+$routes->get('Usuario_controller/reactivar/(:num)', 'Usuario_controller::reactivar/$1');
 
 //RUTAS PARA PRODUCTOS
 /*cargar un nuevo producto*/

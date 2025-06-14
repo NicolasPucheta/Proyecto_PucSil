@@ -179,23 +179,38 @@ class Usuario_controller extends Controller
         }
     }
 
-
+    /*
     public function eliminar($id)
     {
         $usuarioModel = new Usuarios_model();
 
-        // Verificamos si el producto existe
+        // Verificamos si el usuario existe
         $usuario = $usuarioModel->find($id);
         if (!$usuario) {
             session()->setFlashdata('mensaje', 'usuario no encontrado.');
              return redirect()->to('crudUsuarios');
         }
 
-        // Eliminamos el producto
-        $usuarioModel->delete($id);
+        // damos de baja al usuario
+       $usuarioModel->update($id, ['baja' => 'SI']);
 
-        session()->setFlashdata('success', 'Usuario eliminado correctamente.');
+        session()->setFlashdata('success', 'Usuario dado de baja correctamente.');
         return redirect()->to('crudUsuarios');
     }
+    */
+    public function darDeBaja($id)
+    {
+        $model = new Usuarios_model();
+        $model->update($id, ['baja' => 'SI']);
+        return redirect()->to('crudUsuarios');
+    }
+
+    public function reactivar($id)
+    {
+        $model = new Usuarios_model();
+        $model->update($id, ['baja' => 'NO']);
+        return redirect()->to('crudUsuarios');
+    }
+
 }
     

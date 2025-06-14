@@ -62,10 +62,11 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <button type="submit" class="btn btn-sm btn-success">Guardar Rol</button>
-
-                                     <a href="<?= base_url('usuarios/eliminar/' . $usuario['id']) ?>" class="btn btn-danger btn-sm"
-                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">Eliminar</a>
+                                    <?php if ($usuario['baja'] === 'SI'): ?>
+                                        <a href="<?= base_url('Usuario_controller/reactivar/'.$usuario['id']) ?>" class="btn btn-success">Reactivar</a>
+                                    <?php else: ?>
+                                        <a href="<?= base_url('Usuario_controller/darDeBaja/'.$usuario['id']) ?>" class="btn btn-warning text-dark">Dar de baja</a>
+                                    <?php endif; ?>    
                                 </td>
                             </tr>
                         </form>

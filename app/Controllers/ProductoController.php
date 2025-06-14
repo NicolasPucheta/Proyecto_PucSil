@@ -203,10 +203,7 @@ class ProductoController extends Controller {
             return redirect()->to('/');
         }
 
-        // Eliminamos la imagen si existe
-        if (!empty($producto['imagen']) && file_exists(FCPATH . 'assets/uploads/' . $producto['imagen'])) {
-            unlink(FCPATH . 'assets/uploads/' . $producto['imagen']);
-        }
+       
 
         // Eliminación lógica
         $productoModel->update($id, ['eliminado' => 1]);

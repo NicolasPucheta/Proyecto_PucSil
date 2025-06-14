@@ -5,7 +5,7 @@
         <div class="card ventas-card">
           <div class="card-header bg-info text-dark">
             <h3 class="mb-0">Resumen de Ventas</h3>
-            
+            <span id="total-vendido" class="ms-3 badge bg-dark text-info fs-6">Total: $0</span>
           </div>
           <div class="card-body">
             <!-- Tabla de ventas -->
@@ -52,6 +52,7 @@
             </tr>`;
           return;
         }
+        let totalVendido = 0;
 
         data.forEach((venta, i) => {
           const fila = document.createElement('tr');
@@ -63,9 +64,17 @@
             <td>$${venta.precio}</td>
             <td>$${venta.total}</td>
           `;
+         // Convertir "210.000,00" → 210000.00
+          const totalLimpio = parseFloat(venta.total.replace(/\./g, '').replace(',', '.'));
+          totalVendido += totalLimpio;
+
           tablaVentas.appendChild(fila);
         });
-      })
+
+        // Mostrar total
+        document.getElementById('total-vendido').textContent =
+          `Total: $${totalVendido.toLocaleString('es-AR', { minimumFractionDigits: 2 })}`;
+        })
       .catch(error => console.error('Error al cargar ventas:', error));
   });
 </script>
