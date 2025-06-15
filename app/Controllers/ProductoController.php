@@ -113,35 +113,50 @@ class ProductoController extends Controller {
         echo view('front/footer_view');
     }
         
-    public function obtenerVentas()
-    {
-        $ventasCabeceraModel = new \App\Models\Ventas_cabecera_model();
-        $ventasDetalleModel = new \App\Models\Ventas_detalle_model();
-        $productoModel = new Producto_model();
+   public function obtenerVentas()
+{
+    $ventasCabeceraModel = new \App\Models\Ventas_cabecera_model();
+    $ventasDetalleModel = new \App\Models\Ventas_detalle_model();
+    $productoModel = new Producto_model();
 
-        $id_usuario = session()->get('usuario_id');
-        $ventasCabeceras = $ventasCabeceraModel->getVentas($id_usuario);
+    $id_usuario = session()->get('usuario_id');
 
-        $ventas = [];
+    // Obtener fechas del GET
+    $fecha_inicio = $this->request->getGet('fecha_inicio');
+    $fecha_fin = $this->request->getGet('fecha_fin');
 
-        foreach ($ventasCabeceras as $venta) {
-            $detalles = $ventasDetalleModel->getDetalles($venta['id']);
-
-            foreach ($detalles as $detalle) {
-                $producto = $productoModel->find($detalle['producto_id']);
-
-                $ventas[] = [
-                'fecha' => date('Y-m-d H:i:s', strtotime($venta['fecha'])),
-                    'producto' => $producto['nombre_prod'] ?? 'Producto desconocido',
-                    'cantidad' => $detalle['cantidad'],
-                    'precio' => number_format($detalle['precio'], 2, ',', '.'),
-                    'total' => number_format($detalle['precio'] * $detalle['cantidad'], 2, ',', '.')
-                ];
-            }
-        }
-
-        return $this->response->setJSON($ventas);
+    // Formatear fechas con horas para asegurar el rango completo
+    if ($fecha_inicio) {
+        $fecha_inicio .= ' 00:00:00';
     }
+    if ($fecha_fin) {
+        $fecha_fin .= ' 23:59:59';
+    }
+
+    // Usar método del modelo con los parámetros
+    $ventasCabeceras = $ventasCabeceraModel->getVentas($id_usuario, $fecha_inicio, $fecha_fin);
+
+    $ventas = [];
+
+    foreach ($ventasCabeceras as $venta) {
+        $detalles = $ventasDetalleModel->getDetalles($venta['id']);
+
+        foreach ($detalles as $detalle) {
+            $producto = $productoModel->find($detalle['producto_id']);
+
+            $ventas[] = [
+                'fecha' => $venta['fecha'],
+                'producto' => $producto['nombre_prod'] ?? 'Producto desconocido',
+                'cantidad' => $detalle['cantidad'],
+                'precio' => number_format($detalle['precio'], 2, '.', ''),
+                'total' => number_format($detalle['precio'] * $detalle['cantidad'], 2, '.', '')
+            ];
+        }
+    }
+
+    return $this->response->setJSON($ventas);
+}
+
 
     
     public function listar()
