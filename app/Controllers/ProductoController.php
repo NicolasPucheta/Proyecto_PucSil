@@ -131,7 +131,7 @@ class ProductoController extends Controller {
                 $producto = $productoModel->find($detalle['producto_id']);
 
                 $ventas[] = [
-                    'fecha' => date('d/m/Y H:i', strtotime($venta['fecha'])),
+                'fecha' => date('Y-m-d H:i:s', strtotime($venta['fecha'])),
                     'producto' => $producto['nombre_prod'] ?? 'Producto desconocido',
                     'cantidad' => $detalle['cantidad'],
                     'precio' => number_format($detalle['precio'], 2, ',', '.'),

@@ -1,144 +1,158 @@
-/* Contenedor principal */
+/* === CONTENEDOR PRINCIPAL === */
 main.carrito {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    padding: 80px 20px 40px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-    margin-top: 150px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+  margin-top: clamp(3rem, 10vw, 8rem);
 }
 
-/* Título */
+/* === TÍTULO === */
 main.carrito h2.text-info {
-    color: #00bcd4 !important;
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  color: #00bcd4 !important;
+  font-weight: 700;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-/* Tabla */
+/* === TABLA === */
+.table-responsive-carrito {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 main.carrito table.table {
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    overflow: hidden;
-    border-collapse: separate;
-    border-spacing: 0;
-    color: #ccc;
+  width: 100%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #ccc;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
 }
 
-/* Encabezado de tabla */
+/* ENCABEZADO DE TABLA */
 main.carrito table thead th {
-    border-bottom: 2px solid #00bcd4;
-    color: #00e5ff;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 12px;
+  border-bottom: 2px solid #00bcd4;
+  color: #00e5ff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+  padding: clamp(0.5rem, 2vw, 0.8rem);
+  white-space: nowrap;
 }
 
-/* Celdas de tabla */
+/* CELDAS DE TABLA */
 main.carrito table tbody td {
-    border-top: 1px solid #333;
-    vertical-align: middle;
-    padding: 12px;
+  border-top: 1px solid #333;
+  vertical-align: middle;
+  padding: clamp(0.5rem, 2vw, 0.8rem);
 }
 
-/* Hover en filas */
+/* HOVER */
 main.carrito table tbody tr:hover {
-    background-color: #007bff33;
-    cursor: default;
+  background-color: #007bff33;
+  cursor: default;
 }
 
-/* Imagen del producto */
-main.carrito table tbody img {
-    border-radius: 6px;
-    box-shadow: 0 0 6px rgba(0,188,212,0.3);
-    margin-right: 8px;
-    vertical-align: middle;
+/* IMAGEN PRODUCTO */
+.producto-img {
+  width: clamp(40px, 8vw, 60px);
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,188,212,0.3);
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
-/* Controles cantidad */
-main.carrito .cantidad-controles a.btn-outline-info {
-    color: #00bcd4;
-    border-color: #00bcd4;
-    font-weight: 600;
-    padding: 2px 8px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s, color 0.3s;
+/* === CONTROLES CANTIDAD === */
+.cantidad-controles a.btn-outline-info {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  font-weight: 600;
+  padding: 2px 8px;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-main.carrito .cantidad-controles a.btn-outline-info:hover {
-    background-color: #00bcd4;
-    color: #121212;
+.cantidad-controles a.btn-outline-info:hover {
+  background-color: #00bcd4;
+  color: #121212;
 }
 
-/* Botón eliminar */
+/* === BOTÓN ELIMINAR === */
 main.carrito table tbody a.btn-danger {
-    background-color: #00bcd4;
-    border: none;
-    color: #121212;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-    border-radius: 6px;
-    padding: 4px 12px;
-    font-size: 0.85rem;
+  background-color: #00bcd4;
+  border: none;
+  color: #121212;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  padding: clamp(0.2rem, 1vw, 0.4rem) clamp(0.5rem, 2vw, 0.8rem);
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  white-space: nowrap;
 }
 
 main.carrito table tbody a.btn-danger:hover {
-    background-color: #0097a7;
-    color: #fff;
+  background-color: #0097a7;
+  color: #fff;
 }
 
-/* Resumen del carrito */
-main.carrito .carrito-total {
-    background-color: #1c1c1c;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 0 12px rgba(0,188,212,0.3);
-    margin-top: 40px;
-    text-align: center;
-    color: #e0e0e0;
+/* === RESUMEN CARRITO === */
+.carrito-total {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 0 12px rgba(0,188,212,0.3);
+  margin-top: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  color: #e0e0e0;
 }
 
-main.carrito .carrito-total h4 {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #00bcd4;
+.carrito-total h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00bcd4;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
-/* Botón finalizar compra */
-main.carrito .carrito-total a.btn-success {
-    background-color: #00bcd4;
-    border: none;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    color: #121212;
-    text-transform: uppercase;
-    border-radius: 6px;
-    display: inline-block;
-    width: auto;
+/* === BOTÓN FINALIZAR COMPRA === */
+.carrito-total a.btn-success {
+  background-color: #00bcd4;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 4vw, 1.5rem);
+  transition: background-color 0.3s;
+  color: #121212;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
 
-main.carrito .carrito-total a.btn-success:hover {
-    background-color: #0097a7;
-    color: #fff;
+.carrito-total a.btn-success:hover {
+  background-color: #0097a7;
+  color: #fff;
 }
 
-/* Botón seguir comprando */
-main.carrito .carrito-total a.btn-outline-info {
-    color: #00bcd4;
-    border-color: #00bcd4;
-    font-weight: 600;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-transform: uppercase;
+/* === BOTÓN SEGUIR COMPRANDO === */
+.carrito-total a.btn-outline-info {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  font-weight: 600;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 4vw, 1.5rem);
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
 
-main.carrito .carrito-total a.btn-outline-info:hover {
-    background-color: #00bcd4;
-    color: #121212;
+.carrito-total a.btn-outline-info:hover {
+  background-color: #00bcd4;
+  color: #121212;
 }

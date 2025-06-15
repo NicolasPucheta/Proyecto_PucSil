@@ -1,106 +1,120 @@
 /* Contenedor principal */
 main.detalles-compra {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    padding: 80px 20px 40px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+  margin-top: clamp(4rem, 10vw, 10rem);
 }
-  
-  /* Título */
-  main.detalles-compra h2 {
-    color: #00bcd4;
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Tabla */
-  main.detalles-compra table.table {
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  main.detalles-compra table.table thead th {
-    border-bottom: 2px solid #00bcd4;
-    color: #00e5ff;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  
-  main.detalles-compra table.table tbody td {
-    vertical-align: middle;
-    border-top: 1px solid #333;
-    color: #ccc;
-  }
-  
-  main.detalles-compra table.table tbody tr:hover {
-    background-color: #007bff33;
-    cursor: default;
-  }
 
-  main.detalles-compra.container {
-    margin-top: 150px !important; /* override para aumentar margen arriba */
-  }
-  
-  /* Imagenes en la tabla */
-  main.detalles-compra table tbody img {
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,188,212,0.3);
-  }
-  
-  /* Resumen total */
-  main.detalles-compra p strong {
-    color: #00bcd4;
-    font-weight: 700;
-  }
-  
-  /* Contenedor método de pago */
-  main.detalles-compra .metodo-pago {
-    background-color: #1c1c1c;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 0 12px rgba(0,188,212,0.3);
-    margin-top: 40px;
-  }
-  
-  /* Título método pago */
-  main.detalles-compra .metodo-pago h4 {
-    color: #00bcd4;
-    font-weight: 700;
-    margin-bottom: 25px;
-  }
-  
-  /* Selects */
-  main.detalles-compra select.form-select {
-    background-color: #2a2a2a;
-    border: 1px solid #00bcd4;
-    color: #e0e0e0;
-    font-weight: 600;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  
-  main.detalles-compra select.form-select:focus {
-    background-color: #007bff;
-    border-color: #0056b3;
-    color: #fff;
-    outline: none;
-  }
-  
-  /* Botón */
-  main.detalles-compra button.btn-success {
-    background-color: #00bcd4;
-    border: none;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    transition: background-color 0.3s;
-  }
-  
-  main.detalles-compra button.btn-success:hover {
-    background-color: #0097a7;
-  }
-  
+/* Título */
+main.detalles-compra h2 {
+  color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+/* Tabla */
+main.detalles-compra table.table {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* Encabezado tabla */
+main.detalles-compra table thead th {
+  border-bottom: 2px solid #00bcd4;
+  color: #00e5ff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Celdas tabla */
+main.detalles-compra table tbody td {
+  vertical-align: middle;
+  border-top: 1px solid #333;
+  color: #ccc;
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Hover en filas */
+main.detalles-compra table tbody tr:hover {
+  background-color: #007bff33;
+  cursor: default;
+}
+
+/* Imágenes de productos */
+main.detalles-compra table tbody img {
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,188,212,0.3);
+  width: clamp(40px, 6vw, 60px);
+  margin-right: clamp(0.3rem, 1vw, 0.8rem);
+}
+
+/* Texto resumen total */
+main.detalles-compra p strong {
+  color: #00bcd4;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* Contenedor método de pago */
+main.detalles-compra .metodo-pago {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: clamp(1rem, 4vw, 2rem);
+  box-shadow: 0 0 12px rgba(0,188,212,0.3);
+  margin: clamp(0.5rem, 2vw, 1rem) auto 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Título método pago */
+main.detalles-compra .metodo-pago h4 {
+  color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+
+/* Select */
+main.detalles-compra select.form-select {
+  background-color: #2a2a2a;
+  border: 1px solid #00bcd4;
+  color: #e0e0e0;
+  font-weight: 600;
+  padding: clamp(0.4rem, 1vw, 0.8rem);
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+}
+
+/* Select foco */
+main.detalles-compra select.form-select:focus {
+  background-color: #007bff;
+  border-color: #0056b3;
+  color: #fff;
+  outline: none;
+}
+
+/* Botón */
+main.detalles-compra button.btn-success {
+  background-color: #00bcd4;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.4vw, 1rem);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+main.detalles-compra button.btn-success:hover {
+  background-color: #0097a7;
+}

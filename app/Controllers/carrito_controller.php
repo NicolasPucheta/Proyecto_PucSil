@@ -37,12 +37,21 @@ class carrito_controller extends BaseController
         echo view('front/footer_view');
     }
 
-    public function Carrito()// carrito que se muestra
+   public function Carrito()// carrito que se muestra
     {
         $cart = \Config\Services::cart();
         $cart = $cart->contents();
+        
+        // Obtener el stock de los productos
+        $productoModel = new Producto_Model();
+        foreach ($cart as &$item) {
+            $producto = $productoModel->getProducto($item['id']);
+            $item['stock'] = $producto ? $producto['stock'] : 0;
+        }
+
         $data['cart'] = $cart;
         $data['Titulo'] = 'Carrito';
+        
         echo view('front/head_view', $data);
         echo view('front/navbar', $data); 
         echo view('front/Carrito', $data); 
@@ -264,10 +273,5 @@ public function mostrarDatosPago()
     echo view('front/footer_view');
 
 }
-
-
-   
-    
-
 
 }

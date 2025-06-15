@@ -1,0 +1,85 @@
+/* Contenedor principal */
+.resumen-compra {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 4vw, 3rem);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+  margin-top: clamp(4rem, 10vw, 10rem);
+}
+
+/* Título principal */
+.resumen-compra h4 {
+  color: #00bcd4;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  letter-spacing: 1px;
+}
+
+/* Caja principal */
+.resumen-compra .resumen-box {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.3);
+  font-size: clamp(0.95rem, 2.3vw, 1.1rem);
+  color: #e0e0e0;
+}
+
+/* Subtítulos */
+.resumen-compra h5 {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  color: #00e5ff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Textos */
+.resumen-compra p {
+  margin-bottom: 0.6rem;
+  color: #ccc;
+}
+
+/* Texto fuerte */
+.resumen-compra strong {
+  color: #00bcd4;
+  font-weight: 700;
+}
+
+/* Total final */
+.resumen-compra .resumen-total {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+.resumen-compra .resumen-total .total-final {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+/* Alerta transferencia */
+.resumen-compra .alert-info {
+  background-color: rgba(0, 188, 212, 0.1);
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
+  border-radius: 8px;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+}
+
+/* Botón */
+.resumen-compra button.btn-success {
+  background-color: #00bcd4;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.resumen-compra button.btn-success:hover {
+  background-color: #0097a7;
+}

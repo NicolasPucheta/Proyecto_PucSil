@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/ayuda.css?v=1.0') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/Comercializacion.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/inicio.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/inicioSesion-Carrito.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/inicioSesion.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/CrudUsuarios.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/CrudProductos.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/Consultas.css') ?>">

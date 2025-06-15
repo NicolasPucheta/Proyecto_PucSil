@@ -87,24 +87,44 @@ class Ventascontroller extends Controller
         $session->setFlashdata('mensaje', 'Venta registrada exitosamente.');
         return redirect()->to(base_url('vista_compras/' . $venta_id));
     }
+   <?php
+
+namespace App\Controllers;
+
+use CodeIgniter\Controller;
+use App\Models\Ventas_cabecera_model;
+
+class Ventascontroller extends Controller
+{
     public function mostrar_resumen_ventas()
     {
-        $ventasModel = new \App\Models\Ventas_cabecera_model();
+        $ventasModel = new Ventas_cabecera_model();
         $sumaTotal = $ventasModel->obtenerSumaTotalVentas();
 
         $data = [
             'Titulo' => 'Resumen de Ventas',
             'sumaTotal' => $sumaTotal,
-            // Otros datos como la lista de ventas si es necesario
         ];
-
 
         echo view('front/head_view', $data);
         echo view('front/navbar');
         echo view('back/Muestra_ventas', $data);
         echo view('front/footer_view');
-       
     }
+
+    // Endpoint que devuelve ventas en formato JSON con filtro por fecha
+    public function data()
+    {
+        $ventasModel = new Ventas_cabecera_model();
+
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        $ventas = $ventasModel->obtenerVentasConDetalles($fechaInicio, $fechaFin);
+
+        return $this->response->setJSON($ventas);
+    }
+}
 
 
 }
