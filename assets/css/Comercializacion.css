@@ -4,18 +4,6 @@ main.comercializacion {
   line-height: 1.7;
   padding-top: 80px;
 }
-
-/* Estilo para el contenedor */
-.container {
-  background-color: rgb(27, 27, 27) ;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 0px;
-  min-height: 100%;
- 
-}
-
 /* Título principal */
 h2 {
   font-size: 2.5rem; /* Tamaño base */
@@ -64,75 +52,5 @@ p {
   text-decoration: underline;
 }
 
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 576px) {
-  .container {
-    padding: 20px;
-    margin-top: 50px;
-  }
 
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .box h3 {
-    font-size: 1.6rem;
-  }
-
-  .box ul li {
-    font-size: 1rem;
-  }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-  .container {
-    padding: 30px;
-    margin-top: 60px;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-
-  p {
-    font-size: 1.05rem;
-  }
-
-  .box h3 {
-    font-size: 1.7rem;
-  }
-
-  .box ul li {
-    font-size: 1.05rem;
-  }
-}
-
-/* Para pantallas grandes */
-@media (min-width: 992px) {
-  .container {
-    padding: 40px;
-    margin-top: 80px;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-
-  .box h3 {
-    font-size: 1.8rem;
-  }
-
-  .box ul li {
-    font-size: 1.1rem;
-  }
-}
 

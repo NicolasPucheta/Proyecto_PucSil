@@ -1,13 +1,3 @@
-/* === CONTENEDOR PRINCIPAL === */
-main.carrito {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  padding: clamp(2rem, 5vw, 4rem);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-  margin-top: clamp(3rem, 10vw, 8rem);
-}
 
 /* === TÍTULO === */
 main.carrito h2.text-info {

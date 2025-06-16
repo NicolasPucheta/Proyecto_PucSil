@@ -9,15 +9,6 @@ main.quienesSomos {
   flex: 1;
 }
 
-/* Estilo para el contenedor */
-.container {
-  background-color: #1e1e1e;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 100px; /* Ajustable dependiendo del tamaño de pantalla */
-}
-
 /* Título principal */
 h2 {
   font-size: 2.5rem; /* Tamaño base */
@@ -32,56 +23,6 @@ p {
   font-size: 1.1rem;
 }
 
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 576px) {
-  .display-4 {
-    font-size: 2.5rem; /* Reducir el tamaño del título en pantallas pequeñas */
-  }
 
-  /* Ajustamos la imagen de fondo en el contenedor */
-  .container {
-    padding: 20px;
-    margin-top: 50px; /* Menos margen superior en móviles */
-  }
 
-  h2 {
-    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
-  }
-
-  p {
-    font-size: 1rem; /* Ajustamos el tamaño del texto en pantallas pequeñas */
-  }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-  .container {
-    padding: 30px;
-    margin-top: 60px; /* Ajustamos el margen superior en pantallas medianas */
-  }
-
-  h2 {
-    font-size: 2.2rem; /* Reducimos el tamaño del título en pantallas medianas */
-  }
-
-  p {
-    font-size: 1.05rem; /* Ajustamos el tamaño de los párrafos */
-  }
-}
-
-/* Para pantallas grandes */
-@media (min-width: 992px) {
-  .container {
-    padding: 40px;
-    margin-top: 80px; /* Mantener el margen original */
-  }
-
-  h2 {
-    font-size: 2.5rem; /* Volver al tamaño original */
-  }
-
-  p {
-    font-size: 1.1rem; /* Tamaño de texto estándar */
-  }
-}
 

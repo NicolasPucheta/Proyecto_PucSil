@@ -54,7 +54,38 @@
 
             <button type="submit">Guardar cambios</button>
         </form>
+                            <!-- Botón para ver compras -->
+                    <button type="button" class="btn btn-info mt-4" onclick="mostrarCompras()">Ver mis compras</button>
+
+                    <!-- Modal (oculto al principio) -->
+                    <div id="modalCompras" class="modal-compras">
+                    <div class="modal-contenido">
+                        <span class="cerrar" onclick="cerrarCompras()">&times;</span>
+                        <h3>Mis Compras</h3>
+                        <div id="contenidoCompras">
+                        <p>Cargando compras...</p>
+                        </div>
+                    </div>
+                    </div>
+
 
         <a href="<?= base_url('/principal') ?>">← Volver</a>
     </div>
 </main>
+
+<script>
+function mostrarCompras() {
+  const modal = document.getElementById('modalCompras');
+  const contenido = document.getElementById('contenidoCompras');
+  modal.style.display = 'block';
+
+  fetch('<?= base_url('/misCompras') ?>')
+    .then(res => res.text())
+    .then(data => contenido.innerHTML = data)
+    .catch(() => contenido.innerHTML = '<p>Error al cargar compras.</p>');
+}
+
+function cerrarCompras() {
+  document.getElementById('modalCompras').style.display = 'none';
+}
+</script>

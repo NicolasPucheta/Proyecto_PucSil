@@ -6,14 +6,6 @@ main.ayuda {
   padding-top: 150px;
 }
 
-/* Estilo para el contenedor */
-.container {
-  border-radius: 15px;
-  padding-top: 40px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-top: 20px; 
-}
-
 /* Título principal */
 h2 {
   font-size: 2.5rem; /* Tamaño base */
@@ -26,58 +18,4 @@ h2 {
 p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
-}
-
-
-
-@media (max-width: 576px) {
-  .display-4 {
-    font-size: 2.5rem; /* Reducir el tamaño del título en pantallas pequeñas */
-  }
-
-  
-  .container {
-    padding: 20px;
-    margin-top: 50px; 
-  }
-
-  h2 {
-    font-size: 1.8rem; 
-  }
-
-  p {
-    font-size: 1rem; /
-  }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-  .container {
-    padding: 30px;
-    margin-top: 60px; 
-  }
-
-  h2 {
-    font-size: 2.2rem; 
-  }
-
-  p {
-    font-size: 1.05rem; 
-  }
-}
-
-/* Para pantallas grandes */
-@media (min-width: 992px) {
-  .container {
-    padding: 40px;
-    margin-top: 80px; /* Mantener el margen original */
-  }
-
-  h2 {
-    font-size: 2.5rem; /* Volver al tamaño original */
-  }
-
-  p {
-    font-size: 1.1rem; /* Tamaño de texto estándar */
-  }
 }

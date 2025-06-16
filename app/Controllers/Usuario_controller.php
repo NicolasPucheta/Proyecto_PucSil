@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Usuarios_model;
 use CodeIgniter\Controller;
+use App\Models\Ventas_cabecera_model;
 
 class Usuario_controller extends Controller
 {
@@ -212,5 +213,25 @@ class Usuario_controller extends Controller
         return redirect()->to('crudUsuarios');
     }
 
+public function misCompras()
+{
+    $usuarioId = session()->get('id');
+
+    $ventaModel = new Ventas_cabecera_model();
+    $compras = $ventaModel->where('usuario_id', $usuarioId)->findAll();
+
+    if (empty($compras)) {
+        echo '<p>No hay compras registradas.</p>';
+        return;
+    }
+
+    echo '<ul>';
+    foreach ($compras as $compra) {
+        echo '<li>';
+        echo 'Fecha: ' . esc($compra['fecha']) . ' | Total: $' . esc($compra['total_venta']);
+        echo '</li>';
+    }
+    echo '</ul>';
+}
 }
     

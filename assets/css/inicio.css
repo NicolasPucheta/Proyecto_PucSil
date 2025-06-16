@@ -31,6 +31,27 @@ main {
   padding: 0;
 }
 
+/* Estilo para el contenedor */
+.container {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: clamp(20px, 5vw, 40px);
+  margin-top: clamp(105px, 70vh, 150px) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.display-4 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
 .back-to-top:hover {
   background-color: grey; /* Cambia el color al pasar el ratón */
 }
@@ -802,4 +823,5 @@ p {
       font-size: 12px;
   }
 }
+
 

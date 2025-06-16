@@ -107,6 +107,8 @@ $routes->post('/procesarPago', 'carrito_controller::procesar_compra');
 // Mostrar la vista con los datos de pago según método seleccionado
 $routes->post('/mostrarDatosPago', 'carrito_controller::mostrarDatosPago', ['filter' => 'auth']);
 
+//"Mis compras" cliente
+$routes->get('/misCompras', 'Usuario_controller::misCompras');
 
 
 
