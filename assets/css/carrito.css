@@ -52,7 +52,7 @@ main.carrito table tbody tr:hover {
 
 /* IMAGEN PRODUCTO */
 .producto-img {
-  width: clamp(40px, 8vw, 60px);
+  width: clamp(40px, 8vw, 120px);
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0,188,212,0.3);
   margin-right: 8px;

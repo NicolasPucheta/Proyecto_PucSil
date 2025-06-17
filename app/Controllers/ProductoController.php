@@ -57,7 +57,7 @@ class ProductoController extends Controller {
 
         $productoModel = new Producto_Model();
         
-        $data['producto'] = $productoModel->getProductoAll(); 
+        $data['producto'] = $productoModel->findAll(); 
 
         $data['Titulo'] = 'Alta producto';
         echo view('front/head_view', $data);
