@@ -44,10 +44,9 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody id="userTableBody">
-                <?php if (!empty($usuarios)): ?>
-                    <?php foreach ($usuarios as $usuario): ?>
-                        <form method="post" action="<?= base_url('guardar_rol') ?>">
+                <tbody id="userTableBody">
+                    <?php if (!empty($usuarios)): ?>
+                        <?php foreach ($usuarios as $usuario): ?>
                             <tr>
                                 <td><?= $usuario['id'] ?></td>
                                 <td><?= $usuario['nombre'] ?></td>
@@ -55,12 +54,15 @@
                                 <td><?= $usuario['usuario'] ?></td>
                                 <td><?= $usuario['email'] ?></td>
                                 <td>
-                                    <input type="hidden" name="user_id" value="<?= $usuario['id'] ?>">
-                                    <select class="form-select form-select-sm" name="rol">
-                                        <option value="1" <?= ($usuario['perfil_id'] == 1) ? 'selected' : '' ?>>Admin</option>
-                                        <option value="2" <?= ($usuario['perfil_id'] == 2) ? 'selected' : '' ?>>Cliente</option>
-                                    </select>
-                                </td>
+                                    <form method="post" action="<?= base_url('Usuario_controller/guardarRol') ?>">
+                                        <input type="hidden" name="user_id" value="<?= $usuario['id'] ?>">
+                                        <select class="form-select form-select-sm" name="rol">
+                                            <option value="1" <?= ($usuario['perfil_id'] == 1) ? 'selected' : '' ?>>Admin</option>
+                                            <option value="2" <?= ($usuario['perfil_id'] == 2) ? 'selected' : '' ?>>Cliente</option>
+                                        </select>
+                                        <button type="submit" class="btn btn-primary btn-sm mt-1">Guardar Rol</button>
+                                    </form>
+                                    </td>
                                 <td>
                                     <?php if ($usuario['baja'] === 'SI'): ?>
                                         <a href="<?= base_url('Usuario_controller/reactivar/'.$usuario['id']) ?>" class="btn btn-success">Reactivar</a>
@@ -69,12 +71,11 @@
                                     <?php endif; ?>    
                                 </td>
                             </tr>
-                        </form>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr><td colspan="7" class="text-center">No hay usuarios registrados.</td></tr>
-                <?php endif; ?>
-            </tbody>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr><td colspan="7" class="text-center">No hay usuarios registrados.</td></tr>
+                    <?php endif; ?>
+                </tbody>
         </table>
     </div>
 

@@ -68,9 +68,10 @@ class Usuario_controller extends Controller
 
     public function guardarRol()
     {
+        log_message('debug', 'Entrando en guardarRol()');
         $userId = $this->request->getPost('user_id');
         $nuevoRol = $this->request->getPost('rol');
-
+        
         $userModel = new Usuarios_model();
         $data = ['perfil_id' => $nuevoRol];
         $updated = $userModel->update($userId, $data);

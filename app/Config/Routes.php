@@ -39,8 +39,8 @@ $routes->get('usuarios/eliminar/(:num)', 'Usuario_Controller::eliminar/$1');
 $routes->post('/actualizarPerfil', 'Usuario_controller::actualizarPerfil');
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudProductos', 'ProductoController::index');
-$routes->get('crudUsuarios', 'Usuario_Controller::index');
-$routes->post('guardar_rol', 'Usuario_controller::guardarRol');
+$routes->get('crudUsuarios', 'Usuario_controller::index');
+$routes->post('Usuario_controller/guardarRol', 'Usuario_controller::guardarRol');
 /*Cambair estado de usuario*/
 $routes->get('Usuario_controller/darDeBaja/(:num)', 'Usuario_controller::darDeBaja/$1');
 $routes->get('Usuario_controller/reactivar/(:num)', 'Usuario_controller::reactivar/$1');

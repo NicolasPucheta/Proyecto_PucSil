@@ -1,5 +1,5 @@
 <main class="Regristro bg-dark text-light">
-    <div class="container mt-1 mb-1 d-flex justify-content-center">
+    <div class="container-iditar mt-1 mb-1 d-flex justify-content-center">
     <div class="card" style="width:75%;">
         <div class="card-header text-center">
         <h2>Editar Producto</h2>
