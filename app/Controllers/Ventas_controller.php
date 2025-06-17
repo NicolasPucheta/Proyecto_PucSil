@@ -89,7 +89,7 @@ class Ventascontroller extends Controller
     }
     public function mostrar_resumen_ventas()
     {
-        $ventasModel = new \App\Models\Ventas_cabecera_model();
+        $ventasModel = new Ventas_cabecera_model();
         $sumaTotal = $ventasModel->obtenerSumaTotalVentas();
 
         $data = [

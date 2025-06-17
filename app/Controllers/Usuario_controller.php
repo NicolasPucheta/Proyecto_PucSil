@@ -214,25 +214,57 @@ class Usuario_controller extends Controller
         return redirect()->to('crudUsuarios');
     }
 
-public function misCompras()
-{
-    $usuarioId = session()->get('id');
-
-    $ventaModel = new Ventas_cabecera_model();
-    $compras = $ventaModel->where('usuario_id', $usuarioId)->findAll();
-
-    if (empty($compras)) {
-        echo '<p>No hay compras registradas.</p>';
-        return;
+    public function misCompras()
+    {
+        $usuarioId = session()->get('id');
+    
+        // Modelos
+        $ventaModel = new Ventas_cabecera_model();
+        $detalleModel = new \App\Models\Ventas_detalle_model();
+        $productoModel = new \App\Models\Producto_Model();
+    
+        // Obtener todas las compras del usuario
+        $compras = $ventaModel->where('usuario_id', $usuarioId)->orderBy('fecha', 'DESC')->findAll();
+    
+        if (empty($compras)) {
+            echo '<p>No hay compras registradas.</p>';
+            return;
+        }
+    
+        echo '<div class="lista-compras">';
+        foreach ($compras as $compra) {
+            echo '<div class="compra-item">';
+            // Aplicar color a 'Fecha', 'Total' y 'Productos'
+            echo '<strong style="color: #00e0ff;">Fecha:</strong> ' . date('d/m/Y H:i', strtotime($compra['fecha'])) . '<br>';
+            echo '<strong style="color: #00e0ff;">Total:</strong> $' . number_format($compra['total_venta'], 2) . '<br>';
+            echo '<strong style="color: #00e0ff;">Productos:</strong>';
+            echo '<ul>';
+    
+            // Obtener productos de esta venta usando venta_id en lugar de id
+            $detalles = $detalleModel->where('venta_id', $compra['id'])->findAll();
+            foreach ($detalles as $detalle) {
+                // Buscar producto
+                $producto = $productoModel->find($detalle['producto_id']);
+    
+                if ($producto && isset($producto['nombre_prod'])) {
+                    // Si el producto fue encontrado y tiene el campo 'nombre_prod'
+                    $nombre = esc($producto['nombre_prod']);
+                } else {
+                    // Si el producto no se encuentra o no tiene nombre
+                    $nombre = 'Producto eliminado o sin nombre';
+                }
+    
+                echo '<li>' . $nombre . ' (x' . $detalle['cantidad'] . ')</li>';
+            }
+    
+            echo '</ul>';
+            echo '</div>';
+        }
+        echo '</div>';
     }
+    
+    
 
-    echo '<ul>';
-    foreach ($compras as $compra) {
-        echo '<li>';
-        echo 'Fecha: ' . esc($compra['fecha']) . ' | Total: $' . esc($compra['total_venta']);
-        echo '</li>';
-    }
-    echo '</ul>';
-}
+
 }
     

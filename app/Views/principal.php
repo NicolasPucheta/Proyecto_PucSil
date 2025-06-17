@@ -34,7 +34,10 @@
 <section class="caja-carrusel">
   <div class="encabezado-carrusel">
     <h2 class="titulo-caja">Nuestros Productos</h2>
+    <?php if (session()->get('logged_in') && session()->get('perfil_id') == 2): ?>
     <a href="productos/categoria" class="btn-mas-vendido">Ver todo</a>
+<?php endif; ?>
+
   </div>
 
   <div class="carrusel-infinito">

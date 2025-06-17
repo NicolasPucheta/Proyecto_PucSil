@@ -179,3 +179,17 @@ main.usuarioData {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.acciones-usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-volver {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
