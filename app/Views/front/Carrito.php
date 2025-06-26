@@ -1,6 +1,22 @@
 <main class="carrito container my-5">
   <h2 class="text-center mb-4 text-info">Mis Compras</h2>
+   <?php
+    // Este bloque de código mostrará los mensajes flash de éxito o error.
+    // Colocado aquí para asegurar que siempre sea visible en la página del carrito.
+    if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="margin-bottom: 15px;">
+            <?= session()->getFlashdata('error') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    <?php endif; ?>
 
+    <?php if (session()->getFlashdata('success')): ?>
+        <!-- Si ya tienes un toast para 'success' en otra parte, puedes eliminar este bloque si no lo quieres duplicado. -->
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="margin-bottom: 15px;">
+            <?= session()->getFlashdata('success') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    <?php endif; ?>
   <div class="table-responsive-carrito">
     <table class="table table-dark table-striped">
       <thead>
@@ -8,7 +24,7 @@
           <th>Producto</th>
           <th>Precio</th>
           <th>Cantidad</th>
-          <th>Stock</th>
+          <th>Stock Disponible</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -28,7 +44,7 @@
               </div>
             </td>
             <td>
-              <span class="stock"><?= esc($item['stock']) ?></span>
+              <span class="stock"><?= esc($item['stock_disponible']) ?></span>
             </td>
             <td>
               <a href="<?= base_url('carrito_elimina/' . $item['rowid']) ?>" class="btn btn-danger btn-sm">Eliminar</a>

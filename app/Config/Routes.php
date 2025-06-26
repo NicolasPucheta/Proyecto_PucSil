@@ -80,7 +80,7 @@ $routes->get('ventas/data', 'ProductoController::obtenerVentas');
 
 // Rutas para el carrito*/
 // muestra todos los productos del catalogo
-$routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront', ['filter' => 'auth']);
+$routes->get('/productos-catalogo', 'ProductoController::mostrarProductosFront');
 
 // carga la vista carrito_parte_view
 $routes->get('carrito', 'carrito_controller::Carrito', ['filter' => 'auth']);

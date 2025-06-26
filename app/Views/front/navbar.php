@@ -31,10 +31,10 @@ $cantidadCarrito = is_array($carrito) ? count($carrito) : 0;
                     <button type="button" class="search-home-button me-2" onclick="location.href='<?php echo base_url() ?>'">
                         <i class="bi bi-house-door"></i>
                     </button>
-                    <form action="/search" method="get" class="d-flex align-items-center w-100">
-                        <input type="text" placeholder="¿Qué estás buscando?" name="query" class="form-control search-input me-2">
-                        <button type="submit" class="search-button">🔍</button>
-                    </form>
+                        <form action="<?= base_url('productos-catalogo') ?>" method="get" class="d-flex align-items-center w-100">
+                            <input type="text" placeholder="¿Qué estás buscando?" name="query" class="form-control search-input me-2">
+                            <button type="submit" class="search-button">🔍</button>
+                        </form>
                 </div>
 
                 <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
