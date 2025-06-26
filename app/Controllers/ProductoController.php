@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\Producto_Model;
-use App\Models\Usuario_Model; // Asegúrate de que esta línea esté presente si usas Usuario_Model
+use App\Models\Usuario_Model; 
 use App\Models\categoria_model;
 use CodeIgniter\Controller;
 
@@ -58,8 +58,7 @@ class ProductoController extends Controller {
                     ->where('eliminado', 0)
                     ->where('categoria_id', $categoria_a_usar)
                     ->findAll();
-                
-                // Opcional: Obtener el nombre de la categoría para el título
+            
                 $categoriaModel = new categoria_model();
                 $categoria_info = $categoriaModel->find($categoria_a_usar);
                 $data['Titulo'] = 'Productos en ' . ($categoria_info['descripcion'] ?? 'Categoría');

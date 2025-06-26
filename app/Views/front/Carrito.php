@@ -1,8 +1,7 @@
 <main class="carrito container my-5">
   <h2 class="text-center mb-4 text-info">Mis Compras</h2>
    <?php
-    // Este bloque de código mostrará los mensajes flash de éxito o error.
-    // Colocado aquí para asegurar que siempre sea visible en la página del carrito.
+    
     if (session()->getFlashdata('error')): ?>
         <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="margin-bottom: 15px;">
             <?= session()->getFlashdata('error') ?>
@@ -11,7 +10,7 @@
     <?php endif; ?>
 
     <?php if (session()->getFlashdata('success')): ?>
-        <!-- Si ya tienes un toast para 'success' en otra parte, puedes eliminar este bloque si no lo quieres duplicado. -->
+       
         <div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="margin-bottom: 15px;">
             <?= session()->getFlashdata('success') ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>

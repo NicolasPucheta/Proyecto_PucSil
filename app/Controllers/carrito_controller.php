@@ -3,11 +3,11 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use CodeIgniterCart\Cart; // Asegúrate de que esta línea es correcta para tu implementación del carrito
+use CodeIgniterCart\Cart; 
 use CodeIgniter\Config\Services;
 use App\Models\Producto_Model;
-use App\Models\Pedidos_model; // Si usas esta
-use App\Models\DetallePedido_model; // Si usas esta
+use App\Models\Pedidos_model; 
+use App\Models\DetallePedido_model; 
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
 
@@ -182,7 +182,6 @@ class carrito_controller extends BaseController
         if ($new_qty > $stock_disponible) {
             $this->session->setFlashdata('error', 'No hay suficiente stock de "' . esc($nombre_producto) . '". Stock disponible: ' . $stock_disponible . '. La cantidad en el carrito se ajustó a: ' . $stock_disponible);
             
-            // Opcional: Ajustar la cantidad en el carrito al máximo stock disponible si la cantidad solicitada excede.
             $data = [
                 'rowid' => $rowid,
                 'qty' => $stock_disponible // Ajustar a la cantidad máxima disponible
@@ -199,8 +198,7 @@ class carrito_controller extends BaseController
             $data = [
                 'rowid' => $rowid,
                 'qty' => $new_qty,
-                // 'price' => $this->request->getPost('price'), // Estos ya están en el item y no deberían cambiar en una actualización de cantidad
-                // 'name' => $this->request->getPost('name'),
+                
             ];
             $this->cart->update($data);
             $this->session->setFlashdata('success', 'Cantidad de "' . esc($nombre_producto) . '" actualizada a ' . $new_qty . '.');
@@ -293,11 +291,6 @@ class carrito_controller extends BaseController
             $this->session->setFlashdata('error', 'Debe iniciar sesión para realizar la compra.');
             return redirect()->to('/login');
         }
-
-        // ====================================================================
-        // Validar STOCK FINAL ANTES DE PROCESAR LA COMPRA (Doble chequeo crítico)
-        // Esto previene que si el stock cambió entre que se añadió al carrito
-        // y el momento de la compra, se vendan productos sin stock.
         foreach ($cart as $item) {
             $producto = $productoModel->find($item['id']);
             if (!$producto || $producto['stock'] < $item['qty']) {
@@ -308,8 +301,7 @@ class carrito_controller extends BaseController
                 return redirect()->to(base_url('carrito'));
             }
         }
-        // ====================================================================
-
+       
         // Calcular total del carrito
         $total = 0;
         foreach ($cart as $item) {
@@ -359,11 +351,10 @@ class carrito_controller extends BaseController
                 'cantidad' => $item['qty'],
                 'precio' => $item['price']
             ]);
-
-            // ====================================================================
+            
             // DECREMENTAR EL STOCK DEL PRODUCTO
             $productoModel->decrementStock($item['id'], $item['qty']);
-            // ====================================================================
+            
         }
 
         $data['Titulo'] = 'Proceso compra';
@@ -383,7 +374,6 @@ class carrito_controller extends BaseController
         ]);
         echo view('front/footer_view');
 
-        // AHORA sí, destruir el carrito DESPUÉS de mostrar la vista de confirmación
         $this->cart->destroy();
         $this->session->setFlashdata('success', '¡Compra realizada con éxito! Su número de pedido es: ' . $idVenta);
     }

@@ -41,13 +41,10 @@ class Producto_Model extends Model
 
         $currentStock = $producto['stock'];
         $newStock = $currentStock - $cantidad;
-
-        // Asegurarse de que el stock no baje de cero (aunque esto ya se valida antes de la compra)
         if ($newStock < 0) {
-            $newStock = 0; // O lanzar una excepción si prefieres que falle
+            $newStock = 0; 
         }
 
-        // Usar el método update existente
         return $this->update($productoId, ['stock' => $newStock]);
     }
 }
