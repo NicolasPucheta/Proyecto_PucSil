@@ -176,6 +176,60 @@ class ProductoController extends Controller {
         echo view('front/Productos', $data);
         echo view('front/footer_view');
     }
+    // Cargar el formulario para crear un nuevo producto
+    public function crearProducto() {
+        $categoriaModel = new categoria_model();
+        $data['categorias'] = $categoriaModel->getCategorias(); // trae las categorías de la DB
+
+        $productoModel = new Producto_Model();
+        
+        $data['producto'] = $productoModel->findAll(); 
+
+        $data['Titulo'] = 'Alta producto';
+        echo view('front/head_view', $data);
+        echo view('front/navbar');
+        echo view('back/productos/alta_producto_view', $data);
+        echo view('front/footer_view');
+    }
+
+     public function store() {
+        $input = $this->validate([
+            'nombre_prod' => 'required|min_length[3]',
+            'categoria' => 'required|is_not_unique[categorias.id]', 
+            'precio' => 'required|numeric',
+            'precio_vta' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'stock_min' => 'required|numeric',
+            'imagen' => 'uploaded[imagen]|is_image[imagen]|max_size[imagen,2048]'
+        ]);
+    
+        if (!$input) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+    
+        $img = $this->request->getFile('imagen');
+        $nombre_aleatorio = $img->getRandomName();
+        // Asegúrate de que ROOTPATH . 'assets/uploads/' sea la ruta correcta donde quieres guardar las imágenes.
+        // Y que esta ruta sea accesible públicamente desde la web.
+        $img->move(FCPATH . 'assets/uploads/', $nombre_aleatorio); 
+
+        $data = [
+            'nombre_prod' => $this->request->getVar('nombre_prod'),
+            'imagen' =>  $nombre_aleatorio, 
+            'categoria_id' => $this->request->getVar('categoria'),
+            'precio' => $this->request->getVar('precio'),
+            'precio_vta' => $this->request->getVar('precio_vta'),
+            'stock' => $this->request->getVar('stock'),
+            'stock_min' => $this->request->getVar('stock_min'),
+            'eliminado' => 0 
+        ];
+    
+        $productoModel = new Producto_Model(); // Instancia el modelo
+        $productoModel->insert($data);
+    
+        session()->setFlashdata('success', 'Producto creado correctamente.');
+        return $this->response->redirect(site_url('crudProductos')); // Redirige a la página de creación de productos
+    }
     
     public function eliminar($id)
     {
